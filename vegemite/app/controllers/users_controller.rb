@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+
     def index
         @users = User.all
     end
@@ -14,7 +15,7 @@ class UsersController < ApplicationController
     def create
         @user = User.new(user_params)
         if @user.save
-            redirect_to gardens_url, notice: "signed up"
+            redirect_to gardens_url, notice: "Signed up"
         else
           render "new"
         end
@@ -40,6 +41,7 @@ class UsersController < ApplicationController
     end
 
     private
+    
     def user_params
         params.require(:user).permit(:username, :firstname, :lastname, :email, :password, :password_confirmation)
     end

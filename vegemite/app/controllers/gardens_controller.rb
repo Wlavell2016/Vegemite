@@ -40,9 +40,10 @@ class GardensController < ApplicationController
     redirect_to gardens_url
   end
 
-private
+  private
 
   def garden_params
     params.require(:garden).permit(:title, :description, :address, :size)
   end
+
 end
