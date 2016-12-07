@@ -1,11 +1,14 @@
 class ReservationsController < ApplicationController
+  before_action :ensure_logged_in
+  # before_action :load_garden
+  # clarify if we really need this filter and the load_garden method
+
   def index
     @reservations = Reservation.all
   end
 
   def show
     @reservation = Reservation.find(params[:id])
-    # clarify our understanding -- would we need to call on garden, to build the association?
   end
 
   # def new
@@ -13,8 +16,10 @@ class ReservationsController < ApplicationController
   # end
 
   def create
-      @garden = Garden.find(params[:garden_id])
-    #   @reservation = @garden.reservations.build(reservation_params)
+    # clarify this!
+    @garden = Garden.find(params[:garden_id])
+    @reservation.user = current_user
+    # @reservation = @garden.reservations.build(reservation_params)
     # if @reservation.save
     if @garden.reservations.create(reservation_params)
       redirect_to garden_url(@garden), notice: 'Reservation created successfully'
@@ -40,12 +45,17 @@ class ReservationsController < ApplicationController
 
   def destroy
       @reservation = Reservation.find(params[:id])
-        @reservation.destroy
+      @reservation.destroy
   end
 
   private
 
   def reservation_params
       params.require(:reservation).permit(:note)
-
   end
+
+  # def load_garden
+  #   @garden = Garden.find(params)[:garden_id]
+  # end
+
+end
