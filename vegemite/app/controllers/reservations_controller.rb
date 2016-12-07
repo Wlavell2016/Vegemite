@@ -14,8 +14,9 @@ class ReservationsController < ApplicationController
 
   def create
       @garden = Garden.find(params[:garden_id])
-      @reservation = @garden.reservations.build(reservation_params)
-    if @reservation.save
+    #   @reservation = @garden.reservations.build(reservation_params)
+    # if @reservation.save
+    if @garden.reservations.create(reservation_params)
       redirect_to garden_url(@garden), notice: 'Reservation created successfully'
     else
       render 'gardens/show', alert: "Reservation couldn't be saved"
@@ -27,7 +28,7 @@ class ReservationsController < ApplicationController
   end
 
   def update
-      # clarify our understanding -- would we need to call on garden, to build the association?      
+      # clarify our understanding -- would we need to call on garden, to build the association?
       @reservation = Reservation.find(params[:id])
         if @reservation.update_attributes(reservation_params)
             redirect_to garden_reservation_url(@reservation)
