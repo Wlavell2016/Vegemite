@@ -5,4 +5,7 @@ class Garden < ApplicationRecord
     has_many :growers, through: :reservations, source: :users, class_name: 'User'
     has_many :reservations
     has_and_belongs_to_many :veggies
+
+    validates :title, :description, :address, :size, presence: true
+    validates :size, numericality: {only_integer: true}
 end
