@@ -1,2 +1,15 @@
-<h1>Gardens#index</h1>
-<p>Find me in app/views/gardens/index.html.erb</p>
+<h1>Gardens</h1>
+
+<div class="garden">
+    <% @gardens.each do |garden| %>
+        <%= garden.image %>
+        <h3> Garden:  <%= garden.title %> </h3>
+            <p>
+                Address: <%= garden.address %><br />
+                Size: <%= garden.size %><br />
+                Description: <%= garden.description %>
+        <br />
+                <%= link_to 'More Details or whatever', garden_path(garden) %>
+            </p>
+    <% end  %>
+</div>
