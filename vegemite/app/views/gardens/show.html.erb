@@ -1,2 +1,20 @@
-<h1>Gardens#show</h1>
-<p>Find me in app/views/gardens/show.html.erb</p>
+<div class="garden">
+    <% @gardens.each do |garden| %>
+        <img src="<%= garden.image %>">
+        <h3> Garden:  <%= garden.title %> </h3>
+            <p>
+                Address: <%= garden.address %><br />
+                Size: <%= garden.size %><br />
+                Description: <%= garden.description %>
+        <br />
+                <!-- <%= link_to 'Make a reservation', new_garden_reservation(reservation) %> -->
+                <!-- button for JS pop up form   -->
+            </p>
+    <% end  %>
+</div>
+
+<%= form_for [@garden, @reservation] do |f| %>
+  <%= f.text_field :veggie_id %>
+  <%= f.text_field :note %>
+  <%= f.submit %>
+<% end %>
