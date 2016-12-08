@@ -1,20 +1,14 @@
-<div class="garden">
-    <% @gardens.each do |garden| %>
-        <img src="<%= garden.image %>">
-        <h3> Garden:  <%= garden.title %> </h3>
-            <p>
-                Address: <%= garden.address %><br />
-                Size: <%= garden.size %><br />
-                Description: <%= garden.description %>
-        <br />
-                <!-- <%= link_to 'Make a reservation', new_garden_reservation(reservation) %> -->
-                <!-- button for JS pop up form   -->
-            </p>
-    <% end  %>
-</div>
+<img src="<%= @garden.image %>">
+<p><%= @garden.title %></p>
+<p>Address: <%= @garden.address %></p>
+<p>Size: <%= @garden.size %></p>
+<p>About: <%= @garden.description %></p>
+<p>Veggie: <%= @garden.vegetables[:ids] %></p>
+
 
 <%= form_for [@garden, @reservation] do |f| %>
-  <%= f.text_field :veggie_id %>
+  <p>Veggies</p>
+  <%= f.select :vegetable_id, options_for_select(Vegetable.all.map{|c| [c.name, c.start_month, c.end_month]}) %>
   <%= f.text_field :note %>
   <%= f.submit %>
 <% end %>
