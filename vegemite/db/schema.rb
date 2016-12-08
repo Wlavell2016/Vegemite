@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161207013746) do
+ActiveRecord::Schema.define(version: 20161208205233) do
 
   create_table "gardens", force: :cascade do |t|
     t.string   "title"
@@ -19,22 +19,22 @@ ActiveRecord::Schema.define(version: 20161207013746) do
     t.integer  "size"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.integer  "user_id"
+    t.integer  "owner_id"
     t.string   "image"
   end
 
-  create_table "gardens_veggies", force: :cascade do |t|
+  create_table "gardens_vegetables", force: :cascade do |t|
     t.integer "garden_id"
-    t.integer "veggie_id"
+    t.integer "vegetable_id"
   end
 
   create_table "reservations", force: :cascade do |t|
-    t.integer  "veggie_id"
-    t.integer  "user_id"
+    t.integer  "vegetable_id"
+    t.integer  "grower_id"
     t.integer  "garden_id"
     t.text     "note"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 20161207013746) do
     t.string   "image"
   end
 
-  create_table "veggies", force: :cascade do |t|
+  create_table "vegetables", force: :cascade do |t|
     t.string   "name"
     t.string   "start_month"
     t.string   "end_month"
