@@ -6,7 +6,7 @@
 
 <h4>Make a reservation</h4>
 <%= form_for [@garden, @reservation] do |f| %>
-  <p>Veggie: <%= f.select :vegetable_id, options_for_select(@garden.vegetables.map{|c| [c.name, c.start_month, c.end_month]}) %></p>
+  <p>Veggie: <%= f.select :vegetable_id, options_for_select(Vegetable.all.map{|c| [c.name, c.start_month, c.end_month]}) %></p>
   <p>Note: <%= f.text_field :note %></p>
   <%= f.submit %>
 <% end %>
