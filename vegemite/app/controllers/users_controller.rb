@@ -6,6 +6,7 @@ class UsersController < ApplicationController
 
     def show
         @user = User.find(params[:id])
+        # @user = current_user
     end
 
     def new
@@ -13,9 +14,10 @@ class UsersController < ApplicationController
     end
 
     def create
-        @user = User.new(grower_params)
+        @user = User.new(user_params)
         if @user.save
-            redirect_to gardens_url, notice: "Signed up"
+          session[:user_id] = @user.id
+          redirect_to gardens_url, notice: "Signed up"
         else
           render "new"
         end
@@ -43,7 +45,7 @@ class UsersController < ApplicationController
     private
 
     def user_params
-        params.require(:user).permit(:username, :firstname, :lastname, :email, :password, :password_confirmation, :type)
+        params.require(:user).permit(:username, :firstname, :lastname, :email, :password, :password_confirmation)
     end
 
 end

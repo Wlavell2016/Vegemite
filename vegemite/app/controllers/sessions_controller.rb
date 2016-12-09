@@ -9,6 +9,7 @@ class SessionsController < ApplicationController
         # should this be an instance variable or a local variable
         if @user && @user.authenticate(params[:password])
           session[:user_id] = @user.id
+          # flash.now[:notice] = "Logged in!"
           redirect_to root_url, notice: "Logged in!"
         else
           # render :new, alert: "Bad login"

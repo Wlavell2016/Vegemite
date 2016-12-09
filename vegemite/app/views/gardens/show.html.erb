@@ -4,10 +4,12 @@
   Address: <%= @garden.address %><br/>
   Size: <%= @garden.size %><br/>
   About: <%= @garden.description %></br>
+  Vegetable: <%= @garden.vegetables.name %>
 </p>
 
 <h4>Make a reservation</h4>
   <%= form_for [@garden, @reservation] do |f| %>
+  <% f.hidden_field :garden_id, value: @garden.id %>
   Veggie:
     <div class="field">
        <% for vegetable in Vegetable.all %>

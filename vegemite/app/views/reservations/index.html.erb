@@ -1,2 +1,5 @@
-<h1>Reservations#index</h1>
-<p>Find me in app/views/reservations/index.html.erb</p>
+<h1><%= @garden.owner.firstname %>'s Reservations</h1>
+
+<% @garden.reservations.each do |reservation| %>
+  <%= reservation.note %>
+<% end %>

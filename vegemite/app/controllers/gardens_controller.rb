@@ -1,4 +1,5 @@
 class GardensController < ApplicationController
+  before_action :current_user, only: [:create, :destroy]
 
   def index
     @gardens = Garden.all
@@ -15,8 +16,9 @@ class GardensController < ApplicationController
 
   def create
     @garden = Garden.new(garden_params)
+    @garden.owner_id = current_user.id
     if @garden.save
-      redirect_to garden_url
+      redirect_to garden_url(@garden)
     else
       render :new
     end

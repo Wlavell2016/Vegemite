@@ -1,5 +1,5 @@
 class ReservationsController < ApplicationController
-  before_action :ensure_logged_in
+  before_action :ensure_logged_in, only: [:create, :destroy]
   before_action :load_garden
 
   def index
@@ -12,14 +12,16 @@ class ReservationsController < ApplicationController
 
   # def new
   #   @reservation = Reservation.new
+  #   @garden = Garden.find(params[:garden_id])
   # end
 
   def create
     @garden = Garden.find(params[:garden_id])
     @reservation = @garden.reservations.build(reservation_params)
-    @reservation.user = current_user
+    @reservation.grower = current_user
     if @reservation.save
-      redirect_to garden_url(@garden), notice: 'Reservation created successfully'
+      # redirect_to garden_url(@garden), notice: 'Reservation created successfully'
+      redirect to garden_reservations_url, notice: 'Reservation created successfully'
     else
       render 'gardens/show', alert: "Reservation couldn't be saved"
       # test the rendering output when the create method fails to save
@@ -39,10 +41,10 @@ class ReservationsController < ApplicationController
         end
   end
 
-
   def destroy
       @reservation = Reservation.find(params[:id])
       @reservation.destroy
+      redirect_to gardens_url
   end
 
   private
