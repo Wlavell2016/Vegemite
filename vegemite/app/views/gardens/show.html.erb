@@ -3,7 +3,7 @@
 <p>Address: <%= @garden.address %></p>
 <p>Size: <%= @garden.size %></p>
 <p>About: <%= @garden.description %></p>
-<p>Veggie: <%= @garden.vegetables[:ids] %></p>
+<p>Veggie: <%= @garden.vegetables %></p>
 
 
 <%= form_for [@garden, @reservation] do |f| %>
