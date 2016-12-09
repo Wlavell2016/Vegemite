@@ -4,7 +4,11 @@
   Address: <%= @garden.address %><br/>
   Size: <%= @garden.size %><br/>
   About: <%= @garden.description %></br>
-  Vegetable: <%= @garden.vegetables.name %>
+  Vegetable: <% @garden.vegetables.each do |vegetable| %>
+  <%= vegetable.name %><br/>
+  <%= vegetable.start_month %><br/>
+  <%= vegetable.end_month %><br/>
+  <% end %>
 </p>
 
 <h4>Make a reservation</h4>
@@ -12,7 +16,7 @@
   <% f.hidden_field :garden_id, value: @garden.id %>
   Veggie:
     <div class="field">
-       <% for vegetable in Vegetable.all %>
+       <% @garden.vegetables.each do |vegetable|  %>
            <div>
                <%= check_box_tag "garden[vegetable_ids][]", vegetable.id, @garden.vegetables.include?(vegetable) %>
                <%= vegetable.name %>
