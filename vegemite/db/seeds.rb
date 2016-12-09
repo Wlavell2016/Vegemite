@@ -16,7 +16,7 @@ user = User.create!(username: "jsmith",
 garden = Garden.create!(title: "John's garden",
                         description: "small garden",
                         address: "123 front street",
-                        size: 15,
+                        size: 15)
                         owner: user)
 
 vegetable = Vegetable.create!(name: "corn",
