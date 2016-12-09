@@ -1,14 +1,12 @@
 <img src="<%= @garden.image %>">
-<p><%= @garden.title %></p>
+<h4><%= @garden.title %></h4>
 <p>Address: <%= @garden.address %></p>
 <p>Size: <%= @garden.size %></p>
 <p>About: <%= @garden.description %></p>
-<p>Veggie: <%= @garden.vegetables[:ids] %></p>
 
-
+<h4>Make a reservation</h4>
 <%= form_for [@garden, @reservation] do |f| %>
-  <p>Veggies</p>
-  <%= f.select :vegetable_id, options_for_select(Vegetable.all.map{|c| [c.name, c.start_month, c.end_month]}) %>
-  <%= f.text_field :note %>
+  <p>Veggie: <%= f.select :vegetable_id, options_for_select(@garden.vegetables.map{|c| [c.name, c.start_month, c.end_month]}) %></p>
+  <p>Note: <%= f.text_field :note %></p>
   <%= f.submit %>
 <% end %>
