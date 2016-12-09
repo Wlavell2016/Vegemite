@@ -7,6 +7,6 @@ class User < ApplicationRecord
     has_many :booked_gardens, through: :reservations
     # from the grower's perspective, as a user
 
-    validates :username, :firstname, :lastname, :email, presence: true
+    validates :username, :firstname, :lastname, :email, :type, presence: true
     validates :email, uniqueness: true
 end
