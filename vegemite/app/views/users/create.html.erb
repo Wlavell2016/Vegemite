@@ -1,2 +1,42 @@
 <h1>Users#create</h1>
 <p>Find me in app/views/users/create.html.erb</p>
+
+<%= form_for @user do |form| %>
+    <% if @user.errors.any? %>
+      <div class="error_messages">
+        <h2>Form is invalid</h2>
+        <ul>
+          <% @user.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+
+<div class="field">
+  <%= form.label :username %><br />
+  <%= form.text_field :username %>
+</div>
+
+
+<div class="field">
+  <%= form.label :lastname %><br />
+  <%= form.text_field :lastname %>
+</div>
+
+
+<div class="field">
+  <%= form.label :email %><br />
+  <%= form.text_field :email %>
+</div>
+
+<div class="field">
+  <%= form.label :password_digest %><br />
+  <%= form.text_field :password_digest %>
+</div>
+
+<div class="field">
+  <%= form.label :name %><br />
+  <%= form.text_field :name %>
+</div>
+
+<%= end %>
