@@ -1,2 +1,38 @@
-<h1>Gardens#new</h1>
-<p>Find me in app/views/gardens/new.html.erb</p>
+<h1>Add a Garden</h1>
+  <%= form_for [@garden] do |f| %>
+
+    <% if @garden.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@garden.errors.count, "error") %> prohibited this garden from being saved:</h2>
+
+        <ul>
+        <% @garden.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :title %><br/>
+      <%= f.text_field :title %>
+    </div>
+    <div class="field">
+      <%= f.label :description %><br/>
+      <%= f.text_field :description %>
+    </div>
+    <div class="field">
+      <%= f.label :address %><br/>
+      <%= f.text_field :address %>
+    </div>
+    <div class="field">
+      <%= f.label :size %><br/>
+      <%= f.text_area :size %>
+    </div>
+    <div class="field">
+      <%= f.label :image %><br />
+      <%= f.text_field :image %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>

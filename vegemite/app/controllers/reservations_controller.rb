@@ -23,6 +23,7 @@ class ReservationsController < ApplicationController
     else
       render 'gardens/show', alert: "Reservation couldn't be saved"
       # test the rendering output when the create method fails to save
+    end
   end
 
   def edit
