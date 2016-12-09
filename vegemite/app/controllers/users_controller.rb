@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     end
 
     def create
-        @user = User.new(user_params)
+        @user = User.new(grower_params)
         if @user.save
             redirect_to gardens_url, notice: "Signed up"
         else

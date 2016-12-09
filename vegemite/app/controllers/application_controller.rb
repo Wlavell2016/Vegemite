@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def ensure_logged_in
-    redirect_to root_url, alert: "Sorry, I can't let you do that." unless current_user
+    redirect_to root_url, alert: "Please log in" unless current_user
   end
 
   private

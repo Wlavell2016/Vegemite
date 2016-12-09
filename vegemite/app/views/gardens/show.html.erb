@@ -1,12 +1,22 @@
 <img src="<%= @garden.image %>">
-<h4><%= @garden.title %></h4>
-<p>Address: <%= @garden.address %></p>
-<p>Size: <%= @garden.size %></p>
-<p>About: <%= @garden.description %></p>
+<h3><%= @garden.title %></h3>
+<p>
+  Address: <%= @garden.address %><br/>
+  Size: <%= @garden.size %><br/>
+  About: <%= @garden.description %></br>
+</p>
 
 <h4>Make a reservation</h4>
-<%= form_for [@garden, @reservation] do |f| %>
-  <p>Veggie: <%= f.select :vegetable_id, options_for_select(Vegetable.all.map{|c| [c.name, c.start_month, c.end_month]}) %></p>
+  <%= form_for [@garden, @reservation] do |f| %>
+  Veggie:
+    <div class="field">
+       <% for vegetable in Vegetable.all %>
+           <div>
+               <%= check_box_tag "garden[vegetable_ids][]", vegetable.id, @garden.vegetables.include?(vegetable) %>
+               <%= vegetable.name %>
+           </div>
+       <% end %>
+    </div>
   <p>Note: <%= f.text_field :note %></p>
   <%= f.submit %>
-<% end %>
+  <% end %>
