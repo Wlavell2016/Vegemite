@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
 
     def new
+      # why is this empty?
     end
 
     def create

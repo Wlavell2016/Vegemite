@@ -52,7 +52,7 @@ class ReservationsController < ApplicationController
   end
 
   def load_garden
-    @garden = Garden.find(params)[:garden_id]
+    @garden = Garden.find(params[:garden_id])
   end
 
 end
