@@ -11,7 +11,7 @@ class GardensController < ApplicationController
   end
 
   def new
-      @garden = Garden.new
+    @garden = Garden.new
   end
 
   def create
@@ -31,9 +31,9 @@ class GardensController < ApplicationController
   def update
     @garden = Garden.find(params[:id])
     if @garden.update_attributes(garden_params)
-        redirect_to garden_url(@garden)
+      redirect_to garden_url(@garden)
     else
-        render :edit
+      render :edit
     end
   end
 

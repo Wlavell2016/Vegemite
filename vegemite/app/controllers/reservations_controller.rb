@@ -52,7 +52,7 @@ class ReservationsController < ApplicationController
   private
 
   def reservation_params
-      params.require(:reservation).permit(:note)
+    params.require(:reservation).permit(:note)
   end
 
   def load_garden
