@@ -4,7 +4,6 @@
     <% if @garden.errors.any? %>
       <div id="error_explanation">
         <h2><%= pluralize(@garden.errors.count, "error") %> prohibited this garden from being saved:</h2>
-
         <ul>
         <% @garden.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
@@ -35,10 +34,10 @@
     Veggie:
       <div class="field">
          <% for vegetable in Vegetable.all %>
-             <div>
-                 <%= check_box_tag "garden[vegetable_ids][]", vegetable.id, @garden.vegetables.include?(vegetable) %>
-                 <%= vegetable.name %>
-             </div>
+           <div>
+             <%= check_box_tag "garden[vegetable_ids][]", vegetable.id, @garden.vegetables.include?(vegetable) %>
+             <%= vegetable.name %>
+           </div>
          <% end %>
       </div>
     <div class="field">
@@ -48,4 +47,5 @@
     <div class="actions">
       <%= f.submit %>
     </div>
+    
   <% end %>

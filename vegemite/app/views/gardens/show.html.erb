@@ -16,12 +16,12 @@
   <% f.hidden_field :garden_id, value: @garden.id %>
   Veggie:
     <div class="field">
-       <% @garden.vegetables.each do |vegetable|  %>
-           <div>
-               <%= check_box_tag "garden[vegetable_ids][]", vegetable.id, @garden.vegetables.include?(vegetable) %>
-               <%= vegetable.name %>
-           </div>
-       <% end %>
+      <% @garden.vegetables.each do |vegetable|  %>
+        <div>
+          <%= check_box_tag "garden[vegetable_ids][]", vegetable.id, @garden.vegetables.include?(vegetable) %>
+          <%= vegetable.name %>
+        </div>
+      <% end %>
     </div>
   <p>Note: <%= f.text_field :note %></p>
   <%= f.submit %>
