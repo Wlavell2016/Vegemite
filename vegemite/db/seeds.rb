@@ -6,26 +6,34 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user = User.create!(username: "jsmith",
-                    firstname: "John",
-                    lastname: "Smith",
-                    email: "jsmith1@gmail.com",
-                    password: "passpass",
-                    password_confirmation: "passpass")
+require 'faker'
 
-garden = Garden.create!(title: "John's garden",
-                        description: "small garden",
-                        address: "123 front street",
-                        size: 15)
-                        owner: user)
+20.times do
+  fullname = Faker::Name.name
+  firstname = fullname.split.first
 
-vegetable = Vegetable.create!(name: "corn",
-                              start_month: "March",
-                              end_month: "November")
+  user = User.create!(
+    username: firstname.downcase,
+    firstname: firstname,
+    lastname: fullname.split.last,
+    email: "#{firstname}@#{Faker::Internet.domain_name}",
+    password: 'passpass',
+    password_confirmation: 'passpass'
+  )
 
-Vegetable.create(id:10, name: "tomato", start_month: "April", end_month: "May")
-Vegetable.create(id:11, name: "broccoli", start_month: "March", end_month: "May")
-Vegetable.create(id:12, name: "pumpkin", start_month: "May", end_month: "May")
+
+garden = Garden.create!(title: ,
+                        description:,
+                        address: ,
+                        size: )
+                        owner: )
+
+vegetable = Vegetable.create!(name: ,
+                              start_month: ,
+                              end_month: )
+
+
+end
 
 # Category.create(id:1, description: "Art")
 # Category.create(id:2, description: "Comics")
