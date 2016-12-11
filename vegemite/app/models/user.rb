@@ -13,7 +13,7 @@ class User < ApplicationRecord
   # has_many :booked_gardens, class_name: 'Reservation', foreign_key: :grower_id
   # has_many :reserved_gardens, class_name: 'Garden', source: :garden, through: :booked_gardens
 
-  validates :username, :firstname, :lastname, :email, :type, presence: true
+  validates :username, :firstname, :lastname, :email, presence: true
   validates :email, uniqueness: true
   validates :password, presence: true
   validates :password_confirmation, presence: true

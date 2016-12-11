@@ -23,7 +23,7 @@ class ReservationsController < ApplicationController
     @reservation.grower = current_user
     if @reservation.save
       # redirect_to garden_url(@garden), notice: 'Reservation created successfully'
-      redirect_to garden_reservations_url, notice: 'Reservation created successfully'
+      redirect_to garden_reservation_url(@garden, @reservation), notice: 'Reservation created successfully'
     else
       render 'gardens/show', alert: "Reservation couldn't be saved"
       # test the rendering output when the create method fails to save
