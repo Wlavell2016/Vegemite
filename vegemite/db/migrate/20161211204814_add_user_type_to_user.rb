@@ -1,7 +1,5 @@
 class AddUserTypeToUser < ActiveRecord::Migration[5.0]
   def change
-        change_table :users do |t|
-        t.string :usertype
-      end
+        rename_column :users, :type, :usertype
   end
 end

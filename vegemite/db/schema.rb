@@ -46,7 +46,6 @@ ActiveRecord::Schema.define(version: 20161211204814) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.string   "image"
-    t.string   "type"
     t.string   "usertype"
   end
 
