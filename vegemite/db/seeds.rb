@@ -6,26 +6,85 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user = User.create!(username: "jsmith",
+user = User.create!(username: "asmith",
                     firstname: "John",
                     lastname: "Smith",
-                    email: "jsmith1@gmail.com",
+                    email: "asmith1@gmail.com",
                     password: "passpass",
                     password_confirmation: "passpass")
+                    # type: 'A')
 
 garden = Garden.create!(title: "John's garden",
-                        description: "small garden",
-                        address: "123 front street",
-                        size: 15)
-                        owner: user)
+                    description: "small garden",
+                    address: "242 front street, toronto ontario, canada",
+                    size: 15,
+                    owner_id: 1)
+
+user = User.create!(username: "bsmith",
+                    firstname: "John",
+                    lastname: "Smith",
+                    email: "bsmith1@gmail.com",
+                    password: "passpass",
+                    password_confirmation: "passpass")
+                    # type: 'B')
+
+garden = Garden.create!(title: "John's garden",
+                    description: "small garden",
+                    address: "242 front street, toronto ontario, canada",
+                    size: 15,
+                    owner_id: 2)
+
+user = User.create!(username: "csmith",
+                    firstname: "John",
+                    lastname: "Smith",
+                    email: "csmith1@gmail.com",
+                    password: "passpass",
+                    password_confirmation: "passpass")
+                    # type: 'C')
+
+garden = Garden.create!(title: "John's garden",
+                    description: "small garden",
+                    address: "242 front street, toronto ontario, canada",
+                    size: 15,
+                    owner_id: 3)
+
+user = User.create!(username: "dsmith",
+                    firstname: "John",
+                    lastname: "Smith",
+                    email: "dsmith1@gmail.com",
+                    password: "passpass",
+                    password_confirmation: "passpass")
+                    # type: 'D')
+
+garden = Garden.create!(title: "John's garden",
+                    description: "small garden",
+                    address: "123 front street",
+                    size: 15,
+                    owner_id: 4)
+
+
+user = User.create!(username: "esmith",
+                    firstname: "John",
+                    lastname: "Smith",
+                    email: "esmith1@gmail.com",
+                    password: "passpass",
+                    password_confirmation: "passpass")
+                    # type:)
+
+garden = Garden.create!(title: "John's garden",
+                    description: "small garden",
+                    address: "123 front street",
+                    size: 15,
+                    owner_id: 5)
+
 
 vegetable = Vegetable.create!(name: "corn",
                               start_month: "March",
                               end_month: "November")
 
-Vegetable.create(id:10, name: "tomato", start_month: "April", end_month: "May")
-Vegetable.create(id:11, name: "broccoli", start_month: "March", end_month: "May")
-Vegetable.create(id:12, name: "pumpkin", start_month: "May", end_month: "May")
+# Vegetable.create(name: "tomato", start_month: "April", end_month: "May")
+# Vegetable.create(name: "broccoli", start_month: "March", end_month: "May")
+# Vegetable.create(name: "pumpkin", start_month: "May", end_month: "May")
 
 # Category.create(id:1, description: "Art")
 # Category.create(id:2, description: "Comics")
