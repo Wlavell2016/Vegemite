@@ -3,6 +3,7 @@ class User < ApplicationRecord
 
   has_many :reservations
 
+<<<<<<< HEAD
   # from the owner's perspective, as a user
   has_many :owned_gardens, source: :gardens, class_name: 'Garden'
   # has_many: :owned_gardens, class_name: 'Garden', foreign_key: :owner_id
@@ -17,4 +18,8 @@ class User < ApplicationRecord
   validates :email, uniqueness: true
   validates :password, presence: true
   validates :password_confirmation, presence: true
+=======
+    # validates :username, :firstname, :lastname, :email, :type, presence: true
+    # validates :email, uniqueness: true
+>>>>>>> nickytest
 end
