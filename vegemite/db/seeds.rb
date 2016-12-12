@@ -24,38 +24,38 @@ end
 
 garden = Garden.create!(title: "John's garden",
                         description: "small garden",
-                        address: "123 front street",
+                        address: "2434 cornwall avenue vancouver bc",
                         size: 15,
                         owner_id: 1,
                         image: "https://s-media-cache-ak0.pinimg.com/564x/08/e7/09/08e7092876f855f0cb43c9b7556ceadb.jpg")
 
 garden = Garden.create!(title: "John's garden",
                     description: "small garden",
-                    address: "242 front street, toronto ontario, canada",
+                    address: "4576 connaught drive vancouver bc",
                     size: 15,
                     owner_id: 1)
 
 garden = Garden.create!(title: "John's garden",
                     description: "small garden",
-                    address: "242 front street, toronto ontario, canada",
+                    address: "1237 east broadway vancouver bc",
                     size: 15,
                     owner_id: 2)
 
 garden = Garden.create!(title: "John's garden",
                     description: "small garden",
-                    address: "242 front street, toronto ontario, canada",
+                    address: "3263 west 33rd avenue vancouver bc",
                     size: 15,
                     owner_id: 3)
 
 garden = Garden.create!(title: "John's garden",
                     description: "small garden",
-                    address: "123 front street",
+                    address: "1168 howe street vancouver bc",
                     size: 15,
                     owner_id: 4)
 
 garden = Garden.create!(title: "John's garden",
                     description: "small garden",
-                    address: "123 front street",
+                    address: "1842 west 3rd avenue vancouver bc",
                     size: 15,
                     owner_id: 5)
 
