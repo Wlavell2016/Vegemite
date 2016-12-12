@@ -2,12 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#map {
+    height: 100%;
+    width: 800px;
+    position: absolute;
+    right: 5px;
+    top: 5%;
+}
 
-#map{
-   margin-top:5%; padding:0;
-   position:absolute; top:0; right: 1%; bottom:0;
-   // float: right;
-   height: 400px;
-   width: 65%;
-   // float: right
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
