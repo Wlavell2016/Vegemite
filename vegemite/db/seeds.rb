@@ -20,31 +20,31 @@ require 'faker'
     password: 'passpass',
     password_confirmation: 'passpass'
   )
-
-
-garden = Garden.create!(title: ,
-                        description:,
-                        address: ,
-                        size: )
-                        owner: )
-
-vegetable = Vegetable.create!(name: ,
-                              start_month: ,
-                              end_month: )
-
-
 end
-
-# Category.create(id:1, description: "Art")
-# Category.create(id:2, description: "Comics")
-# Category.create(id:3, description: "Crafts")
-# Category.create(id:4, description: "Dance")
-# Category.create(id:5, description: "Design")
-# Category.create(id:6, description: "Fashion")
-# Category.create(id:7, description: "Film/Video")
-# Category.create(id:8, description: "Food")
-# Category.create(id:9, description: "Games")
-# Category.create(id:10, description: "Journalism")
-# Category.create(id:11, description: "Music")
-# Category.create(id:12, description: "Photography")
-# Category.create(id:13, description: "Publishing")
+#
+# garden = Garden.create!(title: ,
+#                         description:,
+#                         address: ,
+#                         size: )
+#                         owner: )
+#
+# vegetable = Vegetable.create!(name: ,
+#                               start_month: ,
+#                               end_month: )
+#
+#
+# end
+#
+# # Category.create(id:1, description: "Art")
+# # Category.create(id:2, description: "Comics")
+# # Category.create(id:3, description: "Crafts")
+# # Category.create(id:4, description: "Dance")
+# # Category.create(id:5, description: "Design")
+# # Category.create(id:6, description: "Fashion")
+# # Category.create(id:7, description: "Film/Video")
+# # Category.create(id:8, description: "Food")
+# # Category.create(id:9, description: "Games")
+# # Category.create(id:10, description: "Journalism")
+# # Category.create(id:11, description: "Music")
+# # Category.create(id:12, description: "Photography")
+# # Category.create(id:13, description: "Publishing")
