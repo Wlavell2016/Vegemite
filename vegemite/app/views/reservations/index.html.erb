@@ -1,5 +1,12 @@
-<h1><%= @garden.owner.firstname %>'s Reservations</h1>
+<%= link_to "Back to Gardens", gardens_url %>
 
-<% @garden.reservations.each do |reservation| %>
-  <%= reservation.note %>
+<h1>Reservations</h1>
+
+<% @reservations.each do |reservation| %>
+  <p>
+    Name: <%= reservation.grower.username %></br>
+    Veggie: <%= reservation.vegetable_id %></br>
+    Note: <%= reservation.note %>
+  </p>
 <% end %>
+<!-- how to iterate thru veggies for each reservations? -->

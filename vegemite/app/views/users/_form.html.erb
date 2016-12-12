@@ -1,5 +1,4 @@
-<h1>Sign up</h1>
-
+<div class="form">
 <%= form_for @user do |form| %>
 
   <% if @user.errors.any? %>
@@ -12,11 +11,6 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label "Type" %><br/>
-    <%= form.text_field :type %>
-  </div>
 
   <div class="field">
     <%= form.label "User Name" %><br/>
@@ -48,6 +42,12 @@
     <%= form.password_field :password_confirmation %>
   </div>
 
+  <div class="field">
+    <%= form.label "Type" %><br/>
+    <%= form.text_field :type %>
+  </div>
+
   <div class="actions"><%= form.submit %></div>
 
 <% end %>
+</div>

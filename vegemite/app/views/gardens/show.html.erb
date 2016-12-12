@@ -1,3 +1,5 @@
+<%= link_to "Back to Gardens", gardens_path %>
+
 <img src="<%= @garden.image %>">
 <h4><%= @garden.title.upcase %></h4>
 <p>
@@ -10,7 +12,9 @@
   <% end %>
 </p>
 
-<h4>Make a reservation</h4>
+<p id="reserve"><%= link_to "Reserve", new_garden_reservation_path(@garden)%></p>
+
+<!-- <h4>Make a reservation</h4>
   <%= form_for [@garden, @reservation] do |f| %>
   <% f.hidden_field :garden_id, value: @garden.id %>
   What veg would you like to grow?
@@ -24,4 +28,4 @@
     </div>
   <p>Note: <%= f.text_field :note %></p>
   <%= f.submit %>
-  <% end %>
+  <% end %> -->
