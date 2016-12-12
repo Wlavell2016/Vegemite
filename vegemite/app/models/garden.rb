@@ -8,4 +8,5 @@ class Garden < ApplicationRecord
 
   validates :title, :description, :address, :size, presence: true
   validates :size, numericality: {only_integer: true}
+
 end

@@ -1,3 +1,4 @@
+
 <h1>Gardens</h1>
 
 <div class="gardens">
@@ -10,4 +11,54 @@
       <%= link_to 'More details or whatever', garden_path(garden) %>
     </p>
   <% end %>
+
+<div id="map">
+
 </div>
+
+</div>
+
+    <p class='geodata'>
+    <% @gardens.each do |f| %>
+            <p data-geo= "<%= f.address %>"></p>
+            <% end %>
+    </p>
+
+
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 49.27970, lng: -123.11562},
+          zoom: 12
+        });
+      }
+
+        codeAddress(Ireland);
+      var Ireland = "Dublin";
+        function initialize()
+        {
+          geocoder = new google.maps.Geocoder();
+          map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+          codeAddress(Ireland);//call the function
+        }
+        function codeAddress(address){
+          geocoder.geocode( {address:address}, function(results, status){
+            if (status == google.maps.GeocoderStatus.OK)
+            {
+              map.setCenter(results[0].geometry.location);//center the map over the result
+              //place a marker at the location
+              var marker = new google.maps.Marker(
+              {
+                  map: map,
+                  position: results[0].geometry.location
+              });
+            } else {
+              alert('Geocode was not successful for the following reason: ' + status);
+           }
+          });
+        }
+    </script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkgLUAdpOZhEbs3SAkYUGPDAo0-zaDg3I&callback=initMap"
+async defer></script>
