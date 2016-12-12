@@ -7,12 +7,13 @@ class ReservationsController < ApplicationController
   end
 
   def show
+    @garden = Garden.find(params[:garden_id])
     @reservation = Reservation.find(params[:id])
   end
 
   def new
-    @reservation = Reservation.new
     @garden = Garden.find(params[:garden_id])
+    @reservation = Reservation.new
   end
 
   def create
@@ -23,9 +24,9 @@ class ReservationsController < ApplicationController
     @reservation.grower = current_user
     if @reservation.save
       # redirect_to garden_url(@garden), notice: 'Reservation created successfully'
-      redirect_to garden_reservation_url(@garden, @reservation), notice: 'Reservation created successfully'
+      redirect_to garden_reservation_url(@garden, @reservation), notice: 'Reservation made!'
     else
-      render 'gardens/show', alert: "Reservation couldn't be saved"
+      render 'gardens/show', alert: "Sorry, the reservation couldn't be saved"
       # test the rendering output when the create method fails to save
     end
   end
