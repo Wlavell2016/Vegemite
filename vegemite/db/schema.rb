@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161213012129) do
+ActiveRecord::Schema.define(version: 20161213014959) do
 
   create_table "gardens", force: :cascade do |t|
     t.string   "title"
@@ -51,11 +51,12 @@ ActiveRecord::Schema.define(version: 20161213012129) do
 
   create_table "vegetables", force: :cascade do |t|
     t.string   "name"
-    t.string   "start_month"
-    t.string   "end_month"
+    t.string   "sow_period"
+    t.string   "plant_out_period"
     t.string   "image"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.string   "harvest"
   end
 
 end
