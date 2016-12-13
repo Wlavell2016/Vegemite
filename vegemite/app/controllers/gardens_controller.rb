@@ -49,4 +49,10 @@ class GardensController < ApplicationController
     params.require(:garden).permit(:title, :description, :address, :size, :name, vegetable_ids:[])
   end
 
+  # def garden_owner
+  #   garden = Garden.find(params[:id])
+  #   if current_user != garden.owner
+  #     redirect
+  # end
+
 end

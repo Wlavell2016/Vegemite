@@ -3,28 +3,28 @@
   <head>
     <title>Greenthumbs</title>
     <%= csrf_meta_tags %>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <header>
-      <div id="title"><h2><a href="/">Greenthumbs</a></h2></div>
+    <header class="site-header">
+      <h1 class="logo"><a href="/">Greenthumbs</a></h1>
 
-      <div class="dashboard">
-        <a href="">My Profile</a>
-        <a href="">Calendar</a>
-        <a href="">Messages</a>
-      </div>
-
-      <div class="userinfo">
+      <nav class="site-nav">
+        <%= link_to "Home", root_path %>
         <% if current_user %>
-          Hello, <%= current_user.username %>!</br><%= link_to "Log out", session_path("current"), :method => :delete %>
+          <%= link_to "Profile", "/users/#{session[:user_id]}" %>
+          <%= link_to "Add a Garden", "/gardens/new" %>
+          <%= link_to "Calendar" %>
+          <%= link_to "Inbox" %>
+          Hello, <%= current_user.username %>!
+          <%= link_to "Log out", session_path("current"), :method => :delete %>
         <% else %>
           <%= link_to "Log in", new_session_path %> or <%= link_to "Sign up", new_user_path %>
         <% end %>
-      </div>
-
+      </nav>
     </header>
 
     <% if flash[:notice] %>
@@ -34,7 +34,12 @@
       <p id="alert"><%= flash[:alert] %></p>
     <% end %>
 
-    <%= yield %>
+    <main>
+      <%= yield %>
+    </main>
 
+    <footer class="site-footer">
+      <small>&copy The app formerly known as vegemite</small>
+    </footer>
   </body>
 </html>
