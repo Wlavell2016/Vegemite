@@ -3,8 +3,8 @@
 <div class="gardens">
   <% @gardens.each do |garden| %>
     <img src="<%= garden.image %>">
-    <h3><%= garden.title %></h3>
-    <p>
+    <h3 class="garden-name"><%= garden.title %></h3>
+    <p class="garden-info">
       Address: <%= garden.address %><br/>
       Size: <%= garden.size %><br/>
       <%= link_to 'More details or whatever', garden_path(garden) %>

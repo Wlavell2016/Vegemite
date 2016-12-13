@@ -1,7 +1,7 @@
 <%= link_to 'Back to Gardens', gardens_path %>
 <!-- change link to go to landing page -->
 
-<h1><%= @user.username.capitalize %>'s Profile</h1>
+<h1 class="page-title"><%= @user.username.capitalize %>'s Profile</h1>
 
 <div class="user_profile">
   <h4>Username: <%= @user.username %></h4>
@@ -13,5 +13,11 @@
   <!-- listings -->
   <!-- reservations -->
 </div>
+
+<h3>Reservations:</h3>
+<!-- iterate through reservations -->
+
+<h3>Gardens:</h3>
+<!-- iterate through owned gardens -->
 
 <%= link_to 'Update', edit_user_path(@user) %>
