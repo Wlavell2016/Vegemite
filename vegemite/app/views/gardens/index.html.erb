@@ -31,8 +31,9 @@
                 center: {lat: 49.27970, lng: -123.11562},
                 });
 
-            function codeAddress(address_input) {
+            function codeAddress(address_input, infowindow) {
                 var garden = address_input
+                var infoInput = infowindow
                 var geocoder = new google.maps.Geocoder();
                 geocoder.geocode( {'address': garden}, function(results, status) {
                         console.log(results, status)
@@ -42,17 +43,25 @@
                 map: map,
                 position: results[0].geometry.location
                 });
+            var contentString = infoInput
+
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString
+                });
+            marker.addListener('click', function() {
+            infowindow.open(map, marker);
+            });
               } else {
                 alert('Geocode was not successful for the following reason: ' + status);
               }
             });
           }
-            //   <% @gardens.each do |f| %>
-            //           codeAddress("<%= f.address %>")
-            //           <% end %>
-            $('.geodata').each(function(){
-                codeAddress($(this).data('geo'))
-            })
+              <% @gardens.each do |f| %>
+                      codeAddress("<%= f.address %>", "<%= f.title %>")
+                      <% end %>
+            // $('.geodata').each(function(){
+            //     codeAddress($(this).data('geo'))
+            // })
     }
     </script>
 
