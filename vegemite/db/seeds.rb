@@ -6,31 +6,19 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# require 'faker'
-#
-# 20.times do
-#   fullname = Faker::Name.name
-#   firstname = fullname.split.first
-#
-#   user = User.create!(
-#     username: firstname.downcase,
-#     firstname: firstname,
-#     lastname: fullname.split.last,
-#     email: "#{firstname}@#{Faker::Internet.domain_name}",
-#     password: 'passpass',
-#     password_confirmation: 'passpass'
-#   )
-# end
-#
-# garden = Garden.create!(title: ,
-#                         description:,
-#                         address: ,
-#                         size: )
-#                         owner: )
-#
-# vegetable = Vegetable.create!(name: ,
-#                               start_month: ,
-#                               end_month: )
-#
-#
-# end
+require 'faker'
+
+20.times do
+  fullname = Faker::Name.name
+  firstname = fullname.split.first
+
+  user = User.create!(
+    username: fullname.downcase,
+    firstname: firstname,
+    lastname: fullname.split.last,
+    email: "#{firstname}@#{Faker::Internet.domain_name}",
+    password: 'passpass',
+    password_confirmation: 'passpass'
+  )
+  puts "#{fullname}"
+end
