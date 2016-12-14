@@ -1,10 +1,5 @@
 class Reservation < ApplicationRecord
-  belongs_to :garden
-
-  belongs_to :grower, class_name: 'User'
-  has_one :owner, through: :garden, class_name: 'User'
-
-  # belongs_to :vegetable
-  # has_one :owner, class_name: 'User', through : :garden
-  # belongs_to :grower, class_name: 'User'
+    belongs_to :garden
+    belongs_to :user
+    has_and_belongs_to_many :vegetables
 end

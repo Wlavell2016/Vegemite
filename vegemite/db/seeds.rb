@@ -9,60 +9,139 @@
 require 'faker'
 
 20.times do
-  fullname = Faker::Name.name
-  firstname = fullname.split.first
+    fullname = Faker::Name.name
+    firstname = fullname.split.first
 
-  user = User.create!(
-    username: firstname.downcase,
-    firstname: firstname,
-    lastname: fullname.split.last,
-    email: "#{firstname}@#{Faker::Internet.domain_name}",
-    password: 'passpass',
-    password_confirmation: 'passpass'
-  )
+    user = User.create!(
+        username: fullname.downcase,
+        firstname: firstname,
+        lastname: fullname.split.last,
+        email: "#{Faker::Internet.free_email(firstname)}",
+        password: 'passpass',
+        password_confirmation: 'passpass'
+    )
 end
 
-garden = Garden.create!(title: "John's garden",
-                        description: "small garden",
-                        address: "2434 cornwall avenue vancouver bc",
-                        size: 15,
-                        owner_id: 1,
-                        image: "https://s-media-cache-ak0.pinimg.com/564x/08/e7/09/08e7092876f855f0cb43c9b7556ceadb.jpg")
+20.times do
+    title = Faker::Pokemon.location
+    description = Faker::Lorem.paragraphs(1)
+    size = Faker::Number.number(3)
+    address = ['4576 connaught drive vancouver bc',
+               '1237 east broadway vancouver bc',
+               '3263 west 33rd avenue vancouver bc',
+               '1168 howe street vancouver bc']
 
-garden = Garden.create!(title: "John's garden",
-                    description: "small garden",
-                    address: "4576 connaught drive vancouver bc",
-                    size: 15,
-                    owner_id: 1)
+    garden = Garden.create!(title: title,
+                            description: description,
+                            address: address.sample,
+                            size: size)
+end
 
-garden = Garden.create!(title: "John's garden",
-                    description: "small garden",
-                    address: "1237 east broadway vancouver bc",
-                    size: 15,
-                    owner_id: 2)
+name = ['Asparagus',
+        'Broad Beans',
+        'Beetroot',
+        'Broccoli',
+        'Cabbage',
+        'Carrot',
+        'Cauliflower',
+        'Celeriac',
+        'Celery',
+        'Cucumber',
+        'Endive',
+        'French Beans',
+        'Leek',
+        'Mustard',
+        'Onion',
+        'Parsley',
+        'Peas',
+        'Peppers',
+        'Spinach',
+        'Squash',
+        'Tomato']
 
-garden = Garden.create!(title: "John's garden",
-                    description: "small garden",
-                    address: "3263 west 33rd avenue vancouver bc",
-                    size: 15,
-                    owner_id: 3)
+sow_period = [
+    'Jan - Feb',
+    'Feb - May',
+    'Mar - Jul',
+    'Apr - Jun',
+    'Feb - Jun',
+    'Feb - Aug',
+    'Jan - Jun',
+    'Feb - Apr',
+    'Feb - May',
+    'Feb - Apr',
+    'Mar - Jul',
+    'Apr - Jun',
+    'Mar - May',
+    'Jun - Sep',
+    'Feb - Apr',
+    'Feb - Jul',
+    'Mar - Jun',
+    'Mar - Apr',
+    'Mar - Jul',
+    'Mar - Apr',
+    'Nov - Mar'
+]
 
-garden = Garden.create!(title: "John's garden",
-                    description: "small garden",
-                    address: "1168 howe street vancouver bc",
-                    size: 15,
-                    owner_id: 4)
+plant_out_period = [
+    'Apr - May',
+    'n/a',
+    'n/a',
+    'Jun - Jul',
+    'Mar - Jun',
+    'n/a',
+    'Mar - Jul',
+    'Apr - May',
+    'Mar - May',
+    'May - Aug',
+    'May - Jun',
+    'Apr - May',
+    'n/a',
+    'n/a',
+    'n/a',
+    'n/a',
+    'Apr - Jun',
+    'n/a',
+    'May - Jun',
+    'n/a',
+    'Feb - May'
+]
 
-garden = Garden.create!(title: "John's garden",
-                    description: "small garden",
-                    address: "1842 west 3rd avenue vancouver bc",
-                    size: 15,
-                    owner_id: 5)
+harvest = [
+    'Apr - Jun',
+    'May - Oct',
+    'Jun - Oct',
+    'Jul - Aug',
+    'Jun - Oct',
+    'Jun - Oct',
+    'Jul - Nov',
+    'Oct - Dec',
+    'Jul - Nov',
+    'Apr - Jul',
+    'Jul - Oct',
+    'May - Oct',
+    'Jul - Nov',
+    'Jul - Oct',
+    'Aug - Oct',
+    'Jun - Sep',
+    'Jun - Sep',
+    'Jun - Oct',
+    'Apr - Oct',
+    'Jun - Sep',
+    'Aug - Oct'
+]
 
-vegetable = Vegetable.create!(name: "corn",
-                              start_month: "March",
-                              end_month: "November")
+name.length.times do |i|
+    vegetable = Vegetable.create!(name: name[i],
+                                  sow_period: sow_period[i],
+                                  plant_out_period: plant_out_period[i],
+                                  harvest: harvest[i])
+end
 
-vegetable2 = Vegetable.create!(name: "beet",
-                              start_month: "March",
-                              end_month: "November")
+4.times do
+  u = User.find(1)
+  g = Garden.find(1)
+  reservation = u.reservations.create!(user_id: u.id,
+                        garden_id: g.id,
+                        note: "Gnome-like atmosphere and post-modern aesthetics. Fantastic! 5 Stars!")
+end

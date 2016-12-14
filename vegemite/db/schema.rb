@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20161213012904) do
+=======
+ActiveRecord::Schema.define(version: 20161214011340) do
+>>>>>>> nickytest
 
   create_table "gardens", force: :cascade do |t|
     t.string   "title"
@@ -19,8 +23,12 @@ ActiveRecord::Schema.define(version: 20161213012904) do
     t.integer  "size"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.integer  "owner_id"
     t.string   "image"
+  end
+
+  create_table "gardens_users", force: :cascade do |t|
+    t.integer "garden_id"
+    t.integer "user_id"
   end
 
   create_table "gardens_vegetables", force: :cascade do |t|
@@ -29,13 +37,22 @@ ActiveRecord::Schema.define(version: 20161213012904) do
   end
 
   create_table "reservations", force: :cascade do |t|
-    t.integer  "vegetable_id"
-    t.integer  "grower_id"
+    t.integer  "user_id"
     t.integer  "garden_id"
     t.text     "note"
+<<<<<<< HEAD
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.datetime "date"
+=======
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "reservations_vegetables", force: :cascade do |t|
+    t.integer "reservation_id"
+    t.integer "vegetable_id"
+>>>>>>> nickytest
   end
 
   create_table "users", force: :cascade do |t|
@@ -47,16 +64,20 @@ ActiveRecord::Schema.define(version: 20161213012904) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.string   "image"
+<<<<<<< HEAD
     t.string   "categoryuser"
+=======
+>>>>>>> nickytest
   end
 
   create_table "vegetables", force: :cascade do |t|
     t.string   "name"
-    t.string   "start_month"
-    t.string   "end_month"
+    t.string   "sow_period"
+    t.string   "plant_out_period"
     t.string   "image"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.string   "harvest"
   end
 
 end
