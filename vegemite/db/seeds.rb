@@ -20,5 +20,4 @@ require 'faker'
     password: 'passpass',
     password_confirmation: 'passpass'
   )
-  puts "#{fullname}"
 end
