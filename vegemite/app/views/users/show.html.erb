@@ -1,14 +1,14 @@
 <%= link_to 'Back to Gardens', gardens_path %>
 <!-- change link to go to landing page -->
-<div class="users-index">
+<div class="users-show">
 <h1 class="page-title"><%= @user.username.capitalize %>'s Profile</h1>
-<%= image_tag('noun_67206_cc.png') %>
+<!-- <%= image_tag('noun_67206_cc.png') %> -->
 
-<div class="user_profile">
+<div class="user-profile">
+  <img src="<%= @user.image %>">
   <h4>Username: <%= @user.username %></h4>
   <h4>First name: <%= @user.firstname %></h4>
   <h4>Last name: <%= @user.lastname %></h4>
-  <h4>Photo: <%= @user.image %></h4>
   <h4>I am a grower / I am an owner</h4>
   <!-- add user type functionality? -->
   <!-- listings -->

@@ -272,7 +272,7 @@ img {
   margin-left: 25px;
 }
 
-.users-index {
+.users-show {
   text-align: center;
   text-align: center;
   background-color: #A6AD95;
@@ -282,13 +282,14 @@ img {
   margin-left: 475px;
 }
 
-.users-index a {
+.users-show a {
   color: #245516;
 }
 
-.users-index img {
-  height: 50px;
-  width: 50px;
+.users-show img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
 }
 
 .form {

@@ -47,6 +47,15 @@
   <h4 class="user-type">I am a grower / I am an owner</h4>
   <!-- add user type functionality? -->
 
+  <% if current_user %>
+    <div class="field">
+      <%= form.label :image %><br />
+      <%= form.text_field :image %>
+    </div>
+  <% else %>
+
+  <% end %>
+
   <div class="actions"><%= form.submit %></div>
 
 <% end %>
