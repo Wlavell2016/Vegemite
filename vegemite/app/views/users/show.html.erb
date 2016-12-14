@@ -1,7 +1,8 @@
 <%= link_to 'Back to Gardens', gardens_path %>
 <!-- change link to go to landing page -->
-
+<div class="users-index">
 <h1 class="page-title"><%= @user.username.capitalize %>'s Profile</h1>
+<%= image_tag('noun_67206_cc.png') %>
 
 <div class="user_profile">
   <h4>Username: <%= @user.username %></h4>
@@ -21,3 +22,4 @@
 <!-- iterate through owned gardens -->
 
 <%= link_to 'Update', edit_user_path(@user) %>
+</div>

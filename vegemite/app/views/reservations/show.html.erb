@@ -1,6 +1,7 @@
 <%= link_to "Back", new_garden_reservation_url(@garden, @reservation) %>
 <h1 class="page-title"><%= @reservation.grower.username.capitalize %>, you're growing veg at...</h1>
 
+<div class="reservations-show">
 <p class="reservation-details">
   <%= @garden.title.upcase %></br>
   Date: <%=  %><br/>
@@ -10,3 +11,4 @@
 
 <%= link_to "Edit" %> | <%= link_to "Delete", method: :delete, data: {confirm: "Are you sure you want to delete this reservation?"}  %>
 <!-- fix edit and delete paths -->
+</div>

@@ -1,4 +1,6 @@
 <div class="form">
+<%= image_tag('noun_58368.png') %>
+
 <%= form_for [@garden] do |f| %>
 
   <% if @garden.errors.any? %>
@@ -52,7 +54,7 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Save" %>
+    <%= f.submit "Add" %>
   </div>
 
 <% end %>

@@ -1,4 +1,5 @@
 <%= link_to "Back to Gardens", gardens_path %>
+<div class="gardens-show">
 
 <img src="<%= @garden.image %>">
 <h4 class="garden-name"><%= @garden.title.upcase %></h4>
@@ -14,6 +15,7 @@
 
 <p id="reserve"><%= link_to "Reserve", new_garden_reservation_path(@garden)%></p>
 
+</div>
 <!-- <h4>Make a reservation</h4>
   <%= form_for [@garden, @reservation] do |f| %>
   <% f.hidden_field :garden_id, value: @garden.id %>

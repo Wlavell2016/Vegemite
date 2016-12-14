@@ -1,4 +1,6 @@
 <div class="form">
+<%= image_tag('noun_67206_cc.png') %>
+
 <%= form_for @user do |form| %>
 
   <% if @user.errors.any? %>
@@ -48,4 +50,11 @@
   <div class="actions"><%= form.submit %></div>
 
 <% end %>
+
+<% if current_user %>
+
+<% else %>
+  <p class="log-sign">Already have an account? <%= link_to "Log in", new_session_path %></p>
+<% end %>
+
 </div>
