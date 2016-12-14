@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
- root 'gardens#index'
+ root 'users#index'
  #change to landing page in the future.
  get '/login/' => 'sessions#new'
  get '/logout/' => 'sessions#destroy'

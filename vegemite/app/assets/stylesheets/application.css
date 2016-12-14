@@ -1,15 +1,327 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+body {
+  /*background-color: ;*/
+  /*font-family: 'Sniglet', cursive;*/
+  font-family: 'Baloo Tamma', cursive;
+  /*font-family: 'Poiret One', cursive;*/
+  font-size: 12px;
+  /*background-color: #E0E8D9;*/
+}
+
+a {
+  text-decoration: none;
+  /*color: #245516;*/
+  color: #A6AD95;
+}
+
+a:hover {
+  color: #245516;
+}
+
+img {
+  width: 350px;
+  height: 200px;
+}
+
+.site-header {
+  /*background: url("f2ab191a99685b7c21318918b5d3af54.jpg");*/
+  height: 100px;
+  background-color: #6C8A57;
+  position: relative;
+  clear: both;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.logo {
+  margin: 0;
+  padding-top: 10px;
+  padding-left: 15px;
+  text-align: left;
+  font-size: 1.5rem;
+  color: #245516;
+  /*font-family: 'Baloo Tamma', cursive;*/;
+  /*font-family: 'Poiret One', cursive;*/
+  font-family: 'Righteous', cursive;
+  position: relative;
+  float: left;
+}
+
+.logo img {
+  height: 50px;
+  width: 50px;
+}
+
+.site-nav {
+  text-align: right;
+  padding-top: 20px;
+}
+
+.site-nav ul li {
+  /*font-size: 10px;
+  font-weight: bold;
+  color: #1c5380;*/
+  /*text-transform: uppercase;*/
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+}
+
+.site-nav img {
+  height: 50px;
+  width: 50px;
+}
+
+.site-footer {
+  padding-top: 50px;
+  text-align: center;
+  color: #A6AD95;
+}
+
+.site-footer img {
+  width: 30px;
+  height: 30px;
+}
+
+.main p {
+  font-size: 20px;
+  text-align: center;
+  color: #245516;
+}
+
+.info-hippies {
+  /*background: url("f2ab191a99685b7c21318918b5d3af54.jpg");*/
+  /*background: url("7_21_10_EagleStreetAnnie9953.jpg");*/
+  /*background: url("hippies-on-commune-carrying-a-tray-of-marijuana-plants-to-the-garden-c0y459.jpg");*/
+  background: url("IMG_7605.jpg");
+  /*background: url("f50a6778100a32f19f0a433ca404c48e.jpg");*/
+  background-repeat: no-repeat;
+  /*background-size: auto 100%;*/
+  height: 800px;
+  width: 100%;
+  /*height: 400px;*/
+  /*position: relative;*/
+}
+
+.box {
+  width: 800px;
+  margin: auto;
+  background-color: #ffffff;
+  opacity: 0.9;
+  position: relative;
+  /*top: 120px;*/
+  top: 200px;
+}
+
+.box h1 {
+  color: #922368;
+  /*color: #E6DBEE;*/
+  font-size: 40px;
+  text-align: center;
+  padding: 40px;
+}
+
+.info-share {
+  height: 400px;
+  background-color: #A6AD95;
+  /*background-color: #AA7C44;*/
+  /*background: url("hippies-on-commune-carrying-a-tray-of-marijuana-plants-to-the-garden-c0y459.jpg");*/
+  /*background-repeat: no-repeat;*/
+  /*background-size: 100%;*/
+  /*overflow: hidden;*/
+}
+
+.info-share h1 {
+  color: #245516;
+  /*color: #A6AD95;*/
+  font-size: 40px;
+  text-align: center;
+  /*padding-top: 20px;*/
+  padding-top: 50px;
+}
+
+.info-share img {
+  height: 100px;
+  width: 100px;
+}
+
+.info-grow {
+  height: 400px;
+  background-color: #A6AD95;
+  /*background-color: #AA7C44;*/
+  /*overflow: hidden;*/
+}
+
+.info-grow h1 {
+  color: #245516;
+  /*color: #A6AD95;*/
+  font-size: 40px;
+  text-align: center;
+  padding-top: 65px;
+}
+
+.info-grow img {
+  height: 100px;
+  width: 100px;
+}
+
+.info-veg {
+  height: 400px;
+  background-color: #A6AD95;
+  /*overflow: hidden;*/
+}
+
+.info-veg h1 {
+  color: #245516;
+  /*color: #E6DBEE;*/
+  font-size: 40px;
+  text-align: center;
+  padding-top: 90px;
+}
+
+.info-veg p {
+  color: #922368;
+  font-size: 15px;
+  width: 500px;
+  /*padding-left: 375px;*/
+  padding-left: 420px;
+}
+
+.testimonial {
+  font-size: 20px;
+  color: #922368;
+}
+
+.info-veg img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  float: left;
+}
+
+.testimonial {
+  color: #245516;
+  text-align: justify;
+  /*padding-left: 500px;*/
+  padding-left: 550px;
+  width: 350px;
+}
+
+.info-sign {
+  height: 400px;
+  background-color: #A6AD95;
+  /*overflow: hidden;*/
+}
+
+.info-sign h1 {
+  color: #245516;
+  /*color: #E6DBEE;*/
+  font-size: 40px;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.info-sign p img {
+  height: 100px;
+  width: 100px;
+}
+
+.buttons {
+  display: inline;
+  margin-left: 520px;
+}
+
+.buttons button {
+  height: 40px;
+  width: 80px;
+  border-color: transparent;
+  border-radius: 5%;
+  font-family: 'Baloo Tamma', cursive;
+  font-size: 15px;
+  color: #A6AD95;
+  /*font-weight: bold;*/
+  text-align: center;
+  background-color: #245516;
+  opacity: 0.6;
+  margin-left: 20px;
+}
+
+.buttons ul li {
+  text-decoration: none;
+}
+
+.buttons a:hover {
+  /*color: #F0E8D4;*/
+  color: #922368;
+}
+
+#map {
+    height: 100%;
+    width: 800px;
+    position: absolute;
+    right: 5px;
+    top: 5%;
+    top: 20%;
+    z-index: 1000;
+    margin-top: 90px;
+    margin-right: 25px;
+}
+
+.gardens-index {
+  /*margin: 25px;*/
+  margin-top: 70px;
+  margin-left: 25px;
+}
+
+.users-show {
+  text-align: center;
+  text-align: center;
+  background-color: #A6AD95;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 300px;
+  margin-left: 475px;
+}
+
+.users-show a {
+  color: #245516;
+}
+
+.users-show img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+.form {
+  text-align: center;
+  background-color: #A6AD95;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 300px;
+  margin-left: 475px;
+}
+
+.form img {
+  height: 50px;
+  width: 50px;
+}
+
+.page-title {
+  text-align: center;
+}
+
+.gardens-show {
+  text-align: center;
+}
+
+.reservations-show {
+  text-align: center;
+}
+
+.log-in a {
+  color: #245516;
+}
+
+.log-sign a {
+  color: #245516;
+}

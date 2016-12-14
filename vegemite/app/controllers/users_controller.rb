@@ -17,7 +17,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      redirect_to gardens_url, notice: "Signed up"
+      redirect_to gardens_url, notice: "Signed up!"
     else
       render "new"
     end
@@ -45,7 +45,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:username, :firstname, :lastname, :email, :password, :password_confirmation)
+    params.require(:user).permit(:username, :firstname, :lastname, :email, :password, :password_confirmation, :image)
   end
 
 end
