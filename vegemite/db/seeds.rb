@@ -36,3 +36,104 @@ end
                             address: address.sample,
                             size: size)
 end
+
+name = ['Asparagus',
+        'Broad Beans',
+        'Beetroot',
+        'Broccoli',
+        'Cabbage',
+        'Carrot',
+        'Cauliflower',
+        'Celeriac',
+        'Celery',
+        'Cucumber',
+        'Endive',
+        'French Beans',
+        'Leek',
+        'Mustard',
+        'Onion',
+        'Parsley',
+        'Peas',
+        'Peppers',
+        'Spinach',
+        'Squash',
+        'Tomato']
+
+sow_period = [
+    'Jan - Feb',
+    'Feb - May',
+    'Mar - Jul',
+    'Apr - Jun',
+    'Feb - Jun',
+    'Feb - Aug',
+    'Jan - Jun',
+    'Feb - Apr',
+    'Feb - May',
+    'Feb - Apr',
+    'Mar - Jul',
+    'Apr - Jun',
+    'Mar - May',
+    'Jun - Sep',
+    'Feb - Apr',
+    'Feb - Jul',
+    'Mar - Jun',
+    'Mar - Apr',
+    'Mar - Jul',
+    'Mar - Apr',
+    'Nov - Mar'
+]
+
+plant_out_period = [
+    'Apr - May',
+    'n/a',
+    'n/a',
+    'Jun - Jul',
+    'Mar - Jun',
+    'n/a',
+    'Mar - Jul',
+    'Apr - May',
+    'Mar - May',
+    'May - Aug',
+    'May - Jun',
+    'Apr - May',
+    'n/a',
+    'n/a',
+    'n/a',
+    'n/a',
+    'Apr - Jun',
+    'n/a',
+    'May - Jun',
+    'n/a',
+    'Feb - May'
+]
+
+harvest = [
+    'Apr - Jun',
+    'May - Oct',
+    'Jun - Oct',
+    'Jul - Aug',
+    'Jun - Oct',
+    'Jun - Oct',
+    'Jul - Nov',
+    'Oct - Dec',
+    'Jul - Nov',
+    'Apr - Jul',
+    'Jul - Oct',
+    'May - Oct',
+    'Jul - Nov',
+    'Jul - Oct',
+    'Aug - Oct',
+    'Jun - Sep',
+    'Jun - Sep',
+    'Jun - Oct',
+    'Apr - Oct',
+    'Jun - Sep',
+    'Aug - Oct'
+]
+
+name.length.times do |i|
+    vegetable = Vegetable.create!(name: name[i],
+                                  sow_period: sow_period[i],
+                                  plant_out_period: plant_out_period[i],
+                                  harvest: harvest[i])
+end
