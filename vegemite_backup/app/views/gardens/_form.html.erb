@@ -1,0 +1,58 @@
+<div class="form">
+<%= form_for [@garden] do |f| %>
+
+  <% if @garden.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@garden.errors.count, "error") %> prohibited this garden from being saved:</h2>
+      <ul>
+      <% @garden.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+  <% end %>
+
+  <div class="field">
+    <%= f.hidden_field :owner_id, value: @owner_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :title %><br/>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %><br/>
+    <%= f.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address %><br/>
+    <%= f.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= f.label :size %><br/>
+    <%= f.text_area :size %>
+  </div>
+
+  <div class="field">
+    Veggie:
+    <% for vegetable in Vegetable.all %>
+      <div>
+        <%= check_box_tag "garden[vegetable_ids][]", vegetable.id, @garden.vegetables.include?(vegetable) %>
+        <%= vegetable.name %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image %><br />
+    <%= f.text_field :image %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Save" %>
+  </div>
+
+<% end %>
+</div>
