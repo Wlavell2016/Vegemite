@@ -1,5 +1,5 @@
 <%= link_to "Back", new_garden_reservation_url(@garden, @reservation) %>
-<h1 class="page-title"><%= @reservation.grower.username.capitalize %>, you're growing veg at...</h1>
+<h1 class="page-title"><%= @reservation.user.username.capitalize %>, you're growing veg at...</h1>
 
 <p>
   <%= @garden.title.upcase %></br>

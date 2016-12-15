@@ -16,29 +16,29 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.new
   end
 
-  def create
-    # raise params.inspect
-###########
-binding.pry
-    @garden = Garden.find(params[:garden_id])
-    @reservation = @garden.reservations.build(reservation_params)
-        @garden.reservations.each do |f|
-        if f.startdate > @reservation.startdate
-            @test1 = 4
-        else
-            @test1 = 6
-###########
-binding.pry
+
+  def isoverlap
+    @garden.reservations.each do |f|
+        if f.startdate <= @reservation.enddate && @reservation.startdate <= f.enddate
+            return true
         end
     end
-    @reservation.grower = current_user
-    if @reservation.save
-    #   # redirect_to garden_url(@garden), notice: 'Reservation created successfully'
-    #   redirect_to garden_reservation_url(@garden, @reservation), notice: 'Reservation made!'
-    # else
-    #   redirect_to garden_path(@garden), alert: @reservation.errors.full_messages
-    #   # test the rendering output when the create method fails to save
-    end
+        return false
+  end
+
+  def create
+    @garden = Garden.find(params[:garden_id])
+    @reservation = @garden.reservations.build(reservation_params)
+        if isoverlap == false
+                @reservation.user = current_user
+                if @reservation.save
+                    redirect_to garden_reservation_url(@garden, @reservation), notice: 'Reservation made!'
+                else
+                    redirect_to garden_path(@garden), alert: @reservation.errors.full_messages
+                end
+        else
+            redirect_to garden_reservation_url(@garden, @reservation), alert: 'Your Reservation overlaps with another reservation change your dates'
+        end
   end
 
   def edit
