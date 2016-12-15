@@ -14,7 +14,7 @@ class VegetablesController < ApplicationController
 
   def create
     @vegetable = Vegetable.new(vegetable_params)
-    @garden.owner_id = current_user.id
+    @garden.user_id = current_user.id
   end
 
   def edit

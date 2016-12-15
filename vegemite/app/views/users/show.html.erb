@@ -1,25 +1,34 @@
 <%= link_to 'Back to Gardens', gardens_path %>
 <!-- change link to go to landing page -->
 <div class="users-show">
-<h1 class="page-title"><%= @user.username.capitalize %>'s Profile</h1>
-<!-- <%= image_tag('noun_67206_cc.png') %> -->
+    <h1 class="page-title"><%= @user.username.capitalize %>'s Profile</h1>
+    <!-- <%= image_tag('noun_67206_cc.png') %> -->
 
-<div class="user-profile">
-  <img src="<%= @user.image %>">
-  <h4>Username: <%= @user.username %></h4>
-  <h4>First name: <%= @user.firstname %></h4>
-  <h4>Last name: <%= @user.lastname %></h4>
-  <h4>I am a grower / I am an owner</h4>
-  <!-- add user type functionality? -->
-  <!-- listings -->
-  <!-- reservations -->
-</div>
+    <div class="user-profile">
+        <img src="<%= @user.image %>">
+        <h4>Username:
+            <%= @user.username %></h4>
+        <h4>First name:
+            <%= @user.firstname %></h4>
+        <h4>Last name:
+            <%= @user.lastname %></h4>
+        <!-- <h4>I am a grower / I am an owner</h4> -->
+        <!-- add user type functionality? -->
+        <!-- listings -->
+        <!-- reservations -->
+    </div>
 
-<h3>Reservations:</h3>
-<!-- iterate through reservations -->
+    <h3>Reservations:</h3>
+    <% @user.reservations.each do |r| %>
+    <%= r.startdate.strftime("%b %d %Y") %>
+    <%= r.enddate.strftime("%b %d %Y")%>
+    <% end %>
 
-<h3>Gardens:</h3>
-<!-- iterate through owned gardens -->
+    <h3>Gardens:</h3>
+    <% @user.owned_gardens.each do |g| %>
+    <%= g.title %>
+    <%= g.address %>
+    <% end %>
 
-<%= link_to 'Update', edit_user_path(@user) %>
+    <%= link_to 'Update', edit_user_path(@user) %>
 </div>

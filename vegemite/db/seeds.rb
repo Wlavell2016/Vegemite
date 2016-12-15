@@ -137,11 +137,3 @@ name.length.times do |i|
                                   plant_out_period: plant_out_period[i],
                                   harvest: harvest[i])
 end
-
-4.times do
-  u = User.find(1)
-  g = Garden.find(1)
-  reservation = u.reservations.create!(user_id: u.id,
-                        garden_id: g.id,
-                        note: "Gnome-like atmosphere and post-modern aesthetics. Fantastic! 5 Stars!")
-end
