@@ -2,13 +2,17 @@
 <div class="gardens-show">
 
 <img src="<%= @garden.image %>">
+<div class="owner">
+<%= @user.image %>
+<%= @user.firstname %> <%= @user.lastname %>
+</div>
 <div class="garden-details">
 <h4><%= @garden.title.upcase %></h4>
 <p>
-  <div class="title"><b>ADDRESS:</b></div> <%= @garden.address %><br/>
-  <b>SIZE (in square feet):</b> <%= @garden.size %><br/>
-  <b>ABOUT:</b> <%= @garden.description %></br>
-  <b>VEGGIES:</b> <% @garden.vegetables.each do |vegetable| %>
+  <div class="title"><b>ADDRESS:</b></div><%= @garden.address %><br/>
+  <div class="title"><b>SIZE (in square feet):</b></div><%= @garden.size %><br/>
+  <div class="title"><b>ABOUT:</b></div><%= @garden.description %></br>
+  <div class="title"><b>VEGGIES:</b></div><% @garden.vegetables.each do |vegetable| %>
   <%= vegetable.name.capitalize %>
   <% end %>
 </p>
