@@ -12,7 +12,6 @@ class ReservationsController < ApplicationController
   end
 
   def new
-    @garden = Garden.find(params[:garden_id])
     @reservation = Reservation.new
   end
 
@@ -21,7 +20,6 @@ class ReservationsController < ApplicationController
     @garden.reservations.each do |f|
         if f.startdate <=> @reservation.enddate && @reservation.startdate <=> f.enddate
             return true
-
   else
         return false
       end
@@ -45,10 +43,12 @@ class ReservationsController < ApplicationController
   end
 
   def edit
+    @garden = Garden.find(params[:id])
     @reservation = Reservation.find(params[:id])
   end
 
   def update
+    @garden = Garden.find(params[:id])
     @reservation = Reservation.find(params[:id])
       if @reservation.update_attributes(reservation_params)
         redirect_to garden_reservation_url(@reservation)
