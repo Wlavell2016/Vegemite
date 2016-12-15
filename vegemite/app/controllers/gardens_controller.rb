@@ -16,7 +16,7 @@ class GardensController < ApplicationController
 
   def create
     @garden = Garden.new(garden_params)
-    @garden.owner_id = current_user.id
+    @garden.user_ids = current_user.id
     if @garden.save
       redirect_to garden_url(@garden)
     else
@@ -46,7 +46,7 @@ class GardensController < ApplicationController
   private
 
   def garden_params
-    params.require(:garden).permit(:title, :description, :address, :size, :name, :image, vegetable_ids:[])
+    params.require(:garden).permit(:title, :description, :address, :size, :image)
   end
 
   # def garden_owner
