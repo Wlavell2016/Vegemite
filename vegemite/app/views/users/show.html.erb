@@ -9,17 +9,16 @@
   <h4>Username: <%= @user.username %></h4>
   <h4>First name: <%= @user.firstname %></h4>
   <h4>Last name: <%= @user.lastname %></h4>
-  <h4>I am a grower / I am an owner</h4>
-  <!-- add user type functionality? -->
-  <!-- listings -->
-  <!-- reservations -->
 </div>
-
-<h3>Reservations:</h3>
-<!-- iterate through reservations -->
-
-<h3>Gardens:</h3>
-<!-- iterate through owned gardens -->
-
+<div class="user-data">
+  <%= image_tag('noun_25922_cc.png') %>
+  <h3>Reservations:</h3>
+  <!-- iterate through reservations -->
+  <%= image_tag('noun_197605_cc.png') %>
+  <h3>Gardens:</h3>
+  <!-- iterate through owned gardens -->
+</div>
+<div class="update">
 <%= link_to 'Update', edit_user_path(@user) %>
+</div>
 </div>

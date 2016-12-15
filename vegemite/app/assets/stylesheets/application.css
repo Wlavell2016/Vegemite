@@ -398,12 +398,11 @@ img {
 
 .users-show {
   text-align: center;
-  text-align: center;
   background-color: #A6AD95;
   padding-top: 30px;
   padding-bottom: 30px;
-  width: 300px;
-  margin-left: 475px;
+  /*width: 300px;*/
+  /*margin-left: 475px;*/
 }
 
 .users-show a {
@@ -414,6 +413,21 @@ img {
   height: 150px;
   width: 150px;
   border-radius: 50%;
+}
+
+.user-data {
+  background-color: #D4DFD1;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.user-data img {
+  height: 30px;
+  width: 30px;
+}
+
+.update {
+  padding-top: 20px;
 }
 
 /*gardens#show*/
