@@ -8,6 +8,7 @@ class GardensController < ApplicationController
   def show
     @garden = Garden.find(params[:id])
     @reservation = Reservation.new
+    @user = User.find(params[:id])
   end
 
   def new

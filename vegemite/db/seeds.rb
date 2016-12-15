@@ -26,10 +26,27 @@ end
     title = Faker::Pokemon.location
     description = Faker::Lorem.paragraphs(1)
     size = Faker::Number.number(3)
-    address = ['4576 connaught drive vancouver bc',
-               '1237 east broadway vancouver bc',
-               '3263 west 33rd avenue vancouver bc',
-               '1168 howe street vancouver bc']
+    address = ['152 Augusta Avenue Toronto Ontario',
+               '62 Nassau Street Toronto Ontario',
+               '329 Manning Avenue Toronto Ontario',
+               '323 Sackville Street Toronto Ontario',
+               '2 Borden Street Toronto Ontario',
+               '730 King Street West Toronto Ontario',
+               '466 King Street West Toronto Ontario',
+               '859 Dundas Street West Toronto Ontario',
+               '499 College Street Toronto Ontario',
+               '557 Bathurst Street Toronto Ontario',
+               '74 Sussex Avenue Toronto Ontario',
+               '46 Lennox Street Toronto Ontario',
+               '108 Sussex Avenue Toronto Ontario',
+               '240 Berkeley Street Toronto Ontario',
+               '358 Ontario Street Toronto Ontario',
+               '217 St George Street Toronto Ontario',
+               '1025 Bloor Street Toronto Ontario',
+               '90 Gloucester Toronto Ontario',
+               '38 Woody Crest Avenue Toronto Ontario'
+               '588 Dupont Street Toronto Ontario'
+              ]
 
     garden = Garden.create!(title: title,
                             description: description,
