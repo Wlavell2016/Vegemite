@@ -1,47 +1,56 @@
 <div class="form">
-<%= image_tag('noun_51822_cc.png') %>
-<!-- <%= image_tag('noun_25922_cc.png') %> -->
+    <%= image_tag('noun_51822_cc.png') %>
+    <!-- <%= image_tag('noun_25922_cc.png') %> -->
 
-<%= form_for [@garden, @reservation] do |f| %>
-
-  <% if @reservation.errors.any? %>
+    <%= form_for ([@garden, @reservation]) do |f| %>
+    <% if @reservation.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@reservation.errors.count, "error") %> prohibited this reservation from being made:</h2>
-      <ul>
-      <% @reservation.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+        <h2><%= pluralize(@reservation.errors.count, "error") %>
+            prohibited this reservation from being made:</h2>
+        <ul>
+            <% @reservation.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+            <% end %>
+        </ul>
     </div>
-  <% end %>
+    <% end %>
 
-  <h4 class="garden-name"><%= @garden.title.upcase %></h4>
+    <h4 class="garden-name"><%= @garden.title.upcase %></h4>
 
     <h4><% @garden.reservations.each do |f| %>
     <h4> This garden is currently booked on the following dates <%= f.startdate.strftime("%b %d %Y")%>, <%= f.enddate.strftime("%b %d %Y")%> </h4>
+        <% end %>
+        <div class="field">
+            <% f.hidden_field :garden_id, value: @garden.id %>
+        </div>
+
+        <div class="veg-info">
+            Veggies:
+            <% @garden.vegetables.each do |vegetable| %>
+            <%= vegetable.name.capitalize %>
+            Sow:
+            <%= vegetable.sow_period %>,
+            <br/>
+            Plant Out:
+            <%= vegetable.plant_out_period %>,
+            <br/>
+            Harvest:
+            <%= vegetable.harvest %><br/>
             <% end %>
-  <div class="field">
-    <% f.hidden_field :garden_id, value: @garden.id %>
-  </div>
+        </div>
 
-  <div class="veg-info">
-  Veggies: <% @garden.vegetables.each do |vegetable| %>
-  <%= vegetable.name.capitalize %>
-  Sow: <%= vegetable.sow_period %>, <br/>
-  Plant Out: <%= vegetable.plant_out_period %>, <br/>
-  Harvest: <%= vegetable.harvest %><br/>
-  <% end %>
-  </div>
+        <div class="field">
+            <p>Note:
+                <%= f.text_field :note %></p>
+            <p>Reap and Sow:
+                <br/><%= f.date_select :startdate %></p>
+            <p>Harvest:
+                <%= f.date_select :enddate %></p>
+        </div>
 
-  <div class="field">
-    <p>Note: <%= f.text_field :note %></p>
-     <p>Reap and Sow: <br/><%= f.date_select :startdate %></p>
-     <p>Harvest: <%= f.date_select :enddate %></p>
-   </div>
+        <div class="actions">
+            <%= f.submit "Grow" %>
+        </div>
 
-  <div class="actions">
-    <%= f.submit "Grow" %>
-  </div>
-
-<% end %>
-</div>
+        <% end %>
+    </div>
