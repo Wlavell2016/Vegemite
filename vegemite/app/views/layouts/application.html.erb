@@ -3,27 +3,31 @@
   <head>
     <title>Greenthumbs</title>
     <%= csrf_meta_tags %>
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Baloo+Tamma|Baumans|Lily+Script+One|Poiret+One|Righteous|Sniglet" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="<%= controller.controller_name %> <%= controller.action_name %>">
     <header class="site-header">
-      <h1 class="logo"><a href="/">Greenthumbs</a></h1>
+      <h1 class="logo"><a href="/">greenthumbs<%= image_tag('noun_27054.png') %></a></h1>
 
       <nav class="site-nav">
-        <%= link_to "Home", root_path %>
-        <% if current_user %>
-          <%= link_to "Profile", "/users/#{session[:user_id]}" %>
-          <%= link_to "Add a Garden", "/gardens/new" %>
-          <%= link_to "Calendar" %>
-          <%= link_to "Inbox" %>
-          Hello, <%= current_user.username %>!
-          <%= link_to "Log out", session_path("current"), :method => :delete %>
-        <% else %>
-          <%= link_to "Log in", new_session_path %> or <%= link_to "Sign up", new_user_path %>
-        <% end %>
+        <!-- <%= image_tag('noun_112887_cc.png') %> -->
+        <ul>
+          <li><%= link_to "Home", root_path %></li>
+          <% if current_user %>
+            <li><%= link_to "Explore", "/gardens" %></li>
+            <li><%= link_to "Profile", "/users/#{session[:user_id]}" %></li>
+            <li><%= link_to "Add a Garden", "/gardens/new" %></li>
+            <li><%= link_to "Calendar" %></li>
+            <li><%= link_to "Inbox" %></li>
+            <li>Hello, <%= current_user.username %>!</li>
+            <li><%= link_to "Log out", session_path("current"), :method => :delete %></li>
+          <% else %>
+            <li><%= link_to "Log in", new_session_path %></li> or <li><%= link_to "Sign up", new_user_path %></li>
+          <% end %>
+      </ul>
       </nav>
     </header>
 
@@ -40,6 +44,7 @@
 
     <footer class="site-footer">
       <small>&copy The app formerly known as vegemite</small>
+      <%= image_tag('noun_288936_cc.png') %>
     </footer>
   </body>
 </html>

@@ -1,19 +1,23 @@
 <%= link_to "Back to Gardens", gardens_path %>
+<div class="gardens-show">
 
 <img src="<%= @garden.image %>">
-<h4><%= @garden.title.upcase %></h4>
-<p>
+<h4 class="garden-name"><%= @garden.title.upcase %></h4>
+<p class="garden-details">
   Address: <%= @garden.address %><br/>
   Size: <%= @garden.size %><br/>
   About: <%= @garden.description %></br>
   Veggies: <% @garden.vegetables.each do |vegetable| %>
   <%= vegetable.name.capitalize %>
-  (<%= vegetable.start_month %> to <%= vegetable.end_month %>)<br/>
+  Sow: <%= vegetable.sow_period %>, <br/>
+  Plant Out: <%= vegetable.plant_out_period %>, <br/>
+  Harvest: <%= vegetable.harvest %><br/>
   <% end %>
 </p>
 
 <p id="reserve"><%= link_to "Reserve", new_garden_reservation_path(@garden)%></p>
 
+</div>
 <!-- <h4>Make a reservation</h4>
   <%= form_for [@garden, @reservation] do |f| %>
   <% f.hidden_field :garden_id, value: @garden.id %>
