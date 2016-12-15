@@ -19,11 +19,13 @@ class ReservationsController < ApplicationController
 
   def isoverlap
     @garden.reservations.each do |f|
-        if f.startdate <= @reservation.enddate && @reservation.startdate <= f.enddate
+        if f.startdate <=> @reservation.enddate && @reservation.startdate <=> f.enddate
             return true
-        end
-    end
+
+  else
         return false
+      end
+    end
   end
 
   def create
@@ -39,6 +41,7 @@ class ReservationsController < ApplicationController
         else
             redirect_to garden_reservation_url(@garden, @reservation), alert: 'Your Reservation overlaps with another reservation change your dates'
         end
+      end
   end
 
   def edit
@@ -60,14 +63,13 @@ class ReservationsController < ApplicationController
     redirect_to gardens_url
   end
 
+
+    def load_garden
+      @garden = Garden.find(params[:garden_id])
+    end
+
   private
 
   def reservation_params
     params.require(:reservation).permit(:note, :vegetable_id, :startdate, :enddate)
   end
-
-  def load_garden
-    @garden = Garden.find(params[:garden_id])
-  end
-
-end
