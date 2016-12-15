@@ -17,9 +17,6 @@ class ReservationsController < ApplicationController
   end
 
   def create
-    # raise params.inspect
-###########
-binding.pry
     @garden = Garden.find(params[:garden_id])
     @reservation = @garden.reservations.build(reservation_params)
         @garden.reservations.each do |f|
@@ -27,8 +24,6 @@ binding.pry
             @test1 = 4
         else
             @test1 = 6
-###########
-binding.pry
         end
     end
     @reservation.grower = current_user
