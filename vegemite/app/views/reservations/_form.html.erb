@@ -24,7 +24,9 @@
   <div class="veg-info">
   Veggies: <% @garden.vegetables.each do |vegetable| %>
   <%= vegetable.name.capitalize %>
-  (<%= vegetable.start_month %> to <%= vegetable.end_month %>)<br/>
+  Sow: <%= vegetable.sow_period %>, <br/>
+  Plant Out: <%= vegetable.plant_out_period %>, <br/>
+  Harvest: <%= vegetable.harvest %><br/>
   <% end %>
   </div>
 
