@@ -10,9 +10,6 @@
   <b>ABOUT:</b> <%= @garden.description %></br>
   <b>VEGGIES:</b> <% @garden.vegetables.each do |vegetable| %>
   <%= vegetable.name.capitalize %>
-  Sow: <%= vegetable.sow_period %>, <br/>
-  Plant Out: <%= vegetable.plant_out_period %>, <br/>
-  Harvest: <%= vegetable.harvest %><br/>
   <% end %>
 </p>
 </div>
