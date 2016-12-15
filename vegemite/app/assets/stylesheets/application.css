@@ -93,8 +93,10 @@ img {
   background-color: #A6AD95;
   padding-top: 30px;
   padding-bottom: 30px;
-  width: 300px;
-  margin-left: 475px;
+  /*width: 300px;*/
+  width: 500px;
+  /*margin-left: 475px;*/
+  margin-left: 360px;
 }
 
 .form img {
