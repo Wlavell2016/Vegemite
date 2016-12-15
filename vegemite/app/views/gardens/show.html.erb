@@ -2,15 +2,17 @@
 <div class="gardens-show">
 
 <img src="<%= @garden.image %>">
-<h4 class="garden-name"><%= @garden.title.upcase %></h4>
-<p class="garden-details">
-  Address: <%= @garden.address %><br/>
-  Size: <%= @garden.size %><br/>
-  About: <%= @garden.description %></br>
-  Veggies: <% @garden.vegetables.each do |vegetable| %>
+<div class="garden-details">
+<h4><%= @garden.title.upcase %></h4>
+<p>
+  <div class="title"><b>ADDRESS:</b></div> <%= @garden.address %><br/>
+  <b>SIZE (in square feet):</b> <%= @garden.size %><br/>
+  <b>ABOUT:</b> <%= @garden.description %></br>
+  <b>VEGGIES:</b> <% @garden.vegetables.each do |vegetable| %>
   <%= vegetable.name.capitalize %>
   <% end %>
 </p>
+</div>
 
 <p id="reserve"><%= link_to "Reserve", new_garden_reservation_path(@garden)%></p>
 

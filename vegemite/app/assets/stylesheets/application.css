@@ -1,3 +1,5 @@
+/*main styles*/
+
 body {
   /*background-color: ;*/
   /*font-family: 'Sniglet', cursive;*/
@@ -18,12 +20,11 @@ a:hover {
 }
 
 img {
-  width: 350px;
   height: 200px;
+  width: 350px;
 }
 
 .site-header {
-  /*background: url("f2ab191a99685b7c21318918b5d3af54.jpg");*/
   height: 100px;
   background-color: #6C8A57;
   position: relative;
@@ -78,9 +79,37 @@ img {
 }
 
 .site-footer img {
-  width: 30px;
   height: 30px;
+  width: 30px;
 }
+
+.page-title {
+  text-align: center;
+}
+
+.form {
+  text-align: center;
+  background-color: #A6AD95;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 300px;
+  margin-left: 475px;
+}
+
+.form img {
+  height: 50px;
+  width: 50px;
+}
+
+.log-in a {
+  color: #245516;
+}
+
+.log-sign a {
+  color: #245516;
+}
+
+/*homepage*/
 
 .main p {
   font-size: 20px;
@@ -186,11 +215,6 @@ img {
   padding-left: 420px;
 }
 
-.testimonial {
-  font-size: 20px;
-  color: #922368;
-}
-
 .info-veg img {
   height: 100px;
   width: 100px;
@@ -199,6 +223,7 @@ img {
 }
 
 .testimonial {
+  font-size: 20px;
   color: #245516;
   text-align: justify;
   /*padding-left: 500px;*/
@@ -254,6 +279,8 @@ img {
   color: #922368;
 }
 
+/*gardens#index*/
+
 #map {
     height: 100%;
     width: 800px;
@@ -271,6 +298,8 @@ img {
   margin-top: 70px;
   margin-left: 25px;
 }
+
+/*users#show*/
 
 .users-show {
   text-align: center;
@@ -292,36 +321,35 @@ img {
   border-radius: 50%;
 }
 
-.form {
-  text-align: center;
-  background-color: #A6AD95;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  width: 300px;
-  margin-left: 475px;
-}
-
-.form img {
-  height: 50px;
-  width: 50px;
-}
-
-.page-title {
-  text-align: center;
-}
+/*gardens#show*/
 
 .gardens-show {
   text-align: center;
 }
 
+.gardens-show img {
+  height: 500px;
+  width: 100%;
+}
+
+.garden-details {
+  background-color: #A6AD95;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 300px;
+  padding-right: 300px;
+}
+
+.garden-details h4 {
+  font-size: 30px;
+}
+
+.garden-details p {
+  font-size:
+}
+
+/*reservations#show*/
+
 .reservations-show {
   text-align: center;
-}
-
-.log-in a {
-  color: #245516;
-}
-
-.log-sign a {
-  color: #245516;
 }
