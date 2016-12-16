@@ -7,7 +7,7 @@ body {
   /*font-family: 'Poiret One', cursive;*/
   font-size: 12px;
   /*background-color: #E0E8D9;*/
-  margin: 5px;
+  /*margin: 5px;*/
 }
 
 a {
@@ -197,7 +197,7 @@ img {
   color: #245516;
   font-size: 40px;
   text-align: center;
-  padding-top: 40px;
+  padding-top: 10px;
 }
 
 .slide:nth-of-type(1) {
@@ -417,42 +417,6 @@ img {
   color: #245516;
 }
 
-/*users#show*/
-
-.users-show {
-  text-align: center;
-  background-color: #A6AD95;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  /*width: 300px;*/
-  /*margin-left: 475px;*/
-}
-
-.users-show a {
-  color: #245516;
-}
-
-.users-show img {
-  height: 150px;
-  width: 150px;
-  border-radius: 50%;
-}
-
-.user-data {
-  background-color: #D4DFD1;
-  padding-top: 20px;
-  padding-bottom: 10px;
-}
-
-.user-data img {
-  height: 30px;
-  width: 30px;
-}
-
-.update {
-  padding-top: 30px;
-}
-
 /*gardens#show*/
 
 .gardens-show {
@@ -496,8 +460,70 @@ img {
   border-radius: 50%;
 }
 
+/*garden#new*/
+
+.veg-list {
+  background-color: #D4DFD1;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+/*reservations#new*/
+
+.veg-info {
+  background-color: #D4DFD1;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.veg-name {
+  color: #245516;  
+}
+
 /*reservations#show*/
 
 .reservations-show {
   text-align: center;
+}
+
+/*reservations#index*/
+
+.reservations-index {
+  text-align: center;
+}
+
+/*users#show*/
+
+.users-show {
+  text-align: center;
+  background-color: #A6AD95;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  /*width: 300px;*/
+  /*margin-left: 475px;*/
+}
+
+.users-show a {
+  color: #245516;
+}
+
+.users-show img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+.user-data {
+  background-color: #D4DFD1;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.user-data img {
+  height: 30px;
+  width: 30px;
+}
+
+.update {
+  padding-top: 30px;
 }

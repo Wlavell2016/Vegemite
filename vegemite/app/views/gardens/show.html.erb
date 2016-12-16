@@ -13,7 +13,7 @@
   <div class="title"><b>SIZE (in square feet):</b></div><%= @garden.size %><br/>
   <div class="title"><b>ABOUT:</b></div><%= @garden.description %></br>
   <div class="title"><b>VEGGIES:</b></div><% @garden.vegetables.each do |vegetable| %>
-  <%= vegetable.name.capitalize %>
+  <%= vegetable.name.capitalize %>,  
   <% end %>
 </p>
 </div>

@@ -17,18 +17,20 @@
 
   <h4 class="garden-name"><%= @garden.title.upcase %></h4>
 
-    <h4><% @garden.reservations.each do |f| %>
-    <h4> This garden is currently booked on the following dates <%= f.startdate %>, <%= f.enddate %> </h4>
-            <% end %>
+  This garden is currently booked on the following dates:
+    <% @garden.reservations.each do |f| %>
+      <p><%= f.startdate %>, <%= f.enddate %></p>
+    <% end %>
+
   <div class="field">
     <% f.hidden_field :garden_id, value: @garden.id %>
   </div>
 
   <div class="veg-info">
-  Veggies: <% @garden.vegetables.each do |vegetable| %>
-  <%= vegetable.name.capitalize %>
-  Sow: <%= vegetable.sow_period %>, <br/>
-  Plant Out: <%= vegetable.plant_out_period %>, <br/>
+  Veggies:<br/><% @garden.vegetables.each do |vegetable| %>
+  <h4><div class="veg-name"><%= vegetable.name.capitalize %></div></h4>
+  Sow: <%= vegetable.sow_period %><br/>
+  Plant Out: <%= vegetable.plant_out_period %><br/>
   Harvest: <%= vegetable.harvest %><br/>
   <% end %>
   </div>
