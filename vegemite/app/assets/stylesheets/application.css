@@ -388,6 +388,17 @@ img {
     margin-right: 25px;
 }
 
+#map2 {
+    height: 100%;
+    width: 800px;
+    position: absolute;
+    right: 5px;
+    top: 5%;
+    top: 20%;
+    z-index: 1000;
+    margin-top: 90px;
+    margin-right: 25px;
+}
 .gardens-index {
   /*margin: 25px;*/
   margin-top: 70px;
