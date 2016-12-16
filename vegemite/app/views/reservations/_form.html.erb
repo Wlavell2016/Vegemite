@@ -1,21 +1,21 @@
 <div class="form">
-<%= image_tag('noun_51822_cc.png') %>
-<!-- <%= image_tag('noun_25922_cc.png') %> -->
+    <%= image_tag('noun_51822_cc.png') %>
+    <!-- <%= image_tag('noun_25922_cc.png') %> -->
 
-<%= form_for [@garden, @reservation] do |f| %>
-
-  <% if @reservation.errors.any? %>
+    <%= form_for ([@garden, @reservation]) do |f| %>
+    <% if @reservation.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@reservation.errors.count, "error") %> prohibited this reservation from being made:</h2>
-      <ul>
-      <% @reservation.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+        <h2><%= pluralize(@reservation.errors.count, "error") %>
+            prohibited this reservation from being made:</h2>
+        <ul>
+            <% @reservation.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+            <% end %>
+        </ul>
     </div>
-  <% end %>
+    <% end %>
 
-  <h4 class="garden-name"><%= @garden.title.upcase %></h4>
+    <h4 class="garden-name"><%= @garden.title.upcase %></h4>
 
   This garden is currently booked on the following dates:
     <% @garden.reservations.each do |f| %>
@@ -46,4 +46,5 @@
   </div>
 
 <% end %>
+
 </div>

@@ -4,12 +4,12 @@
 <h1 class="page-title">Reservations</h1>
 
 <% @reservations.each do |reservation| %>
-  <p class="reservation-info">
-    Name: <%= reservation.grower.username %></br>
-    Date: <%= %></br>
-    <!-- Veggie: <%= reservation.vegetable_id %></br> -->
+  <div class="reservation-info"><p>Grow!</p>
+    Confirmation Number: <%= reservation.id %> </br>
+    Date: <%= reservation.startdate%> </br>
+    <%= reservation.enddate%> </br>
+
     Note: <%= reservation.note %>
-  </p>
+  </div>
 <% end %>
-<!-- how to iterate thru veggies for each reservations? -->
 </div>

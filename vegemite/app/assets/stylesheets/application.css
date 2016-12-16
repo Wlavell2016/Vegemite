@@ -392,7 +392,7 @@ img {
   color: #922368;
 }
 
-/*gardens#index*/
+/*gardens#index*******************************************************************************************/
 
 #map {
     height: 100%;
@@ -413,14 +413,65 @@ img {
   /*color: #245516;*/
 }
 
+<<<<<<< HEAD
 .gardens h1 {
   color: #245516;
 }
 
+=======
+/*users#show******************************************************************************************/
+
+.users-show {
+  text-align: center;
+  background-color: #A6AD95;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  /*width: 300px;*/
+  /*margin-left: 475px;*/
+}
+
+.users-show a {
+  color: #245516;
+}
+
+.users-show img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+
+/*gardens#show*******************************************************************************************/
+
+.user-data {
+  background-color: #D4DFD1;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.user-data img {
+  height: 30px;
+  width: 30px;
+}
+
+.update {
+  padding-top: 20px;
+}
+
+>>>>>>> e8b4782311a72ff1fda992e278e719dbd522ff68
 /*gardens#show*/
 
 .gardens-show {
   text-align: center;
+}
+
+#map {
+    height: 100%;
+    width: 800px;
+    position: absolute;
+    right: 5px;
+    top: 5%;
+    z-index: 1000;
 }
 
 .gardens-show img {
@@ -444,6 +495,7 @@ img {
   font-size:
 }
 
+/*reservations#show*******************************************************************************************/
 .title {
   color: #245516;
 }
