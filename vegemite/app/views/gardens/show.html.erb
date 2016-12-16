@@ -4,8 +4,8 @@
 <img src="<%= @garden.image %>">
 
 <div class="owner">
-  <img src="<%= @user.image %>">
-  <%= @user.firstname %> <%= @user.lastname %>
+  <img src="<%= @user.gardens(:image) %>">
+  <!-- <%= @user.firstname %> <%= @user.lastname %> -->
 </div>
 
 <div class="garden-details">
