@@ -310,6 +310,7 @@ img {
   height: 400px;
   background-color: #A6AD95;
   /*overflow: hidden;*/
+  position: relative;
 }
 
 .info-veg h1 {
@@ -317,7 +318,7 @@ img {
   /*color: #E6DBEE;*/
   font-size: 40px;
   text-align: center;
-  padding-top: 90px;
+  padding-top: 5%;
 }
 
 .info-veg p {
@@ -329,19 +330,24 @@ img {
 }
 
 .info-veg img {
-  height: 100px;
-  width: 100px;
+  height: 250px;
+  width: 250px;
   border-radius: 50%;
-  float: left;
+  position: absolute;
+  bottom: 15%;
+  left: 5%;
 }
 
 .testimonial {
   font-size: 20px;
   color: #245516;
-  text-align: justify;
+  /*text-align: justify;*/
   /*padding-left: 500px;*/
-  padding-left: 550px;
-  width: 350px;
+  /*padding-left: 550px;*/
+  /*width: 350px;*/
+  display: inline;
+  position: absolute;
+  left: 30%;
 }
 
 .info-sign {
@@ -406,6 +412,17 @@ img {
     margin-right: 25px;
 }
 
+#map2 {
+    height: 100%;
+    width: 800px;
+    position: absolute;
+    right: 5px;
+    top: 5%;
+    top: 20%;
+    z-index: 1000;
+    margin-top: 90px;
+    margin-right: 25px;
+}
 .gardens-index {
   /*margin: 25px;*/
   margin-top: 70px;
@@ -529,7 +546,7 @@ img {
 }
 
 .veg-name {
-  color: #245516;  
+  color: #245516;
 }
 
 /*reservations#show*/
