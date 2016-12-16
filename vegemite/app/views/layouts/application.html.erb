@@ -22,7 +22,7 @@
             <li><%= link_to "Add a Garden", "/gardens/new" %></li>
             <li><%= link_to "Calendar" %></li>
             <li><%= link_to "Inbox" %></li>
-            <li>Hello, <%= current_user.username %>!</li>
+            <li>Hello, <%= current_user.username %>!<%= image_tag('noun_22379_cc.png') %></li>
             <li><%= link_to "Log out", session_path("current"), :method => :delete %></li>
           <% else %>
             <li><%= link_to "Log in", new_session_path %></li> or <li><%= link_to "Sign up", new_user_path %></li>
@@ -46,5 +46,6 @@
       <small>&copy The app formerly known as vegemite</small>
       <%= image_tag('noun_288936_cc.png') %>
     </footer>
+
   </body>
 </html>

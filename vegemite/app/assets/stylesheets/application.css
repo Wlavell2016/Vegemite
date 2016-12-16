@@ -7,6 +7,7 @@ body {
   /*font-family: 'Poiret One', cursive;*/
   font-size: 12px;
   /*background-color: #E0E8D9;*/
+  margin: 5px;
 }
 
 a {
@@ -69,8 +70,8 @@ img {
 }
 
 .site-nav img {
-  height: 50px;
-  width: 50px;
+  height: 20px;
+  width: 20px;
 }
 
 .site-footer {
@@ -248,7 +249,6 @@ img {
 .info-share {
   height: 400px;
   background-color: #A6AD95;
-  /*background-color: #AA7C44;*/
   /*background: url("hippies-on-commune-carrying-a-tray-of-marijuana-plants-to-the-garden-c0y459.jpg");*/
   /*background-repeat: no-repeat;*/
   /*background-size: 100%;*/
@@ -271,9 +271,11 @@ img {
 
 .info-grow {
   height: 400px;
-  background-color: #A6AD95;
-  /*background: url("bef475ecc8e5ddd6667b7ad9e174499e.jpg");*/
-  /*background-color: #AA7C44;*/
+  /*background-color: #A6AD95;*/
+  /*background: url("5-garden-tips.jpg");*/
+  background: url("19454431-Old-retro-garden-tools-cultivator-shovel-rake-over-brown-soil-ploughed-land-close-up-Agriculture-gar-Stock-Photo.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   /*overflow: hidden;*/
 }
 
@@ -282,12 +284,26 @@ img {
   /*color: #A6AD95;*/
   font-size: 40px;
   text-align: center;
-  padding-top: 65px;
+  /*padding-top: 65px;*/
+  padding-top: 20px;
+}
+
+.info-grow p {
+  padding-bottom: 20px;
 }
 
 .info-grow img {
   height: 100px;
   width: 100px;
+}
+
+.box-grow {
+  width: 800px;
+  margin: auto;
+  background-color: #ffffff;
+  opacity: 0.8;
+  position: relative;
+  top: 55px;
 }
 
 .info-veg {
@@ -394,6 +410,11 @@ img {
   /*margin: 25px;*/
   margin-top: 70px;
   margin-left: 25px;
+  /*color: #245516;*/
+}
+
+.gardens h1 {
+  color: #245516;
 }
 
 /*users#show*/
@@ -429,7 +450,7 @@ img {
 }
 
 .update {
-  padding-top: 20px;
+  padding-top: 30px;
 }
 
 /*gardens#show*/

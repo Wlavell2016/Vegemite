@@ -23,5 +23,6 @@ $(function() {
       slides[currentSlide].className = 'slide';
       currentSlide = (currentSlide+1)%slides.length;
       slides[currentSlide].className = 'slide showing';
-  }
-})
+  };
+
+});

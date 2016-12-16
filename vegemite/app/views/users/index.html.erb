@@ -28,11 +28,13 @@
 </div>
 
 <div class="info-grow">
-  <h1>Grow local</h1>
-  <p>
-    <%= image_tag('noun_205045_cc.png') %><br/>
-    Discover available greenspace and gardeners and start growing some veg together!
-  </p>
+  <div class="box-grow">
+    <h1>Grow local</h1>
+    <p>
+      <%= image_tag('noun_205045_cc.png') %><br/>
+      Discover available greenspace and gardeners and start growing some veg together!
+    </p>
+  </div>
 </div>
 
 <div class="info-veg">
@@ -62,6 +64,7 @@
     <button type="button"><%= link_to "Sign up", new_user_path %></button>
     <button type="button"><%= link_to "Log in", new_session_path %></button>
   </div>
+
 </div>
 <% end %>
 
