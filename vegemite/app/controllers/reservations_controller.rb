@@ -17,7 +17,7 @@ class ReservationsController < ApplicationController
 
     def isoverlap
         @garden.reservations.each do |f|
-            if f.startdate <=> @reservation.enddate && @reservation.startdate <=> f.enddate
+            if f.startdate <= @reservation.enddate && @reservation.startdate <= f.enddate
                 return true
             else
                 return false
