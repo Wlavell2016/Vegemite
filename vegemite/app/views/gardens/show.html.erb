@@ -1,24 +1,35 @@
 <%= link_to "Back to Gardens", gardens_path %>
 <div class="gardens-show">
 
-<img src="<%= @garden.image %>">
-<div class="owner">
-<%= @user.image %>
-<%= @user.firstname %> <%= @user.lastname %>
-</div>
-<div class="garden-details">
-<h4><%= @garden.title.upcase %></h4>
-<p>
-  <div class="title"><b>ADDRESS:</b></div><%= @garden.address %><br/>
-  <div class="title"><b>SIZE (in square feet):</b></div><%= @garden.size %><br/>
-  <div class="title"><b>ABOUT:</b></div><%= @garden.description %></br>
-  <div class="title"><b>VEGGIES:</b></div><% @garden.vegetables.each do |vegetable| %>
-  <%= vegetable.name.capitalize %>
-  <% end %>
-</p>
-</div>
+    <img src="<%= @garden.image %>">
 
-<p id="reserve"><%= link_to "Reserve", new_garden_reservation_path(@garden)%></p>
+    <div class="owner">
+        <img src="<%= @user.image %>">
+        <%= @user.firstname %>
+        <%= @user.lastname %>
+    </div>
+    <div class="garden-details">
+        <h4><%= @garden.title.upcase %></h4>
+        <p>
+            <div class="title">
+                <b>ADDRESS:</b>
+            </div><%= @garden.address %><br/>
+            <div class="title">
+                <b>SIZE (in square feet):</b>
+            </div><%= @garden.size %>
+            <br>
+                <div class="title">
+                    <b>ABOUT:</b>
+                </div><%= @garden.description %></br>
+            <div class="title">
+                <b>VEGGIES:</b>
+            </div><% @garden.vegetables.each do |vegetable| %>
+            <%= vegetable.name.capitalize %>
+            <% end %>
+        </p>
+    </div>
+
+    <p id="reserve"><%= link_to "Reserve", new_garden_reservation_path(@garden)%></p>
 
 </div>
 <!-- <h4>Make a reservation</h4>
