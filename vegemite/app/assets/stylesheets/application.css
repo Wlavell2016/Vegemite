@@ -7,6 +7,7 @@ body {
   /*font-family: 'Poiret One', cursive;*/
   font-size: 12px;
   /*background-color: #E0E8D9;*/
+  /*margin: 5px;*/
 }
 
 a {
@@ -69,8 +70,8 @@ img {
 }
 
 .site-nav img {
-  height: 50px;
-  width: 50px;
+  height: 20px;
+  width: 20px;
 }
 
 .site-footer {
@@ -93,8 +94,10 @@ img {
   background-color: #A6AD95;
   padding-top: 30px;
   padding-bottom: 30px;
-  width: 300px;
-  margin-left: 475px;
+  /*width: 300px;*/
+  width: 500px;
+  /*margin-left: 475px;*/
+  margin-left: 360px;
 }
 
 .form img {
@@ -194,7 +197,7 @@ img {
   color: #245516;
   font-size: 40px;
   text-align: center;
-  padding-top: 40px;
+  padding-top: 10px;
 }
 
 .slide:nth-of-type(1) {
@@ -246,7 +249,6 @@ img {
 .info-share {
   height: 400px;
   background-color: #A6AD95;
-  /*background-color: #AA7C44;*/
   /*background: url("hippies-on-commune-carrying-a-tray-of-marijuana-plants-to-the-garden-c0y459.jpg");*/
   /*background-repeat: no-repeat;*/
   /*background-size: 100%;*/
@@ -269,9 +271,11 @@ img {
 
 .info-grow {
   height: 400px;
-  background-color: #A6AD95;
-  /*background: url("bef475ecc8e5ddd6667b7ad9e174499e.jpg");*/
-  /*background-color: #AA7C44;*/
+  /*background-color: #A6AD95;*/
+  /*background: url("5-garden-tips.jpg");*/
+  background: url("19454431-Old-retro-garden-tools-cultivator-shovel-rake-over-brown-soil-ploughed-land-close-up-Agriculture-gar-Stock-Photo.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   /*overflow: hidden;*/
 }
 
@@ -280,12 +284,26 @@ img {
   /*color: #A6AD95;*/
   font-size: 40px;
   text-align: center;
-  padding-top: 65px;
+  /*padding-top: 65px;*/
+  padding-top: 20px;
+}
+
+.info-grow p {
+  padding-bottom: 20px;
 }
 
 .info-grow img {
   height: 100px;
   width: 100px;
+}
+
+.box-grow {
+  width: 800px;
+  margin: auto;
+  background-color: #ffffff;
+  opacity: 0.8;
+  position: relative;
+  top: 55px;
 }
 
 .info-veg {
@@ -403,8 +421,15 @@ img {
   /*margin: 25px;*/
   margin-top: 70px;
   margin-left: 25px;
+  /*color: #245516;*/
 }
 
+<<<<<<< HEAD
+.gardens h1 {
+  color: #245516;
+}
+
+=======
 /*users#show******************************************************************************************/
 
 .users-show {
@@ -444,6 +469,7 @@ img {
   padding-top: 20px;
 }
 
+>>>>>>> e8b4782311a72ff1fda992e278e719dbd522ff68
 /*gardens#show*/
 
 .gardens-show {
@@ -497,8 +523,70 @@ img {
   border-radius: 50%;
 }
 
+/*garden#new*/
+
+.veg-list {
+  background-color: #D4DFD1;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+/*reservations#new*/
+
+.veg-info {
+  background-color: #D4DFD1;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.veg-name {
+  color: #245516;  
+}
+
 /*reservations#show*/
 
 .reservations-show {
   text-align: center;
+}
+
+/*reservations#index*/
+
+.reservations-index {
+  text-align: center;
+}
+
+/*users#show*/
+
+.users-show {
+  text-align: center;
+  background-color: #A6AD95;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  /*width: 300px;*/
+  /*margin-left: 475px;*/
+}
+
+.users-show a {
+  color: #245516;
+}
+
+.users-show img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+.user-data {
+  background-color: #D4DFD1;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.user-data img {
+  height: 30px;
+  width: 30px;
+}
+
+.update {
+  padding-top: 30px;
 }

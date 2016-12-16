@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
 
 $(function() {
@@ -24,5 +23,6 @@ $(function() {
       slides[currentSlide].className = 'slide';
       currentSlide = (currentSlide+1)%slides.length;
       slides[currentSlide].className = 'slide showing';
-  }
-})
+  };
+
+});

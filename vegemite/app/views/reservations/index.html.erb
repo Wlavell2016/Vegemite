@@ -1,9 +1,10 @@
 <%= link_to "Back to Gardens", gardens_url %>
 
+<div class="reservations-index">
 <h1 class="page-title">Reservations</h1>
 
 <% @reservations.each do |reservation| %>
-  <div class="reservation-info"><p>Yay!</p>
+  <div class="reservation-info"><p>Grow!</p>
     Confirmation Number: <%= reservation.id %> </br>
     Date: <%= reservation.startdate%> </br>
     <%= reservation.enddate%> </br>
@@ -11,3 +12,4 @@
     Note: <%= reservation.note %>
   </div>
 <% end %>
+</div>
