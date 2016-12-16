@@ -12,14 +12,14 @@ class ReservationsController < ApplicationController
     end
 
 
-    def isoverlap
-        @garden.reservations.each do |f|
-            if f.startdate <= @reservation.enddate && @reservation.startdate <= f.enddate
-                return true
-            end
-        end
-                return false
-  end
+  #   def isoverlap
+  #       @garden.reservations.each do |f|
+  #           if f.startdate <= @reservation.enddate && @reservation.startdate <= f.enddate
+  #               return true
+  #           end
+  #       end
+  #       return false
+  # end
 
     def new
         @reservation = Reservation.new
@@ -28,7 +28,7 @@ class ReservationsController < ApplicationController
     def create
         @garden = Garden.find(params[:garden_id])
         @reservation = @garden.reservations.build(reservation_params)
-          if isoverlap == false
+        #   if isoverlap == false
             @reservation.user = current_user
             if @reservation.save
                 redirect_to garden_reservation_url(@garden, @reservation), notice: 'Reservation made!'

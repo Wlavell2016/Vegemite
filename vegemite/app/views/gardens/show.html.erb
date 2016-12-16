@@ -3,7 +3,6 @@
 
 <img src="<%= @garden.image %>">
 
-<<<<<<< HEAD
     <div class="owner">
         <img src="<%= @user.image %>">
         <%= @user.firstname %>
@@ -28,13 +27,10 @@
             <%= vegetable.name.capitalize %>
             <% end %>
         </p>
-        <div id="map2">
+        <!-- <div id="map2">
 
-        </div>
+        </div> -->
     </div>
-
-
-
 
     <p id="reserve"><%= link_to "Reserve", new_garden_reservation_path(@garden)%></p>
 
@@ -75,25 +71,3 @@
 }
     </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkgLUAdpOZhEbs3SAkYUGPDAo0-zaDg3I&callback=initMap"async defer></script>
-=======
-<div class="owner">
-  <img src="<%= @user.image %>">
-  <%= @user.firstname %> <%= @user.lastname %>
-</div>
-
-<div class="garden-details">
-<h4><%= @garden.title.upcase %></h4>
-<p>
-  <div class="title"><b>ADDRESS:</b></div><%= @garden.address %><br/>
-  <div class="title"><b>SIZE (in square feet):</b></div><%= @garden.size %><br/>
-  <div class="title"><b>ABOUT:</b></div><%= @garden.description %></br>
-  <div class="title"><b>VEGGIES:</b></div><% @garden.vegetables.each do |vegetable| %>
-  <%= vegetable.name.capitalize %>,
-  <% end %>
-</p>
-</div>
-
-  <p id="reserve"><%= link_to "Reserve", new_garden_reservation_path(@garden)%></p>
-
-</div>
->>>>>>> 44f3996ae5f9bb4369ebbcd878d613257bcae4ef
