@@ -18,11 +18,7 @@
     <h4 class="garden-name"><%= @garden.title.upcase %></h4>
 
     <h4><% @garden.reservations.each do |f| %>
-        <h4>
-            This garden is currently booked on the following dates
-            <%= f.startdate %>,
-            <%= f.enddate %>
-        </h4>
+    <h4> This garden is currently booked on the following dates <%= f.startdate.strftime("%b %d %Y")%>, <%= f.enddate.strftime("%b %d %Y")%> </h4>
         <% end %>
         <div class="field">
             <% f.hidden_field :garden_id, value: @garden.id %>

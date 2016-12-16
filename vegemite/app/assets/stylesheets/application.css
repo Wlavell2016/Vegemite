@@ -374,7 +374,7 @@ img {
   color: #922368;
 }
 
-/*gardens#index*/
+/*gardens#index*******************************************************************************************/
 
 #map {
     height: 100%;
@@ -394,7 +394,7 @@ img {
   margin-left: 25px;
 }
 
-/*users#show*/
+/*users#show******************************************************************************************/
 
 .users-show {
   text-align: center;
@@ -415,6 +415,9 @@ img {
   border-radius: 50%;
 }
 
+
+/*gardens#show*******************************************************************************************/
+
 .user-data {
   background-color: #D4DFD1;
   padding-top: 20px;
@@ -434,6 +437,15 @@ img {
 
 .gardens-show {
   text-align: center;
+}
+
+#map {
+    height: 100%;
+    width: 800px;
+    position: absolute;
+    right: 5px;
+    top: 5%;
+    z-index: 1000;
 }
 
 .gardens-show img {
@@ -457,6 +469,7 @@ img {
   font-size:
 }
 
+/*reservations#show*******************************************************************************************/
 .title {
   color: #245516;
 }
