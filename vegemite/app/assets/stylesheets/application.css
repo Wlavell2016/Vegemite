@@ -1,3 +1,55 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
 /*main styles*/
 
 body {
@@ -398,7 +450,7 @@ img {
   color: #922368;
 }
 
-/*gardens#index*******************************************************************************************/
+/******************************gardens#index******************************************************************************************/
 
 #map {
     height: 100%;
@@ -430,13 +482,11 @@ img {
   /*color: #245516;*/
 }
 
-<<<<<<< HEAD
 .gardens h1 {
   color: #245516;
 }
 
-=======
-/*users#show******************************************************************************************/
+/*********************************************users#show******************************************************************************************/
 
 .users-show {
   text-align: center;
@@ -458,7 +508,7 @@ img {
 }
 
 
-/*gardens#show*******************************************************************************************/
+/*****************************************gardens#show*******************************************************************************************/
 
 .user-data {
   background-color: #D4DFD1;
@@ -475,8 +525,54 @@ img {
   padding-top: 20px;
 }
 
->>>>>>> e8b4782311a72ff1fda992e278e719dbd522ff68
-/*gardens#show*/
+/**************************gardens#show*/
+
+.garden-details {
+  background-color: #A6AD95;
+  /*padding-top: 20px;*/
+  /*position: relative;*/
+  /*padding-bottom: 20px;
+  padding-left: 300px;
+  padding-right: 300px;*/
+  height: 500px;
+  width: 100%;
+  border-style: dashed;
+  overflow: hidden;
+}
+
+.owner {
+  float: left;
+  /*padding-left: 90px;*/
+  /*padding-top: 140px;*/
+  margin-left: 1.0%;
+  margin-right: 0.5%;
+  width: 32.0%;
+  height: 100%;
+  border-style: dashed;
+  float: left;
+  display: inline;
+}
+
+.garden-info {
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    width: 32.0%;
+    height: 100%;
+    border-style: dashed;
+    float: left;
+    display: inline;
+}
+
+.garden-map {
+        margin-left: 0.5%;
+        margin-right: 0.0%;
+        height: 100%;
+        width: 32.0%;
+        border-style: dashed;
+        background-color: blue;
+        float: left;
+        display: inline;
+}
 
 .gardens-show {
   text-align: center;
@@ -496,14 +592,6 @@ img {
   width: 100%;
 }
 
-.garden-details {
-  background-color: #A6AD95;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 300px;
-  padding-right: 300px;
-}
-
 .garden-details h4 {
   font-size: 30px;
 }
@@ -512,25 +600,24 @@ img {
   font-size:
 }
 
+.owner img {
+  position: absolute;
+  left: 5%;
+  top: 10%;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+}
+
+
+
 /*reservations#show*******************************************************************************************/
 .title {
   color: #245516;
 }
 
-.owner {
-  float: left;
-  padding-left: 90px;
-  padding-top: 140px;
-}
-
-.owner img {
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-}
 
 /*garden#new*/
-
 .veg-list {
   background-color: #D4DFD1;
   padding-top: 20px;
@@ -577,8 +664,8 @@ img {
 }
 
 .users-show img {
-  height: 150px;
-  width: 150px;
+  height: 300px;
+  width: 300px;
   border-radius: 50%;
 }
 

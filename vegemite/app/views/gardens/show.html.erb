@@ -3,72 +3,40 @@
 
 <img src="<%= @garden.image %>">
 
-    <div class="owner">
-        <img src="<%= @user.image %>">
-        <%= @user.firstname %>
-        <%= @user.lastname %>
-    </div>
-    <div class="garden-details">
-        <h4><%= @garden.title.upcase %></h4>
-        <p>
-            <div class="title">
-                <b>ADDRESS:</b>
-            </div><%= @garden.address %><br/>
-            <div class="title">
-                <b>SIZE (in square feet):</b>
-            </div><%= @garden.size %>
-            <br>
-                <div class="title">
-                    <b>ABOUT:</b>
-                </div><%= @garden.description %></br>
-            <div class="title">
-                <b>VEGGIES:</b>
-            </div><% @garden.vegetables.each do |vegetable| %>
-            <%= vegetable.name.capitalize %>
-            <% end %>
-        </p>
-        <!-- <div id="map2">
 
-        </div> -->
+    <div class="garden-details">
+        <div class="owner">
+            <!-- <img src="<%= @user.image %>"> -->
+            <div class="userInfo">
+            <%= @user.firstname %>
+            <%= @user.lastname %>
+            </div>
+        </div>
+        <div class='garden-info'>
+                <h4><%= @garden.title.upcase %></h4>
+                <p>
+                    <div class="title">
+                        <b>ADDRESS:</b>
+                    </div><%= @garden.address %><br/>
+                    <div class="title">
+                        <b>SIZE (in square feet):</b>
+                    </div><%= @garden.size %>
+                    <br>
+                        <div class="title">
+                            <b>ABOUT:</b>
+                        </div><%= @garden.description %></br>
+                    <div class="title">
+                        <b>VEGGIES:</b>
+                    </div><% @garden.vegetables.each do |vegetable| %>
+                    <%= vegetable.name.capitalize %>
+                    <% end %>
+                </p>
+        </div>
+        <div class="garden-map">
+            <p>The more she shat euron maegor elia baelor aerys jory thoros benjen coldhands, obara eddard tyrion lady melisandre wights. Edmure jon connington lyanna, stannis areo aeron qhorin halfhand sansa brandon stark tommen doran myrcella. Lysa coldhands lord of bones, olenna Wun Weg Wun Dar Wun meryn trant egg joffrey brandon stark varys aerys night's king roose bolton pycelle. Rickon patchface areo, tysha tyrion meryn trant rodrik hodor ghost shaggydog brienne. Lady aenys lysa cersei brave companions tommen littlefinger gerold hightower edmure.</p>
+        </div>
     </div>
 
     <p id="reserve"><%= link_to "Reserve", new_garden_reservation_path(@garden)%></p>
 
 </div>
-
-
-<script>
-    function initMap() {
-    var map = new google.maps.Map(document.getElementById('map2'), {
-        zoom: 12,
-        center: {lat: 43.669297, lng: -79.415811},
-        });
-
-    function codeAddress(address_input, infowindow) {
-        var garden = address_input
-        var infoInput = infowindow
-        var geocoder = new google.maps.Geocoder();
-        geocoder.geocode( {'address': garden}, function(results, status) {
-            console.log(results, status)
-            if (status == 'OK') {
-            map.setCenter(results[0].geometry.location);
-                var marker = new google.maps.Marker({
-                    map: map,
-                    position: results[0].geometry.location
-                });
-            var contentString = infoInput
-            var infowindow = new google.maps.InfoWindow({
-                content: contentString
-            });
-            marker.addListener('click', function() {
-            infowindow.open(map, marker);
-            })
-            } else {
-                alert('Geocode was not successful for the following reason: ' + status);
-            }
-        });
-    }
-    codeAddress("<%= @garden.address %>", "<%= @garden.title %>")
-}
-    </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkgLUAdpOZhEbs3SAkYUGPDAo0-zaDg3I&callback=initMap"async defer></script>

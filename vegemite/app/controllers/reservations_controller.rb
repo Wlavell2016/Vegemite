@@ -69,4 +69,4 @@ class ReservationsController < ApplicationController
         def reservation_params
             params.require(:reservation).permit(:note, :vegetable_id, :startdate, :enddate)
         end
-      end
+    
