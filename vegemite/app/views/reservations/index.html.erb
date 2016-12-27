@@ -6,8 +6,8 @@
 <% @reservations.each do |reservation| %>
   <div class="reservation-info"><p>Grow!</p>
     Confirmation Number: <%= reservation.id %> </br>
-    Date: <%= reservation.startdate%> </br>
-    <%= reservation.enddate%> </br>
+    Date: <%= reservation.startdate.strftime("%b %d %Y")%> </br>
+    <%= reservation.enddate.strftime("%b %d %Y")%> </br>
 
     Note: <%= reservation.note %>
   </div>
