@@ -310,7 +310,6 @@ img {
   height: 400px;
   background-color: #A6AD95;
   /*overflow: hidden;*/
-  position: relative;
 }
 
 .info-veg h1 {
@@ -318,36 +317,31 @@ img {
   /*color: #E6DBEE;*/
   font-size: 40px;
   text-align: center;
-  padding-top: 5%;
+  padding-top: 90px;
 }
 
 .info-veg p {
   color: #922368;
-  font-size: 15px;
+  font-size: 5px;
   width: 500px;
   /*padding-left: 375px;*/
   padding-left: 420px;
 }
 
 .info-veg img {
-  height: 250px;
-  width: 250px;
+  height: 100px;
+  width: 100px;
   border-radius: 50%;
-  position: absolute;
-  bottom: 15%;
-  left: 5%;
+  float: left;
 }
 
 .testimonial {
   font-size: 20px;
   color: #245516;
-  /*text-align: justify;*/
+  text-align: justify;
   /*padding-left: 500px;*/
-  /*padding-left: 550px;*/
-  /*width: 350px;*/
-  display: inline;
-  position: absolute;
-  left: 30%;
+  padding-left: 550px;
+  width: 350px;
 }
 
 .info-sign {
@@ -398,7 +392,7 @@ img {
   color: #922368;
 }
 
-/*gardens#index*******************************************************************************************/
+/*gardens#index*/
 
 #map {
     height: 100%;
@@ -412,17 +406,6 @@ img {
     margin-right: 25px;
 }
 
-#map2 {
-    height: 100%;
-    width: 800px;
-    position: absolute;
-    right: 5px;
-    top: 5%;
-    top: 20%;
-    z-index: 1000;
-    margin-top: 90px;
-    margin-right: 25px;
-}
 .gardens-index {
   /*margin: 25px;*/
   margin-top: 70px;
@@ -430,19 +413,18 @@ img {
   /*color: #245516;*/
 }
 
-<<<<<<< HEAD
 .gardens h1 {
   color: #245516;
 }
 
-=======
-/*users#show******************************************************************************************/
+/*users#show*/
 
 .users-show {
   text-align: center;
   background-color: #A6AD95;
   padding-top: 30px;
   padding-bottom: 30px;
+  font-size: 15px;
   /*width: 300px;*/
   /*margin-left: 475px;*/
 }
@@ -457,13 +439,11 @@ img {
   border-radius: 50%;
 }
 
-
-/*gardens#show*******************************************************************************************/
-
 .user-data {
   background-color: #D4DFD1;
   padding-top: 20px;
   padding-bottom: 10px;
+  font-size: 15px;
 }
 
 .user-data img {
@@ -472,23 +452,13 @@ img {
 }
 
 .update {
-  padding-top: 20px;
+  padding-top: 30px;
 }
 
->>>>>>> e8b4782311a72ff1fda992e278e719dbd522ff68
 /*gardens#show*/
 
 .gardens-show {
   text-align: center;
-}
-
-#map {
-    height: 100%;
-    width: 800px;
-    position: absolute;
-    right: 5px;
-    top: 5%;
-    z-index: 1000;
 }
 
 .gardens-show img {
@@ -512,7 +482,6 @@ img {
   font-size:
 }
 
-/*reservations#show*******************************************************************************************/
 .title {
   color: #245516;
 }
@@ -529,70 +498,12 @@ img {
   border-radius: 50%;
 }
 
-/*garden#new*/
-
-.veg-list {
-  background-color: #D4DFD1;
-  padding-top: 20px;
-  padding-bottom: 10px;
-}
-
-/*reservations#new*/
-
-.veg-info {
-  background-color: #D4DFD1;
-  padding-top: 20px;
-  padding-bottom: 10px;
-}
-
-.veg-name {
-  color: #245516;
-}
-
 /*reservations#show*/
 
 .reservations-show {
   text-align: center;
 }
 
-/*reservations#index*/
-
 .reservations-index {
   text-align: center;
-}
-
-/*users#show*/
-
-.users-show {
-  text-align: center;
-  background-color: #A6AD95;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  /*width: 300px;*/
-  /*margin-left: 475px;*/
-}
-
-.users-show a {
-  color: #245516;
-}
-
-.users-show img {
-  height: 150px;
-  width: 150px;
-  border-radius: 50%;
-}
-
-.user-data {
-  background-color: #D4DFD1;
-  padding-top: 20px;
-  padding-bottom: 10px;
-}
-
-.user-data img {
-  height: 30px;
-  width: 30px;
-}
-
-.update {
-  padding-top: 30px;
 }
