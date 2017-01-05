@@ -31,7 +31,7 @@ user = User.create!([
     title = Faker::Pokemon.location
     description = Faker::Hipster.paragraph(20)
     size = Faker::Number.number(3)
-    image = Faker::Placeholdit.image
+    # image = Faker::Placeholdit.image
     user_id = Faker::Number.between(1,16)
     address = ['152 Augusta Avenue Toronto Ontario',
                '62 Nassau Street Toronto Ontario',
@@ -59,8 +59,8 @@ user = User.create!([
                           description: description,
                           address: address.sample,
                           size: size,
-                          user_id: user_id,
-                          image: image)
+                          user_id: user_id
+                          # image: image)
 end
 
 vegetable = Vegetable.create!([
