@@ -1,0 +1,8 @@
+desc
+        desc 'Generate a report of new users'
+        task :new_users [:environment] do
+        puts 'Generating report...'
+        sleep 5
+        puts " Done. "
+    end
+end

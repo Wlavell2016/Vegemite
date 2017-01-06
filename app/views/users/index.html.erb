@@ -1,0 +1,70 @@
+<div class="main">
+
+<div class="info-hippies">
+  <ul id="slides">
+    <li class="showing"></li>
+    <li class="slide"></li>
+    <li class="slide"></li>
+    <li class="slide"></li>
+    <li class="slide"></li>
+    <li class="slide"></li>
+    <li class="slide"><%= image_tag('noun_147303_cc.png') %><br/><h1>Hippies sharing land and growing stuff</h1></li>
+  </ul>
+  <!-- <div class="box">
+    <h1>Hippies sharing land and growing stuff</h1>
+  </div> -->
+</div>
+
+<div class="info-share">
+  <h1>Share land</h1>
+  <p>
+    <%= image_tag('noun_18742_cc.png') %><br/>
+    Greenthumbs connects people with land to share with people with veg to grow - <br/>
+    Creating a community for sustainable urban living.
+  </p>
+  <!-- <p>
+    Greenthumbs: Connecting gardens and people with vegetables to grow
+  </p> -->
+</div>
+
+<div class="info-grow">
+  <div class="box-grow">
+    <h1>Grow local</h1>
+    <p>
+      <%= image_tag('noun_205045_cc.png') %><br/>
+      Discover available greenspace and gardeners and start growing some veg together!
+    </p>
+  </div>
+</div>
+
+<div class="info-veg">
+  <h1>Veg out</h1>
+  <p>
+  <%= image_tag('3_2_720.jpg') %>
+    <div class="testimonial">
+    "I was growing some veggies on my balcony when my landlord warned that it wasn't allowed in the building.
+    Thanks to greenthumbs I was able to transfer them to a bigger space and enjoyed fresh veg all winter long!
+    Although, sadly, the strawberries didn't make the move."<br/>
+    "Amazing app!"<br/>
+    - Captain Amazing (aka Will Lavell)
+    </div>
+  </p>
+</div>
+
+<% if current_user %>
+
+<% else %>
+<div class="info-sign">
+
+  <h1>Join the Greenthumbs Community</h1>
+  <p><%= image_tag('noun_81677_cc.png') %></p>
+
+  <div class="buttons">
+    <button type="button"><%= link_to "Sign up", new_user_path %></button>
+    <button type="button"><%= link_to "Log in", new_session_path %></button>
+  </div>
+
+</div>
+<% end %>
+
+</div>

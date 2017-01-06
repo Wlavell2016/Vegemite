@@ -1,0 +1,28 @@
+// Place all the styles related to the gardens controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#map {
+    height: 100%;
+    width: 800px;
+    position: absolute;
+    right: 5px;
+    top: 5%;
+    z-index: 1000;
+}
+
+
+#map2 {
+    height: 100%;
+    width: 800px;
+    position: absolute;
+    right: 5px;
+    top: 5%;
+    z-index: 1000;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
