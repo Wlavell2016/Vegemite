@@ -1,3 +1,5 @@
+
+
 <div class="form">
 <%= image_tag('noun_67206_cc.png') %>
 
@@ -48,10 +50,15 @@
   <!-- add user type functionality? -->
 
   <% if current_user %>
-    <div class="field">
+    <!-- <div class="field">
       <%= form.label :image %><br />
       <%= form.text_field :image %>
-    </div>
+    </div> -->
+
+    <div class="field">
+    <%= form.label :avatar %><br>
+    <%= form.file_field :avatar %>
+   </div>
   <% else %>
 
   <% end %>

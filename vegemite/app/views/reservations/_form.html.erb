@@ -19,7 +19,7 @@
 
   This garden is currently booked on the following dates:
     <% @garden.reservations.each do |f| %>
-      <p><%= f.startdate %>, <%= f.enddate %></p>
+      <p><%= f.startdate.strftime("%b %d %Y") %>, <%= f.enddate.strftime("%b %d %Y") %></p>
     <% end %>
 
   <div class="field">
