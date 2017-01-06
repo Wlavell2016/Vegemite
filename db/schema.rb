@@ -32,18 +32,19 @@ ActiveRecord::Schema.define(version: 20161222030744) do
   end
 
   create_table "reservations", force: :cascade do |t|
+    t.integer  "vegetable_id"
     t.integer  "user_id"
     t.integer  "garden_id"
     t.text     "note"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.datetime "startdate"
     t.datetime "enddate"
   end
 
-  create_table "reservations_vegetables", force: :cascade do |t|
+  create_table "reservations_users", force: :cascade do |t|
     t.integer "reservation_id"
-    t.integer "vegetable_id"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
