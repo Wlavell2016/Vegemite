@@ -12,52 +12,25 @@
     </p>
   <% end %>
 
-<div id="map">
+    <div id="map">test blah blah</div>
 
-</div>
-
-</div>s
-
-</div>
-    <% @gardens.each do |f| %>
-            <p class ='geodata' data-geo= "<%= f.address %>"></p>
-            <% end %>
     <script>
-    function initMap() {
-    var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 12,
-        center: {lat: 43.669297, lng: -79.415811},
-        });
 
-    function codeAddress(address_input, infowindow) {
-        var garden = address_input
-        var infoInput = infowindow
-        var geocoder = new google.maps.Geocoder();
-        geocoder.geocode( {'address': garden}, function(results, status) {
-            console.log(results, status)
-            if (status == 'OK') {
-            map.setCenter(results[0].geometry.location);
-                var marker = new google.maps.Marker({
-                    map: map,
-                    position: results[0].geometry.location
-                });
-            var contentString = infoInput
-            var infowindow = new google.maps.InfoWindow({
-                content: contentString
-            });
-            marker.addListener('click', function() {
-            infowindow.open(map, marker);
-            })
-            } else {
-                alert('Geocode was not successful for the following reason: ' + status);
-            }
-        });
+       function initMap() {
+         var toronto = {lat: 43.669297, lng: -79.415811};
+         var map = new google.maps.Map(document.getElementById('map'), {
+             zoom: 10,
+             center: toronto
+           });
+      <%  @gardens.each do |g|  %>
+      var marker = new google.maps.Marker({
+        position: {lat: <%= g.latitude.to_f %>, lng: <%=g.longitude.to_f%>},
+        map: map
+      });
+      <% end %>
     }
-    <% @gardens.each do |f| %>
-    codeAddress("<%= f.address %>", "<%= f.title %>")
-    <% end %>
-}
 
     </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkgLUAdpOZhEbs3SAkYUGPDAo0-zaDg3I&callback=initMap"
-async defer></script>
+     <script async defer
+     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfGdWTZAmF0HDpWOnGsfVpIwLcb94EO-0&callback=initMap">
+     </script>

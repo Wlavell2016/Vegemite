@@ -10,17 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161222030744) do
+ActiveRecord::Schema.define(version: 20170106171134) do
 
   create_table "gardens", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
     t.string   "address"
     t.integer  "size"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
     t.string   "image"
     t.integer  "user_id"
+    t.decimal  "latitude",    precision: 9, scale: 6
+    t.decimal  "longitude",   precision: 9, scale: 6
   end
 
   create_table "gardens_vegetables", force: :cascade do |t|
@@ -49,11 +51,13 @@ ActiveRecord::Schema.define(version: 20161222030744) do
     t.string   "lastname"
     t.string   "email"
     t.string   "password_digest"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
     t.string   "image"
     t.string   "categoryuser"
     t.string   "avatar"
+    t.decimal  "latitude",        precision: 9, scale: 6
+    t.decimal  "longitude",       precision: 9, scale: 6
   end
 
   create_table "vegetables", force: :cascade do |t|
