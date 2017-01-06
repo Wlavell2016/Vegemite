@@ -3,9 +3,8 @@
 <div class="users-show">
     <h1 class="page-title"><%= @user.username.capitalize %>'s Profile</h1>
     <!-- <%= image_tag('noun_67206_cc.png') %> -->
-
 <div class="user-profile">
-  <img src="<%= @user.image %>">
+    <%= image_tag @user.avatar.banner.url %>
   <h4>Username: <%= @user.username %></h4>
   <h4>First name: <%= @user.firstname %></h4>
   <h4>Last name: <%= @user.lastname %></h4>

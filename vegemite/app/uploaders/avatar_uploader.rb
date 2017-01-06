@@ -34,6 +34,10 @@ class AvatarUploader < CarrierWave::Uploader::Base
   version :thumb do
     process resize_to_fit: [50, 50]
   end
+
+    version :banner do
+      process :resize_to_fill => [400, 400]
+    end
   # changed above if not working test
 
   # Add a white list of extensions which are allowed to be uploaded.
