@@ -6,6 +6,6 @@ class Garden < ApplicationRecord
 
     geocoded_by :address
     after_validation :geocode, if: :address_changed?
-    validates :title, :description, :address, :size, presence: true
-    validates :size, numericality: {only_integer: true}
+    # validates :title, :description, :address, :size, presence: true
+    # validates :size, numericality: {only_integer: true}
 end
