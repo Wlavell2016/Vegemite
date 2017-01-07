@@ -45,6 +45,7 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
 /*main styles*/
 body {
   /*background-color: ;*/
@@ -142,6 +143,7 @@ img {
 .log-sign a {
   color: #245516;
 }
+
 /*homepage*/
 .main p {
   font-size: 20px;
@@ -175,11 +177,11 @@ img {
   padding: 40px;
 }
 #slides {
-    position: relative;
-    height: 400px;
-    padding: 0px;
-    margin: 0px;
-    list-style-type: none;
+  position: relative;
+  height: 400px;
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
 }
 .slide {
   position: absolute;
@@ -199,10 +201,10 @@ img {
   z-index: 2;
 }
 .slide {
-    /*padding: 40px;*/
-    /*box-sizing: border-box;*/
-    height: 400px;
-    background: #333;
+  /*padding: 40px;*/
+  /*box-sizing: border-box;*/
+  height: 400px;
+  background: #333;
 }
 .slide img {
   height: 100px;
@@ -218,49 +220,49 @@ img {
   padding-top: 10px;
 }
 .slide:nth-of-type(1) {
-    /*background: red;*/
-    background: url("0uMUTX9rp9YpfSpWVPIW_1082068304.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
+  /*background: red;*/
+  background: url("0uMUTX9rp9YpfSpWVPIW_1082068304.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .slide:nth-of-type(2) {
-    /*background: orange;*/
-    background: url("080766f8f207970e64109ed849ed0573.jpg");
-    background-repeat: no-repeat;
-    background-position: left;
-    background-size: auto 100%;
+  /*background: orange;*/
+  background: url("080766f8f207970e64109ed849ed0573.jpg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: auto 100%;
 }
 .slide:nth-of-type(3) {
-    /*background: green;*/
-    background: url("4b9cd27947b3415beec39afa255a96ad.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto 100%;
+  /*background: green;*/
+  background: url("4b9cd27947b3415beec39afa255a96ad.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 100%;
 }
 .slide:nth-of-type(4) {
-    /*background: blue;*/
-    background: url("6787fd9033061.5602d04bb29dc.jpg");
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: auto 100%;
+  /*background: blue;*/
+  background: url("6787fd9033061.5602d04bb29dc.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: auto 100%;
 }
 .slide:nth-of-type(5) {
-    /*background: blue;*/
-    background: url("0uMUTX9rp9YpfSpWVPIW_1082068304.jpg");
-    background-repeat: no-repeat;
-    background-position: left;
-    background-size: auto 100%;
+  /*background: blue;*/
+  background: url("0uMUTX9rp9YpfSpWVPIW_1082068304.jpg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: auto 100%;
 }
 .slide:nth-of-type(6) {
-    /*background: blue;*/
-    background: url("IMG_7605.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto 100%;
+  /*background: blue;*/
+  background: url("IMG_7605.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 100%;
 }
 .slide:nth-of-type(7) {
-    background: #A6AD95;
-    /*background: url("0uMUTX9rp9YpfSpWVPIW_1082068304.jpg";*/
+  background: #A6AD95;
+  /*background: url("0uMUTX9rp9YpfSpWVPIW_1082068304.jpg";*/
 }
 .info-share {
   height: 400px;
@@ -394,28 +396,29 @@ img {
   /*color: #F0E8D4;*/
   color: #922368;
 }
-/******************************gardens#index******************************************************************************************/
+
+/*gardens#index*/
 #map {
-    height: 100%;
-    width: 800px;
-    position: absolute;
-    right: 5px;
-    top: 5%;
-    top: 20%;
-    z-index: 1000;
-    margin-top: 90px;
-    margin-right: 25px;
+  height: 100%;
+  width: 800px;
+  position: absolute;
+  right: 5px;
+  top: 5%;
+  top: 20%;
+  z-index: 1000;
+  margin-top: 90px;
+  margin-right: 25px;
 }
 #map2 {
-    height: 100%;
-    width: 800px;
-    position: absolute;
-    right: 5px;
-    top: 5%;
-    top: 20%;
-    z-index: 1000;
-    margin-top: 90px;
-    margin-right: 25px;
+  height: 100%;
+  width: 800px;
+  position: absolute;
+  right: 5px;
+  top: 5%;
+  top: 20%;
+  z-index: 1000;
+  margin-top: 90px;
+  margin-right: 25px;
 }
 .gardens-index {
   /*margin: 25px;*/
@@ -426,7 +429,8 @@ img {
 .gardens h1 {
   color: #245516;
 }
-/*********************************************users#show******************************************************************************************/
+
+/*users#show*/
 .users-show {
   text-align: center;
   background-color: #A6AD95;
@@ -443,7 +447,8 @@ img {
   width: 150px;
   border-radius: 50%;
 }
-/*****************************************gardens#show*******************************************************************************************/
+
+/*gardens#show*/
 .user-data {
   background-color: #D4DFD1;
   padding-top: 20px;
@@ -456,7 +461,6 @@ img {
 .update {
   padding-top: 20px;
 }
-/**************************gardens#show*/
 .garden-details {
   background-color: #A6AD95;
   /*padding-top: 20px;*/
@@ -468,6 +472,12 @@ img {
   width: 100%;
   border-style: dashed;
   overflow: hidden;
+}
+.garden-details h4 {
+  font-size: 30px;
+}
+.garden-details p {
+  font-size:
 }
 .owner {
   float: left;
@@ -481,46 +491,6 @@ img {
   float: left;
   display: inline;
 }
-.garden-info {
-    margin-left: 0.5%;
-    margin-right: 0.5%;
-    width: 32.0%;
-    height: 100%;
-    border-style: dashed;
-    float: left;
-    display: inline;
-}
-.garden-map {
-        margin-left: 0.5%;
-        margin-right: 0.0%;
-        height: 100%;
-        width: 32.0%;
-        border-style: dashed;
-        background-color: blue;
-        float: left;
-        display: inline;
-}
-.gardens-show {
-  text-align: center;
-}
-#map {
-    height: 100%;
-    width: 800px;
-    position: absolute;
-    right: 5px;
-    top: 5%;
-    z-index: 1000;
-}
-.gardens-show img {
-  height: 500px;
-  width: 100%;
-}
-.garden-details h4 {
-  font-size: 30px;
-}
-.garden-details p {
-  font-size:
-}
 .owner img {
   position: absolute;
   left: 5%;
@@ -529,7 +499,42 @@ img {
   width: 300px;
   border-radius: 50%;
 }
-/*reservations#show*******************************************************************************************/
+.garden-info {
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  width: 32.0%;
+  height: 100%;
+  border-style: dashed;
+  float: left;
+  display: inline;
+}
+.garden-map {
+  margin-left: 0.5%;
+  margin-right: 0.0%;
+  height: 100%;
+  width: 32.0%;
+  border-style: dashed;
+  background-color: blue;
+  float: left;
+  display: inline;
+}
+.gardens-show {
+  text-align: center;
+}
+.gardens-show img {
+  height: 500px;
+  width: 100%;
+}
+#map {
+  height: 100%;
+  width: 800px;
+  position: absolute;
+  right: 5px;
+  top: 5%;
+  z-index: 1000;
+}
+
+/*reservations#show*/
 .title {
   color: #245516;
 }

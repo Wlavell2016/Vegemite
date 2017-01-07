@@ -59,7 +59,7 @@ user = User.create!([
                           description: description,
                           address: address.sample,
                           size: size,
-                          user_id: user_id
+                          user_id: user_id)
                           # image: image)
 
 end
