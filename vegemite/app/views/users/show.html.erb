@@ -3,30 +3,33 @@
 <div class="users-show">
     <h1 class="page-title"><%= @user.username.capitalize %>'s Profile</h1>
     <!-- <%= image_tag('noun_67206_cc.png') %> -->
-<div class="user-profile">
-    <%= image_tag @user.avatar.banner.url %>
-  <h4>Username: <%= @user.username %></h4>
-  <h4>First name: <%= @user.firstname %></h4>
-  <h4>Last name: <%= @user.lastname %></h4>
-</div>
+    <div class="user-profile">
+        <!-- <%= image_tag @user.avatar.banner.url %> -->
+        <h4>Username:
+            <%= @user.username %></h4>
+        <h4>First name:
+            <%= @user.firstname %></h4>
+        <h4>Last name:
+            <%= @user.lastname %></h4>
+    </div>
 
-<div class="user-data">
-  <%= image_tag('noun_25922_cc.png') %>
-  <h3>Reservations:</h3>
-  <% @user.reservations.each do |r| %>
-  <%= r.startdate.strftime("%b %d %Y") %> -
-  <%= r.enddate.strftime("%b %d %Y")%><br/>
-  <% end %><br/>
-  <%= image_tag('noun_197605_cc.png') %>
-  <h3>Gardens:</h3>
-  <% @user.owned_gardens.each do |g| %>
-  <%= g.title %>
-  <%= g.address %>
-  <% end %>
-</div>
+    <div class="user-data">
+        <%= image_tag('noun_25922_cc.png') %>
+        <h3>Reservations:</h3>
+        <% @user.reservations.each do |r| %>
+        <%= r.startdate.strftime("%b %d %Y") %>
+        <%= r.enddate.strftime("%b %d %Y")%>
+        <% end %>
+        <%= image_tag('noun_197605_cc.png') %>
+        <h3>Gardens:</h3>
+        <% @user.owned_gardens.each do |g| %>
+        <%= g.title %>
+        <%= g.address %>
+        <% end %>
+    </div>
 
-<div class="update">
-  <button type="button"><%= link_to 'Update', edit_user_path(@user) %></button>
-</div>
+    <div class="update">
+        <button type="button"><%= link_to 'Update', edit_user_path(@user) %></button>
+    </div>
 
 </div>
