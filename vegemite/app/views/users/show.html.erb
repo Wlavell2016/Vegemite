@@ -4,7 +4,8 @@
     <h1 class="page-title"><%= @user.username.capitalize %>'s Profile</h1>
     <!-- <%= image_tag('noun_67206_cc.png') %> -->
     <div class="user-profile">
-        <!-- <%= image_tag @user.avatar.banner.url %> -->
+        <%= image_tag @user.avatar.banner.url%>
+
         <h4>Username:
             <%= @user.username %></h4>
         <h4>First name:
@@ -13,23 +14,31 @@
             <%= @user.lastname %></h4>
     </div>
 
+    <div class="update">
+      <button type="button"><%= link_to 'Update', edit_user_path(@user) %></button>
+    </div>
     <div class="user-data">
         <%= image_tag('noun_25922_cc.png') %>
-        <h3>Reservations:</h3>
+        <h3>Here are your current Reservations:</h3>
         <% @user.reservations.each do |r| %>
-        <%= r.startdate.strftime("%b %d %Y") %>
-        <%= r.enddate.strftime("%b %d %Y")%>
+        <%= r.garden.title %>:
+        <%= r.startdate.strftime("%b %d %Y") %> -
+        <%= r.enddate.strftime("%b %d %Y")%><br/>
+    <%=link_to "Edit", edit_garden_reservation_path(r.garden, r.id) %>
+    <%=link_to "Delete", garden_reservation_path(r.garden, r.id), method: :delete, data: {confirm: "Are you sure you want to delete this reservation?"} %>
+
         <% end %>
+
+      <br/>
+
         <%= image_tag('noun_197605_cc.png') %>
         <h3>Gardens:</h3>
         <% @user.owned_gardens.each do |g| %>
         <%= g.title %>
-        <%= g.address %>
+        <%= g.address %></br>
+        <%=link_to "Edit", edit_garden_path(g.id) %>
         <% end %>
     </div>
 
-    <div class="update">
-        <button type="button"><%= link_to 'Update', edit_user_path(@user) %></button>
-    </div>
 
 </div>
