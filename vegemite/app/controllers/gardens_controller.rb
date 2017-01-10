@@ -8,9 +8,7 @@ class GardensController < ApplicationController
     def show
         @garden = Garden.find(params[:id])
         @reservation = Reservation.new
-        # @user = User.find(params[:id])
         @user = current_user
-
     end
 
     def new
@@ -49,6 +47,6 @@ class GardensController < ApplicationController
     private
 
     def garden_params
-        params.require(:garden).permit(:title, :description, :address, :size, :image, vegetable_ids: [])
+        params.require(:garden).permit(:title, :description, :address, :size, :garden_image, vegetable_ids: [])
     end
 end

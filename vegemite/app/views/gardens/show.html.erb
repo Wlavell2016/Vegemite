@@ -1,7 +1,7 @@
 <%= link_to "Back to Gardens", gardens_path %>
 <div class="gardens-show">
 
-    <img src="<%= @garden.image %>">
+        <%= image_tag @garden.garden_image.banner2.url   unless @garden.garden_image.banner2.url.blank?%>
 
     <div class="garden-details">
         <div class="owner">
