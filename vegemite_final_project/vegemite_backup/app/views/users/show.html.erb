@@ -1,0 +1,17 @@
+<%= link_to 'Back to Gardens', gardens_path %>
+<!-- change link to go to landing page -->
+
+<h1><%= @user.username.capitalize %>'s Profile</h1>
+
+<div class="user_profile">
+  <h4>Username: <%= @user.username %></h4>
+  <h4>First name: <%= @user.firstname %></h4>
+  <h4>Last name: <%= @user.lastname %></h4>
+  <h4>Photo: <%= @user.image %></h4>
+  <h4>I am a grower / I am an owner</h4>
+  <!-- add user type functionality? -->
+  <!-- listings -->
+  <!-- reservations -->
+</div>
+
+<%= link_to 'Update', edit_user_path(@user) %>

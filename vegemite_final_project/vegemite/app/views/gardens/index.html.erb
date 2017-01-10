@@ -1,0 +1,36 @@
+<div class="gardens-index">
+<h1 class="gardens-title">Gardens</h1>
+
+<div class="gardens">
+  <% @gardens.each do |garden| %>
+    <img src="<%= garden.image %>">
+    <h3 class="garden-name"><%= garden.title %></h3>
+    <p class="garden-info">
+      Address: <%= garden.address %><br/>
+      Size: <%= garden.size %><br/>
+      <%= link_to 'More details or whatever', garden_path(garden) %>
+    </p>
+  <% end %>
+
+    <div id="map">test blah blah</div>
+
+    <script>
+
+       function initMap() {
+         var toronto = {lat: 43.669297, lng: -79.415811};
+         var map = new google.maps.Map(document.getElementById('map'), {
+             zoom: 12,
+             center: toronto
+           });
+      <%  @gardens.each do |g|  %>
+      var marker = new google.maps.Marker({
+        position: {lat: <%= g.latitude.to_f %>, lng: <%=g.longitude.to_f%>},
+        map: map
+      });
+      <% end %>
+    }
+
+    </script>
+     <script async defer
+     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfGdWTZAmF0HDpWOnGsfVpIwLcb94EO-0&callback=initMap">
+     </script>

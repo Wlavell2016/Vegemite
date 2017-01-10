@@ -1,0 +1,50 @@
+<div class="form">
+    <%= image_tag('noun_51822_cc.png') %>
+    <!-- <%= image_tag('noun_25922_cc.png') %> -->
+
+    <%= form_for ([@garden, @reservation]) do |f| %>
+    <% if @reservation.errors.any? %>
+    <div id="error_explanation">
+        <h2><%= pluralize(@reservation.errors.count, "error") %>
+            prohibited this reservation from being made:</h2>
+        <ul>
+            <% @reservation.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+            <% end %>
+        </ul>
+    </div>
+    <% end %>
+
+    <h4 class="garden-name"><%= @garden.title.upcase %></h4>
+
+  This garden is currently booked on the following dates:
+    <% @garden.reservations.each do |f| %>
+      <p><%= f.startdate.strftime("%b %d %Y") %>, <%= f.enddate.strftime("%b %d %Y") %></p>
+    <% end %>
+
+  <div class="field">
+    <% f.hidden_field :garden_id, value: @garden.id %>
+  </div>
+
+  <div class="veg-info">
+  Veggies:<br/><% @garden.vegetables.each do |vegetable| %>
+  <h4><div class="veg-name"><%= vegetable.name.capitalize %></div></h4>
+  Sow: <%= vegetable.sow_period %><br/>
+  Plant Out: <%= vegetable.plant_out_period %><br/>
+  Harvest: <%= vegetable.harvest %><br/>
+  <% end %>
+  </div>
+
+  <div class="field">
+    <p>Note: <%= f.text_field :note %></p>
+     <p>Reap and Sow: <br/><%= f.date_select :startdate %></p>
+     <p>Harvest: <%= f.date_select :enddate %></p>
+   </div>
+
+  <div class="actions">
+    <%= f.submit "Grow" %>
+  </div>
+
+<% end %>
+
+</div>

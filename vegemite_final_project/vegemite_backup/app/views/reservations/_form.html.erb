@@ -1,0 +1,36 @@
+<div class="form">
+<%= form_for [@garden, @reservation] do |f| %>
+
+  <% if @reservation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@reservation.errors.count, "error") %> prohibited this reservation from being made:</h2>
+      <ul>
+      <% @reservation.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+  <% end %>
+
+  <h4><%= @garden.title.upcase %></h4>
+
+  <div class="field">
+    <% f.hidden_field :garden_id, value: @garden.id %>
+  </div>
+
+  Veggies: <% @garden.vegetables.each do |vegetable| %>
+  <%= vegetable.name.capitalize %>
+  (<%= vegetable.start_month %> to <%= vegetable.end_month %>)<br/>
+  <% end %>
+
+  <div class="field">
+    <p>Note: <%= f.text_field :note %></p>
+     <p>Please Enter the Start Date: <%= f.date_select :startdate %></p>
+     <p>Please Enter the End Date: <%= f.date_select :enddate %></p>
+   </div>
+
+  <div class="actions">
+    <%= f.submit "Reserve" %>
+  </div>
+
+<% end %>
+</div>
