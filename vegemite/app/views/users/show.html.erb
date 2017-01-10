@@ -4,7 +4,7 @@
     <h1 class="page-title"><%= @user.username.capitalize %>'s Profile</h1>
     <!-- <%= image_tag('noun_67206_cc.png') %> -->
     <div class="user-profile">
-        <%= image_tag @user.avatar.banner.url%>
+        <%= image_tag @user.avatar.banner.url   unless @user.avatar.banner.url.blank?%>
 
         <h4>Username:
             <%= @user.username %></h4>
@@ -30,14 +30,18 @@
         <% end %>
 
       <br/>
-
         <%= image_tag('noun_197605_cc.png') %>
         <h3>Gardens:</h3>
         <% @user.owned_gardens.each do |g| %>
-        <%= g.title %>
-        <%= g.address %></br>
+        <%= link_to g.title, garden_path(g) %>
+        <br/>
+        <%= g.address %>
         <%=link_to "Edit", edit_garden_path(g.id) %>
+        <%=link_to "Reservations", garden_reservations_path(g.id) %>
+
         <% end %>
+
+
     </div>
 
 
