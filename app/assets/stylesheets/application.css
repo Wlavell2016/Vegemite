@@ -31,7 +31,8 @@ body {
     line-height: 1;
 }
 ol, ul {
-    list-style: none;
+    list-style:
+     none;
 }
 blockquote, q {
     quotes: none;
@@ -194,7 +195,7 @@ img {
 .slide {
   position: absolute;
   left: 0px;
-  top: 0px
+  top: 0px;
   height: 100%;
   width: 100%;
   opacity: 0;
