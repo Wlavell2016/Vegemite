@@ -31,8 +31,6 @@ gem 'carrierwave', '>= 1.0.0.rc', '< 2.0'
 
 gem 'geocoder'
 
-gem 'pg'
-
 gem 'pry-nav'
 
 gem 'image_magick'
