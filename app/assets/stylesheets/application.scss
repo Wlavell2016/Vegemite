@@ -23,17 +23,27 @@
   width: 50px;
 }
 
+.img {
+  height: 200px;
+  width: 200px;
+}
 .container.cards{
+  padding-top: 10%;
   padding-left: 10%;
   padding-right: 10%;
   // padding-top: 5%;
   // padding-bottom: 5%;
 }
 
+.nav-wrapper {
+  height: 300px;
+}
+
+
 #map {
   position: fixed !important;
-  top: 80px;
-  right: 10px;
+  top: 100px;
+  left: 10px;
   height: 500px;
   width: 50%;
   padding-right: 100px !important;

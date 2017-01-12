@@ -17,8 +17,6 @@
   </head>
   <body class="<%= controller.controller_name %> <%= controller.action_name %>">
     <header class="site-header">
-
-
       <!-- <nav class="site-nav"> -->
         <!-- <%= image_tag('noun_112887_cc.png') %> -->
         <!-- <ul>
@@ -38,34 +36,42 @@
       </ul>
       </nav> -->
       <!-- Dropdown Structure -->
-    <% if current_user %>
-    <li>Hello, <%= current_user.username %>!</li>
-    <ul id="dropdown1" class="dropdown-content">
-    <li><%= link_to "Home", root_path %></li>
-    <li><a href="#!"><%= link_to "Gardens", "/gardens" %></a></li>
-    <li><a href="#!"><%= link_to "Profile", "/users/#{session[:user_id]}" %></a></li>
-    <li><a href="#!"><%= link_to "Add a Garden", "/gardens/new" %></a></li>
-    <li class="divider"></li>
-    <li><a href="#!">About Us</a></li>
-    <li><%= link_to "Log out", session_path("current"), :method => :delete %></li>
-  <% else %>
-    <li><%= link_to "Log in", new_session_path %></li>
-    <li><%= link_to "Sign up", new_user_path %></li>
-  <% end %>
-  </ul>
+       <div class="navbar-fixed">
   <nav>
     <div class="nav-wrapper">
+      <div class="row">
+        <!-- <% if current_user %>
+        <p>
+          Hello, <%= current_user.username %>!
+        </p> -->
+      <div class="center-align">
+     <h1 class="logo"><a href="/">greenthumbs<%= image_tag('noun_27054.png') %></a></h1>
+   </div>
+          <ul id="dropdown1" class="dropdown-content">
+          <li><%= link_to "Home", root_path %></li>
+          <li><a href="#!"><%= link_to "Gardens", "/gardens" %></a></li>
+          <li><a href="#!"><%= link_to "Profile", "/users/#{session[:user_id]}" %></a></li>
+          <li><a href="#!"><%= link_to "Add a Garden", "/gardens/new" %></a></li>
+          <li class="divider"></li>
+          <li><a href="#!">About Us</a></li>
+          <li><%= link_to "Log out", session_path("current"), :method => :delete %></li>
+        <% else %>
+          <li><%= link_to "Log in", new_session_path %></li>
+          <li><%= link_to "Sign up", new_user_path %></li>
+        <% end %>
+        </ul>
       <!-- <a href="#!" class="brand-logo">Logo</a> -->
-      <ul class="right hide-on-med-and-down">
+        <ul class="right hide-on-med-and-down">
+            <li><a class="dropdown-button" href="#!" data-activates="dropdown1"><i class="material-icons right">reorder</i></a></li>
+          </ul>
+        </div>
         <!-- <li><a href="sass.html">Sign up</a></li> -->
         <!-- <li><a href="badges.html">Log in</a></li> -->
         <!-- Dropdown Trigger -->
-        <li><a class="dropdown-button" href="#!" data-activates="dropdown1"><i class="material-icons right">reorder</i></a></li>
-      </ul>
-    </div>
-  </nav>
+      </div>
+        </nav>
+          </div>
     </header>
-
     <% if flash[:notice] %>
       <p id="notice"><%= flash[:notice] %></p>
     <% end %>
@@ -111,33 +117,6 @@
       <!-- <small>&copy The app formerly known as vegemite</small> -->
       <!-- <%= image_tag('noun_288936_cc.png') %> -->
     <!-- </footer> -->
-
-    <footer class="page-footer">
-
-  <div class="container">
-    <div class="row">
-      <div class="col l6 s12">
-        <h5 class="white-text">Footer Content</h5>
-        <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-      </div>
-      <div class="col l4 offset-l2 s12">
-        <h5 class="white-text">Links</h5>
-        <ul>
-          <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-          <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-          <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-          <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="footer-copyright">
-    <div class="container">
-    © 2014 Copyright Text
-    <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-    </div>
-  </div>
-</footer>
 
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
