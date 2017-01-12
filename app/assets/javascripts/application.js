@@ -10,14 +10,18 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-// = require jquery
-//= require jquery_ujs
-//= require_tree .
-
 //= require jquery
+//= require jquery_ujs
 //= require materialize
+//= require_tree .
 
 $( document ).ready(function) {
   $(".dropdown-button").dropdown();
   $('.parallax').parallax();
+});
+
+
+$(document).ready(function(){
+    console.log($(".carousel"))
+      $('.carousel').carousel();
 });

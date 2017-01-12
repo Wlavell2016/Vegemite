@@ -8,7 +8,10 @@
       <div class="gardens">
 <!--Here i loop through our data and serve it to the web wiht a slice-->
   <% @gardens.each_slice(2) do |slice| %>
+ <div class="carousel">
     <div class="row">
+      <a class="carousel-item">
+      <!--above is the start of the carosel  -->
       <% slice.each do |garden| %>
           <div class="col s12 m6">
             <div class="card blue-grey darken-1">
@@ -25,22 +28,13 @@
             </div>
           </div>
         <% end %>
+      </a>
       </div>
-  <% end %>
+      <!--below is the end of the carosel  -->
+    </div>
+      <% end %>
    </div>
  </div>
-<!--
-<script>
-  $('.pushpin-demo-nav').each(function() {
-    var $this = $(this);
-    var $target = $('#map' + $(this).attr('data-target'));
-    $this.pushpin({
-      top: $target.offset(100).top,
-      bottom: $target.offset().top + $target.outerHeight() - $this.height()
-    });
-  });
-</script> -->
-
 
     <div id="map" class="fixed">test blah blah
         </div>
