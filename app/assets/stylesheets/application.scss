@@ -11,7 +11,7 @@
   padding-left: 15px;
   text-align: left;
   font-size: 1.5rem;
-  color: #245516;
+  color: #245516 ;
   // font-family: 'Baloo Tamma', cursive;
   // font-family: 'Poiret One', cursive;
   font-family: 'Righteous', cursive;
@@ -23,12 +23,30 @@
   width: 50px;
 }
 
+.container.cards{
+  padding-left: 10%;
+  padding-right: 10%;
+  // padding-top: 5%;
+  // padding-bottom: 5%;
+}
+
+#map {
+  position: fixed !important;
+  top: 80px;
+  right: 10px;
+  height: 500px;
+  width: 50%;
+  padding-right: 100px !important;
+  padding-left: 20px!important;
+}
+
 body {
   /*background-color: ;*/
   /*font-family: 'Sniglet', cursive;*/
   font-family: 'Baloo Tamma', cursive;
   /*font-family: 'Poiret One', cursive;*/
   font-size: 12px;
+  /*background-color: #E0E8D9 ;*/
   /*background-color: #E0E8D9;*/
   /*margin: 5px;*/
 }
