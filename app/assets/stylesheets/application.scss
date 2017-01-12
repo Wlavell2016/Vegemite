@@ -18,15 +18,32 @@
   position: relative;
   float: left;
 }
+
 .logo img {
   height: 50px;
   width: 50px;
+}
+
+body {
+  /*background-color: ;*/
+  /*font-family: 'Sniglet', cursive;*/
+  font-family: 'Baloo Tamma', cursive;
+  /*font-family: 'Poiret One', cursive;*/
+  font-size: 12px;
+  /*background-color: #E0E8D9 ;*/
+  /*background-color: #E0E8D9;*/
+  /*margin: 5px;*/
+}
+
+.parallax-container {
+  height: 500px;
 }
 
 .img {
   height: 200px;
   width: 200px;
 }
+
 .container.cards{
   padding-top: 10%;
   padding-left: 10%;
@@ -44,7 +61,6 @@ height: 100px;
 
 }
 
-
 #map {
   position: fixed !important;
   top: 80px;
@@ -53,15 +69,4 @@ height: 100px;
   width: 50%;
   padding-right: 100px !important;
   padding-left: 20px!important;
-}
-
-body {
-  /*background-color: ;*/
-  /*font-family: 'Sniglet', cursive;*/
-  font-family: 'Baloo Tamma', cursive;
-  /*font-family: 'Poiret One', cursive;*/
-  font-size: 12px;
-  /*background-color: #E0E8D9 ;*/
-  /*background-color: #E0E8D9;*/
-  /*margin: 5px;*/
 }

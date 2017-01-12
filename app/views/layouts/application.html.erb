@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <title>Greenthumbs</title>
     <!--Import Google Icon Font-->
@@ -15,63 +16,44 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+
   <body class="<%= controller.controller_name %> <%= controller.action_name %>">
+
     <header class="site-header">
-      <!-- <nav class="site-nav"> -->
-        <!-- <%= image_tag('noun_112887_cc.png') %> -->
-        <!-- <ul>
-          <li><%= link_to "Home", root_path %></li>
+      <!-- <h1 class="logo"><a href="/">greenthumbs<%= image_tag('logo.png') %></a></h1> -->
+      <nav class="site-nav">
+        <ul>
+          <!-- Dropdown Structure -->
+          <!-- <div class="navbar-fixed"> -->
           <% if current_user %>
-            <li><%= link_to "Explore", "/gardens" %></li>
-            <li><%= link_to "Profile", "/users/#{session[:user_id]}" %></li>
-            <li><%= link_to "Add a Garden", "/gardens/new" %></li>
-            <li><%= link_to "Calendar" %></li>
-            <li><%= link_to "Inbox" %></li>
             <li>Hello, <%= current_user.username %>!</li>
-            <li><%= link_to "Log out", session_path("current"), :method => :delete %></li>
+              <ul id="dropdown1" class="dropdown-content">
+                <li><%= link_to "Home", root_path %></li>
+                <li><%= link_to "Gardens", "/gardens" %></a></li>
+                <li><%= link_to "Profile", "/users/#{session[:user_id]}" %></a></li>
+                <li><%= link_to "Add a Garden", "/gardens/new" %></a></li>
+                <li class="divider"></li>
+                <li><a href="#!">About Us</a></li>
+                <li><%= link_to "Log out", session_path("current"), :method => :delete %></li>
+              </ul>
+              <ul class="right hide-on-med-and-down">
+                <!-- Dropdown Trigger -->
+                <li><a class="dropdown-button" href="#!" data-activates="dropdown1"><i class="material-icons right">reorder</i></a></li>
+              </ul>
           <% else %>
-            <li><%= link_to "Log in", new_session_path %></li>
-            <li><%= link_to "Sign up", new_user_path %></li>
+            <ul class="right hide-on-med-and-down">
+              <li><%= link_to "Log in", new_session_path %></li>
+              <li><%= link_to "Sign up", new_user_path %></li>
+            </ul>
           <% end %>
-      </ul>
-      </nav> -->
-      <!-- Dropdown Structure -->
-       <div class="navbar-fixed">
-  <nav>
-    <div class="nav-wrapper">
-      <div class="row">
-        <!-- <% if current_user %>
-        <p>
-          Hello, <%= current_user.username %>!
-        </p> -->
-      <div class="center-align">
-     <h1 class="logo"><a href="/">greenthumbs<%= image_tag('noun_27054.png') %></a></h1>
-   </div>
-          <ul id="dropdown1" class="dropdown-content">
-          <li><%= link_to "Home", root_path %></li>
-          <li><a href="#!"><%= link_to "Gardens", "/gardens" %></a></li>
-          <li><a href="#!"><%= link_to "Profile", "/users/#{session[:user_id]}" %></a></li>
-          <li><a href="#!"><%= link_to "Add a Garden", "/gardens/new" %></a></li>
-          <li class="divider"></li>
-          <li><a href="#!">About Us</a></li>
-          <li><%= link_to "Log out", session_path("current"), :method => :delete %></li>
-        <% else %>
-          <li><%= link_to "Log in", new_session_path %></li>
-          <li><%= link_to "Sign up", new_user_path %></li>
-        <% end %>
-        </ul>
-      <!-- <a href="#!" class="brand-logo">Logo</a> -->
-        <ul class="right hide-on-med-and-down">
-            <li><a class="dropdown-button" href="#!" data-activates="dropdown1"><i class="material-icons right">reorder</i></a></li>
-          </ul>
-        </div>
-        <!-- <li><a href="sass.html">Sign up</a></li> -->
-        <!-- <li><a href="badges.html">Log in</a></li> -->
-        <!-- Dropdown Trigger -->
-      </div>
-        </nav>
+          <div class="nav-wrapper">
+            <h1 class="logo"><a href="/">greenthumbs<%= image_tag('logo.png') %></a></h1>
           </div>
+          <!-- </div> -->
+        </ul>
+      </nav>
     </header>
+
     <% if flash[:notice] %>
       <p id="notice"><%= flash[:notice] %></p>
     <% end %>
@@ -82,37 +64,48 @@
     <main>
       <%= yield %>
     </main>
-       <div class="footer-fixed">
+
+    <!-- <div class="footer-fixed"> -->
     <footer class="page-footer">
-            <div class="row">
-               <div class="col s12 m4 l6">
-                  <h5 class="white-text">Footer Content</h5>
-               </div>
-               <!-- <div class="col s12 m4 l4">
-                      <div class="center-align">
-                        </div>
-                  </div>
-               </div> -->
-               <div class="col s12 m4 l6">
-                 <div class="right-align">
-			              <ul>
-                     <li><a href="#" class="grey-text text-lighten-4 ">Help</a></li>
-                     <li><a href="#" class="grey-text text-lighten-4 ">Privacy and Terms</a></li>
-                     <li><a href="#" class="grey-text text-lighten-4 ">User Agreement</a></li>
-                  </ul>
-               </div>
-              </div>
-            </div>
-			<div class="footer-copyright">
-               <div class="container">
-                  © 2016 Copyright Information
-                  <a class="grey-text text-lighten-4 right" href="#!">Links</a>
-                  <a class="grey-text text-lighten-4 right" href="#!">Links</a>
-                  <a class="grey-text text-lighten-4 right" href="#!">Links</a>
-                  <a class="grey-text text-lighten-4 right" href="#!">Links</a>
-               </div>
+      <div class="row">
+        <div class="col s12 m4 l6">
+          <h5 class="white-text">About Us</h5>
+        </div>
+        <!-- <div class="col s12 m4 l4">
+          <div class="center-align">
           </div>
-       </footer>
-     </div>
+        </div>
+        </div> -->
+      <div class="col s12 m4 l6">
+        <div class="right-align">
+          <ul>
+            <li><a href="#" class="grey-text text-lighten-4 ">Help</a></li>
+            <li><a href="#" class="grey-text text-lighten-4 ">Privacy and Terms</a></li>
+            <li><a href="#" class="grey-text text-lighten-4 ">User Agreement</a></li>
+          </ul>
+        </div>
+        </div>
+        </div>
+      <div class="footer-copyright">
+        <div class="container">
+          © 2016 Copyright Information
+          <a class="grey-text text-lighten-4 right" href="#!">Links</a>
+          <a class="grey-text text-lighten-4 right" href="#!">Links</a>
+          <a class="grey-text text-lighten-4 right" href="#!">Links</a>
+          <a class="grey-text text-lighten-4 right" href="#!">Links</a>
+        </div>
+      </div>
+    </footer>
+    <!-- </div> -->
+
+    <!-- <footer class="site-footer"> -->
+      <!-- <small>&copy The app formerly known as vegemite</small> -->
+      <!-- <%= image_tag('noun_288936_cc.png') %> -->
+    <!-- </footer> -->
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+
   </body>
 </html>
