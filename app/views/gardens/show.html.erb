@@ -1,7 +1,7 @@
 <%= link_to "Back to Gardens", gardens_path %>
 <div class="gardens-show">
 
-        <%= image_tag @garden.garden_image.banner2.url   unless @garden.garden_image.banner2.url.blank?%>
+    <%= image_tag @garden.garden_image.banner2.url   unless @garden.garden_image.banner2.url.blank?%>
 
     <div class="garden-details">
         <div class="owner">
@@ -38,6 +38,6 @@
         </div>
     </div>
 
-   <p id="reserve"><%= link_to "Reserve", new_garden_reservation_path(@garden)%></p>
+    <p id="reserve"><%= link_to "Reserve", new_garden_reservation_path(@garden)%></p>
 
 </div>
