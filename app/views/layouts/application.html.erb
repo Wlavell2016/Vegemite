@@ -24,7 +24,7 @@
       <nav class="site-nav">
         <ul>
           <!-- Dropdown Structure -->
-          <div class="navbar-fixed">
+          <!-- <div class="navbar-fixed"> -->
           <% if current_user %>
             <li>Hello, <%= current_user.username %>!</li>
               <ul id="dropdown1" class="dropdown-content">
@@ -49,7 +49,7 @@
           <div class="nav-wrapper">
             <h1 class="logo"><a href="/">greenthumbs<%= image_tag('logo.png') %></a></h1>
           </div>
-          </div>
+          <!-- </div> -->
         </ul>
       </nav>
     </header>
@@ -65,7 +65,7 @@
       <%= yield %>
     </main>
 
-    <div class="footer-fixed">
+    <!-- <div class="footer-fixed"> -->
     <footer class="page-footer">
       <div class="row">
         <div class="col s12 m4 l6">
@@ -96,7 +96,7 @@
         </div>
       </div>
     </footer>
-    </div>
+    <!-- </div> -->
 
     <!-- <footer class="site-footer"> -->
       <!-- <small>&copy The app formerly known as vegemite</small> -->
