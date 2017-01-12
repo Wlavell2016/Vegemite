@@ -11,13 +11,14 @@
   padding-left: 15px;
   text-align: left;
   font-size: 1.5rem;
-  color: #245516;
+  color: #245516 ;
   // font-family: 'Baloo Tamma', cursive;
   // font-family: 'Poiret One', cursive;
   font-family: 'Righteous', cursive;
   position: relative;
   float: left;
 }
+
 .logo img {
   height: 50px;
   width: 50px;
@@ -29,6 +30,43 @@ body {
   font-family: 'Baloo Tamma', cursive;
   /*font-family: 'Poiret One', cursive;*/
   font-size: 12px;
+  /*background-color: #E0E8D9 ;*/
   /*background-color: #E0E8D9;*/
   /*margin: 5px;*/
+}
+
+.parallax-container {
+  height: 500px;
+}
+
+.img {
+  height: 200px;
+  width: 200px;
+}
+
+.container.cards{
+  padding-top: 10%;
+  padding-left: 10%;
+  padding-right: 10%;
+  // padding-top: 5%;
+  // padding-bottom: 5%;
+}
+
+.nav-wrapper {
+  height: 300px;
+}
+
+.page-footer {
+height: 100px;
+
+}
+
+#map {
+  position: fixed !important;
+  top: 80px;
+  left: 10px;
+  height: 500px;
+  width: 50%;
+  padding-right: 100px !important;
+  padding-left: 20px!important;
 }

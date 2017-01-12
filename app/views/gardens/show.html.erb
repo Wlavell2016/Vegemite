@@ -1,43 +1,61 @@
 <%= link_to "Back to Gardens", gardens_path %>
+
 <div class="gardens-show">
 
+<<<<<<< HEAD
     <%= image_tag @garden.garden_image.banner2.url   unless @garden.garden_image.banner2.url.blank?%>
+=======
+  <%= image_tag @garden.garden_image.banner2.url unless @garden.garden_image.banner2.url.blank? %>
 
-    <div class="garden-details">
-        <div class="owner">
-            <!-- <img src="<%= @user.image %>"> -->
-            <div class="userInfo">
-                <%= @garden.user.firstname %>
-                <%= @garden.user.lastname %>
-            </div>
+  <div class="garden-details">
+
+    <div class="owner">
+      <!-- <img src="<%= @user.image %>"> -->
+      <div class="userInfo">
+        <%= @garden.user.firstname %>
+        <%= @garden.user.lastname %>
+      </div>
+    </div>
+>>>>>>> db73036850bee9c4543a264fe1f179ff8c1757e8
+
+    <div class='garden-info'>
+      <h4><%= @garden.title.upcase %></h4>
+      <p>
+        <div class="title">
+          <b>ADDRESS:</b>
         </div>
-        <div class='garden-info'>
-            <h4><%= @garden.title.upcase %></h4>
-            <p>
-                <div class="title">
-                    <b>ADDRESS:</b>
-                </div><%= @garden.address %><br/>
-                <div class="title">
-                    <b>SIZE (in square feet):</b>
-                </div><%= @garden.size %>
-                <br>
-                    <div class="title">
-                        <b>ABOUT:</b>
-                    </div><%= @garden.description %></br>
-                <div class="title">
-                    <b>VEGGIES:</b>
-                </div><% @garden.vegetables.each do |vegetable| %>
-                <%= vegetable.name.capitalize %>
-                <% end %>
-            </p>
+          <%= @garden.address %><br/>
+        <div class="title">
+          <b>SIZE (in square feet):</b>
         </div>
-        <div class="garden-map">
-            <p>The more she shat euron maegor elia baelor aerys jory thoros benjen coldhands, obara eddard tyrion lady melisandre wights. Edmure jon connington lyanna, stannis areo aeron qhorin halfhand sansa brandon stark tommen doran myrcella. Lysa coldhands
-                lord of bones, olenna Wun Weg Wun Dar Wun meryn trant egg joffrey brandon stark varys aerys night's king roose bolton pycelle. Rickon patchface areo, tysha tyrion meryn trant rodrik hodor ghost shaggydog brienne. Lady aenys lysa cersei brave
-                companions tommen littlefinger gerold hightower edmure.</p>
+          <%= @garden.size %><br/>
+        <div class="title">
+          <b>ABOUT:</b>
         </div>
+          <%= @garden.description %><br/>
+        <div class="title">
+          <b>VEGGIES:</b>
+        </div>
+          <% @garden.vegetables.each do |vegetable| %>
+            <%= vegetable.name.capitalize %>
+          <% end %>
+      </p>
     </div>
 
+    <div class="garden-map">
+      <p>
+        The more she shat euron maegor elia baelor aerys jory thoros benjen coldhands, obara eddard tyrion lady melisandre wights. Edmure jon connington lyanna, stannis areo aeron qhorin halfhand sansa brandon stark tommen doran myrcella. Lysa coldhands
+        lord of bones, olenna Wun Weg Wun Dar Wun meryn trant egg joffrey brandon stark varys aerys night's king roose bolton pycelle. Rickon patchface areo, tysha tyrion meryn trant rodrik hodor ghost shaggydog brienne. Lady aenys lysa cersei brave
+        companions tommen littlefinger gerold hightower edmure.
+      </p>
+    </div>
+
+<<<<<<< HEAD
     <p id="reserve"><%= link_to "Reserve", new_garden_reservation_path(@garden)%></p>
+=======
+  </div>
+
+  <p id="reserve"><%= link_to "Reserve", new_garden_reservation_path(@garden)%></p>
+>>>>>>> db73036850bee9c4543a264fe1f179ff8c1757e8
 
 </div>

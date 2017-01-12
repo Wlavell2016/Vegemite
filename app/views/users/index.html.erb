@@ -1,5 +1,6 @@
 <div class="main">
 
+<<<<<<< HEAD
     <nav>
         <div class="nav-wrapper">
             <div class="input-field">
@@ -14,11 +15,26 @@
             </div>
         </div>
     </nav>
+=======
+  <!-- <nav> -->
+    <!-- <div class="nav-wrapper"> -->
+      <div class="input-field">
+        <!-- <input id="search" type="search" required> -->
+        <%= form_tag(gardens_path, :method => "get", class: "search-form") do %>
+          <span class="blue-text text-darken-2"><i class="material-icons">search<%= text_field_tag( :search, params[:search]) %></i></span>
+          <!-- <i class="material-icons">search<%= text_field_tag( :search, params[:search], placeholder: "Search away") %></i> -->
+          <% submit_tag "Search" %>
+        <% end %>
+      </div>
+    <!-- </div>
+  </nav> -->
+>>>>>>> db73036850bee9c4543a264fe1f179ff8c1757e8
 
     <%#= if @gardens.present? %>
     <%#= render :gardens %>
     <%#= end %>
 
+<<<<<<< HEAD
     <div class="info-hippies">
         <!-- <%= image_tag('parallax1.jpg') %> -->
         <%= image_tag('veggy.png') %>
@@ -83,5 +99,69 @@
 
     </div>
     <% end %>
+=======
+  <div class="parallax-container">
+    <div class="parallax"><img src="images/city2.jpg")></div>
+  </div>
+  <div class="section white">
+  <div class="row container">
+    <h2 class="header">Parallax</h2>
+    <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
+  </div>
+  </div>
+  
+  <!-- <%= image_tag('city2.jpg') %> -->
+  <!-- <%= image_tag('city2.jpg') %> -->
+  <%= image_tag('vegillustration1.jpg') %>
+  <%= image_tag('vegillustration2.jpg') %>
+  <%= image_tag('vegillustration3.jpg') %>
+  <%= image_tag('vegillustration4.jpg') %>
+
+  <div class="info-hippies">
+    <div class="box">
+      <h1>Hippies sharing land and growing stuff</h1>
+    </div>
+  </div>
+
+  <div class="parallax-container">
+    <!-- <div class="parallax"><img src="groupshot.jpg"></div> -->
+    <!-- <div class="parallax"><%= image_tag('parallax1.jpg') %></div> -->
+  </div>
+
+  <div class="info-share">
+    <h1>Share land</h1>
+    <p>
+      Greenthumbs connects people with land to share with people with veg to grow - <br/>
+      Creating a community for sustainable urban living.
+    </p>
+  </div>
+
+  <div class="info-grow">
+    <div class="box-grow">
+      <h1>Grow local</h1>
+      <p>
+        The roots of all goodness lie in the soil of appreciation.
+      </p>
+    </div>
+  </div>
+
+  <div class="info-veg">
+    <h1>Veg out</h1>
+    <p>
+      Discover available greenspace and gardeners and start growing some veg together!
+    </p>
+  </div>
+
+  <% if current_user %>
+  <% else %>
+  <div class="info-sign">
+    <h1>Join the Greenthumbs Community</h1>
+    <div class="buttons">
+      <button type="button"><%= link_to "Sign up", new_user_path %></button>
+      <button type="button"><%= link_to "Log in", new_session_path %></button>
+    </div>
+  </div>
+<% end %>
+>>>>>>> db73036850bee9c4543a264fe1f179ff8c1757e8
 
 </div>
