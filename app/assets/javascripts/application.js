@@ -16,3 +16,8 @@
 
 //= require jquery
 //= require materialize
+
+$( document ).ready(function) {
+  $(".dropdown-button").dropdown();
+  $('.parallax').parallax();
+});

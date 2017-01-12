@@ -1,5 +1,14 @@
 <div class="main">
 
+  <p><%= form_tag(gardens_path, :method => "get", class: "search-form") do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Search Gardens" %>
+  <%= submit_tag "Search" %>
+  <% end %></p>
+
+  <%#= if @gardens.present? %>
+    <%#= render :gardens %>
+  <%#= end %>
+
 <div class="info-hippies">
   <ul id="slides">
     <li class="showing"></li>
@@ -8,12 +17,19 @@
     <li class="slide"></li>
     <li class="slide"></li>
     <li class="slide"></li>
-    <li class="slide"><%= image_tag('noun_147303_cc.png') %><br/><h1>Hippies sharing land and growing stuff</h1></li>
+    <!-- <li class="slide"><%= image_tag('noun_147303_cc.png') %><br/><h1>Hippies sharing land and growing stuff</h1></li> -->
+    <!-- <li class="slide"><%= image_tag('parallax1.jpg') %><br/><h1>Hippies sharing land and growing stuff</h1></li> -->
   </ul>
   <!-- <div class="box">
     <h1>Hippies sharing land and growing stuff</h1>
   </div> -->
 </div>
+
+<div class="parallax-container">
+  <!-- <div class="parallax"><img src="groupshot.jpg"></div> -->
+  <div class="parallax"><%= image_tag('parallax1.jpg') %></div>
+</div>
+<!-- <div class="parallax"><img src="/hands.jpg" alt="Unsplashed background img 1"></div> -->
 
 <div class="info-share">
   <h1>Share land</h1>
@@ -38,7 +54,7 @@
   </div>
 </div>
 
-<div class="info-veg">
+<!-- <div class="info-veg">
   <h1>Veg out</h1>
   <p>
   <%= image_tag('3_2_720.jpg') %>
@@ -47,7 +63,7 @@
     - Captain Amazing (aka Will Lavell)
     </div>
   </p>
-</div>
+</div> -->
 
 <% if current_user %>
 

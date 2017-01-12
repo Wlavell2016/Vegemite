@@ -1,8 +1,15 @@
 class GardensController < ApplicationController
     before_action :current_user, only: [:create, :destroy]
+    before_action :ensure_logged_in, except: [:index]
 
     def index
+        # @gardens = Garden.all
         @gardens = Garden.all
+        if params[:search]
+          @gardens = Garden.search(params[:search])
+        else
+          @gardens = Garden.all
+        end
     end
 
     def show

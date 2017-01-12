@@ -19,7 +19,7 @@
       <button type="button"><%= link_to 'Update', edit_user_path(@user) %></button>
     </div>
     <div class="user-data">
-        <%= image_tag('noun_25922_cc.png') %>
+        <!-- <%= image_tag('noun_25922_cc.png') %> -->
         <h3>Here are your current Reservations:</h3>
         <% @user.reservations.each do |r| %>
         <%= r.garden.title %>:
@@ -31,7 +31,7 @@
         <% end %>
 
       <br/>
-        <%= image_tag('noun_197605_cc.png') %>
+        <!-- <%= image_tag('noun_197605_cc.png') %> -->
         <h3>Gardens:</h3>
         <% @user.owned_gardens.each do |g| %>
         <%= link_to g.title, garden_path(g) %>
