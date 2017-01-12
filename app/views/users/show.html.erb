@@ -1,49 +1,44 @@
 <%= link_to 'Back to Gardens', gardens_path %>
 <!-- change link to go to landing page -->
+
 <div class="users-show">
-    <h1 class="page-title"><%= @user.username.capitalize %>'s Profile</h1>
-    <!-- <%= image_tag('noun_67206_cc.png') %> -->
-    <div class="user-profile">
 
-        <%= image_tag @user.avatar.banner.url   unless @user.avatar.banner.url.blank?%>
+  <h1 class="page-title"><%= @user.username.capitalize %>'s Profile</h1>
 
-        <h4>Username:
-            <%= @user.username %></h4>
-        <h4>First name:
-            <%= @user.firstname %></h4>
-        <h4>Last name:
-            <%= @user.lastname %></h4>
-    </div>
+  <div class="user-profile">
+    <%= image_tag @user.avatar.banner.url unless @user.avatar.banner.url.blank?%>
+    <h4>Username:
+      <%= @user.username %>
+    </h4>
+    <h4>First name:
+      <%= @user.firstname %>
+    </h4>
+    <h4>Last name:
+      <%= @user.lastname %>
+    </h4>
+  </div>
 
-    <div class="update">
-      <button type="button"><%= link_to 'Update', edit_user_path(@user) %></button>
-    </div>
-    <div class="user-data">
-        <!-- <%= image_tag('noun_25922_cc.png') %> -->
-        <h3>Here are your current Reservations:</h3>
-        <% @user.reservations.each do |r| %>
+  <div class="update">
+    <button type="button"><%= link_to 'Update', edit_user_path(@user) %></button>
+  </div>
+
+  <div class="user-data">
+    <h3>Here are your current Reservations:</h3>
+      <% @user.reservations.each do |r| %>
         <%= r.garden.title %>:
         <%= r.startdate.strftime("%b %d %Y") %> -
         <%= r.enddate.strftime("%b %d %Y")%><br/>
-    <%=link_to "Edit", edit_garden_reservation_path(r.garden, r.id) %>
-    <%=link_to "Delete", garden_reservation_path(r.garden, r.id), method: :delete, data: {confirm: "Are you sure you want to delete this reservation?"} %>
-
-        <% end %>
-
-      <br/>
-        <!-- <%= image_tag('noun_197605_cc.png') %> -->
-        <h3>Gardens:</h3>
-        <% @user.owned_gardens.each do |g| %>
-        <%= link_to g.title, garden_path(g) %>
-        <br/>
+        <%=link_to "Edit", edit_garden_reservation_path(r.garden, r.id) %>
+        <%=link_to "Delete", garden_reservation_path(r.garden, r.id), method: :delete, data: {confirm: "Are you sure you want to delete this reservation?"} %>
+      <% end %>
+    <br/>
+    <h3>Gardens:</h3>
+      <% @user.owned_gardens.each do |g| %>
+        <%= link_to g.title, garden_path(g) %><br/>
         <%= g.address %>
         <%=link_to "Edit", edit_garden_path(g.id) %>
         <%=link_to "Reservations", garden_reservations_path(g.id) %>
-
-        <% end %>
-
-
-    </div>
-
+      <% end %>
+  </div>
 
 </div>
