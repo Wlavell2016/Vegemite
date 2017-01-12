@@ -19,3 +19,9 @@ $( document ).ready(function(){
   $(".dropdown-button").dropdown();
   $('.parallax').parallax();
 });
+
+
+$(document).ready(function(){
+    console.log($(".carousel"))
+      $('.carousel').carousel();
+});
