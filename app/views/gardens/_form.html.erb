@@ -1,18 +1,16 @@
 <div class="form">
-    <!-- <%= image_tag('noun_58368.png') %> -->
 
-    <%= form_for [@garden] do |f| %>
+  <%= form_for [@garden] do |f| %>
 
     <% if @garden.errors.any? %>
-    <div id="error_explanation">
-        <h2><%= pluralize(@garden.errors.count, "error") %>
-            prohibited this garden from being saved:</h2>
+      <div id="error_explanation">
+        <h2><%= pluralize(@garden.errors.count, "error") %>prohibited this garden from being saved:</h2>
         <ul>
-            <% @garden.errors.full_messages.each do |msg| %>
+          <% @garden.errors.full_messages.each do |msg| %>
             <li><%= msg %></li>
-            <% end %>
+          <% end %>
         </ul>
-    </div>
+      </div>
     <% end %>
 
     <!-- <div class="field">
@@ -20,46 +18,45 @@
     </div> -->
 
     <div class="field">
-        <%= f.label :title %><br/>
-        <%= f.text_field :title %>
+      <%= f.label :title %><br/>
+      <%= f.text_field :title %>
     </div>
 
     <div class="field">
-        <%= f.label :description %><br/>
-        <%= f.text_field :description %>
+      <%= f.label :description %><br/>
+      <%= f.text_field :description %>
     </div>
 
     <div class="field">
-        <%= f.label :address %><br/>
-        <%= f.text_field :address %>
+      <%= f.label :address %><br/>
+      <%= f.text_field :address %>
     </div>
 
     <div class="field">
-        <%= f.label :size %>
-        (in square feet)<br/>
-        <%= f.text_area :size %>
+      <%= f.label :size %>
+      (in square feet)<br/>
+      <%= f.text_area :size %>
     </div>
-
-
 
     <div class="veg-list">
-        Veggie:
-        <% for vegetable in Vegetable.all %>
+      Veggie:
+      <% for vegetable in Vegetable.all %>
         <div>
-            <%= check_box_tag "garden[vegetable_ids][]", vegetable.id, @garden.vegetables.include?(vegetable) %>
-            <%= vegetable.name %>
+          <%= check_box_tag "garden[vegetable_ids][]", vegetable.id, @garden.vegetables.include?(vegetable) %>
+          <%= vegetable.name %>
         </div>
-        <% end %>
+      <% end %>
     </div>
 
-  <div class="field">
-  <%= f.label :garden_image %><br>
-  <%= f.file_field :garden_image %>
- </div>
+    <div class="field">
+      <%= f.label :garden_image %><br>
+      <%= f.file_field :garden_image %>
+    </div>
 
     <div class="actions">
-        <%= f.submit "Add" %>
+      <%= f.submit "Add" %>
     </div>
 
-    <% end %>
+  <% end %>
+
 </div>
