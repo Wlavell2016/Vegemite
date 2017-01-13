@@ -11,14 +11,21 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
 //= require materialize
+//= require jquery_ujs
 //= require_tree .
 
+<<<<<<< HEAD
+// $( document ).ready(function) {
+//   $(".dropdown-button").dropdown();
+//   $('.parallax').parallax();
+// });
+=======
 $( document ).ready(function(){
   $(".dropdown-button").dropdown();
   $('.parallax').parallax();
 });
+>>>>>>> 8220d3acc796c2c52289e3b1ffad46bdc377b872
 
 
 $(document).ready(function(){
