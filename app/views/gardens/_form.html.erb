@@ -1,66 +1,64 @@
 <div class="container">
-<div class="row">
+  <div class="row">
+    <div class="form">
 
-<div class="form">
+      <%= form_for [@garden] do |f| %>
 
-  <%= form_for [@garden] do |f| %>
+        <% if @garden.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@garden.errors.count, "error") %>prohibited this garden from being saved:</h2>
+            <ul>
+              <% @garden.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
 
-    <% if @garden.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(@garden.errors.count, "error") %>prohibited this garden from being saved:</h2>
-        <ul>
-          <% @garden.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
+        <!-- <div class="field">
+            <%= f.hidden_field :user_id, value: @user_id %>
+        </div> -->
 
-    <!-- <div class="field">
-        <%= f.hidden_field :user_id, value: @user_id %>
-    </div> -->
-
-    <div class="field">
-      <%= f.label :title %><br/>
-      <%= f.text_field :title %>
-    </div>
-
-    <div class="field">
-      <%= f.label :description %><br/>
-      <%= f.text_field :description %>
-    </div>
-
-    <div class="field">
-      <%= f.label :address %><br/>
-      <%= f.text_field :address %>
-    </div>
-
-    <div class="field">
-      <%= f.label :size %>
-      (in square feet)<br/>
-      <%= f.text_area :size %>
-    </div>
-
-    <div class="veg-list">
-      Veggie:
-      <% for vegetable in Vegetable.all %>
-        <div>
-          <%= check_box_tag "garden[vegetable_ids][]", vegetable.id, @garden.vegetables.include?(vegetable) %>
-          <%= vegetable.name %>
+        <div class="field">
+          <%= f.label :title %><br/>
+          <%= f.text_field :title %>
         </div>
-      <% end %>
-    </div>
+
+        <div class="field">
+          <%= f.label :description %><br/>
+          <%= f.text_field :description %>
+        </div>
+
+        <div class="field">
+          <%= f.label :address %><br/>
+          <%= f.text_field :address %>
+        </div>
+
+        <div class="field">
+          <%= f.label :size %>
+          (in square feet)<br/>
+          <%= f.text_area :size %>
+        </div>
+
+        <div class="veg-list">
+          Veggie:
+          <% for vegetable in Vegetable.all %>
+            <div>
+              <%= check_box_tag "garden[vegetable_ids][]", vegetable.id, @garden.vegetables.include?(vegetable) %>
+              <%= vegetable.name %>
+            </div>
+          <% end %>
+        </div>
 
     <div class="field">
-      <%= f.label :garden_image %><br>
-      <%= f.file_field :garden_image %>
+   <%= f.label :garden_image %><br>
+    <%= f.file_field :garden_image %>
+   </div>
+
+        <div class="actions">
+        <%= f.submit "Add" %>
+          </div>
+       <% end %>
     </div>
-
-    <div class="actions">
-      <%= f.submit "Add" %>
-      </div>
-<% end %>
-
-</div>
-</div>
-</div>
+    </div>
+  </div>
