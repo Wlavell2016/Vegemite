@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+ActiveRecord::Schema.define(version: 20170110015132) do
 
-ActiveRecord::Schema.define(version: 20170110042942) do
-
-enable_extension "plpgsql"
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "gardens", force: :cascade do |t|
     t.string   "title"
@@ -35,11 +35,12 @@ enable_extension "plpgsql"
   end
 
   create_table "reservations", force: :cascade do |t|
+    t.integer  "vegetable_id"
     t.integer  "user_id"
     t.integer  "garden_id"
     t.text     "note"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.datetime "startdate"
     t.datetime "enddate"
   end
