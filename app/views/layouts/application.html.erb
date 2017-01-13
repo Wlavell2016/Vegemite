@@ -3,37 +3,38 @@
 
   <head>
     <title>Greenthumbs</title>
+    <meta charset="utf-8">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Baloo+Tamma|Baumans|Lily+Script+One|Poiret+One|Righteous|Sniglet" rel="stylesheet">
+    <%= csrf_meta_tags %>
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <!-- Compiled and minified CSS -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
-    <!-- Compiled and minified JavaScript -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script> -->
-    <%= csrf_meta_tags %>
-    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Baloo+Tamma|Baumans|Lily+Script+One|Poiret+One|Righteous|Sniglet" rel="stylesheet">
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!--Import materialize.css-->
+    <!-- <link type="text/css" rel="stylesheet" href="/css/materialize.min.css"  media="screen,projection"/> -->
   </head>
 
   <body class="<%= controller.controller_name %> <%= controller.action_name %>">
 
     <header class="site-header">
       <!-- <h1 class="logo"><a href="/">greenthumbs<%= image_tag('logo.png') %></a></h1> -->
-      <nav class="site-nav">
+      <!-- <nav class="site-nav"> -->
+      <nav class=" light-green darken-2">
         <ul>
           <!-- Dropdown Structure -->
           <!-- <div class="navbar-fixed"> -->
           <% if current_user %>
             <li>Hello, <%= current_user.username %>!</li>
               <ul id="dropdown1" class="dropdown-content">
-                <li><%= link_to "Home", root_path %></li>
-                <li><%= link_to "Gardens", "/gardens" %></a></li>
+                <li class><%= link_to "Home", root_path %></li>
+                <li class><%= link_to "Gardens", "/gardens" %></a></li>
                 <li><%= link_to "Profile", "/users/#{session[:user_id]}" %></a></li>
                 <li><%= link_to "Add a Garden", "/gardens/new" %></a></li>
                 <li class="divider"></li>
-                <li><a href="#!">About Us</a></li>
+                <li><a href="#about">About Us</a></li>
                 <li><%= link_to "Log out", session_path("current"), :method => :delete %></li>
               </ul>
               <ul class="right hide-on-med-and-down">
@@ -42,8 +43,8 @@
               </ul>
           <% else %>
             <ul class="right hide-on-med-and-down">
-              <li><%= link_to "Log in", new_session_path %></li>
-              <li><%= link_to "Sign up", new_user_path %></li>
+              <li class="waves-effect waves-light"><%= link_to "Log in", new_session_path %></li>
+              <li class="waves-effect waves-light"><%= link_to "Sign up", new_user_path %></li>
             </ul>
           <% end %>
           <div class="nav-wrapper">
@@ -53,6 +54,8 @@
         </ul>
       </nav>
     </header>
+
+    <div class="container">
 
     <% if flash[:notice] %>
       <p id="notice"><%= flash[:notice] %></p>
@@ -65,11 +68,13 @@
       <%= yield %>
     </main>
 
+    </div>
+
     <!-- <div class="footer-fixed"> -->
-    <footer class="page-footer">
+    <footer class="page-footer light-green darken-2">
       <div class="row">
         <div class="col s12 m4 l6">
-          <h5 class="white-text">About Us</h5>
+          <h5 id="about" class="white-text scrollspy">About Us</h5>
         </div>
         <!-- <div class="col s12 m4 l4">
           <div class="center-align">
@@ -104,8 +109,8 @@
     <!-- </footer> -->
 
     <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script> -->
+    <!-- <script type="text/javascript" src="js/materialize.min.js"></script> -->
 
   </body>
 </html>
