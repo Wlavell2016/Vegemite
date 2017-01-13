@@ -28,23 +28,23 @@
 
       <div class="col s7">
       <!-- <div class="user-data"> -->
-        <h3>Here are your current Reservations:</h3>
+        <h3>Growing at:</h3>
           <% @user.reservations.each do |r| %>
-            <%= r.garden.title %>:
-            <%= r.startdate.strftime("%b %d %Y") %> -
+            <%= link_to r.garden.title, garden_path(r.garden, r.id) %><br/>
+            <%= r.startdate.strftime("%b %d") %> -
             <%= r.enddate.strftime("%b %d %Y")%><br/>
-            <%=link_to "Edit", edit_garden_reservation_path(r.garden, r.id) %>
-            <%=link_to "Delete", garden_reservation_path(r.garden, r.id), method: :delete, data: {confirm: "Are you sure you want to delete this reservation?"} %>
+            <%=link_to "Edit", edit_garden_reservation_path(r.garden, r.id) %> |
+            <%=link_to "Delete", garden_reservation_path(r.garden, r.id), method: :delete, data: {confirm: "Are you sure you want to delete this reservation?"} %><br/>
           <% end %>
         <!-- <br/> -->
         </div>
 
         <div class="col s5">
-        <h3>Gardens:</h3>
+        <h3>My Gardens:</h3>
           <% @user.owned_gardens.each do |g| %>
             <%= link_to g.title, garden_path(g) %><br/>
             <%= g.address %><br/>
-            <%=link_to "Edit", edit_garden_path(g.id) %>
+            <%=link_to "Edit", edit_garden_path(g.id) %> |
             <%=link_to "Reservations", garden_reservations_path(g.id) %><br/>
           <% end %>
       <!-- </div> -->
