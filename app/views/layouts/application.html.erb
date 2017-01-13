@@ -24,7 +24,6 @@
       <nav class="site-nav">
         <ul>
           <!-- Dropdown Structure -->
-          <!-- <div class="navbar-fixed"> -->
           <% if current_user %>
             <li>Hello, <%= current_user.username %>!</li>
               <ul id="dropdown1" class="dropdown-content">
@@ -49,7 +48,6 @@
           <div class="nav-wrapper">
             <h1 class="logo"><a href="/">greenthumbs<%= image_tag('logo.png') %></a></h1>
           </div>
-          <!-- </div> -->
         </ul>
       </nav>
     </header>
@@ -64,8 +62,6 @@
     <main>
       <%= yield %>
     </main>
-
-    <!-- <div class="footer-fixed"> -->
     <footer class="page-footer">
       <div class="row">
         <div class="col s12 m4 l6">
@@ -76,6 +72,7 @@
           </div>
         </div>
         </div> -->
+              <!-- <%= image_tag('noun_288936_cc.png') %> -->
       <div class="col s12 m4 l6">
         <div class="right-align">
           <ul>
@@ -96,16 +93,7 @@
         </div>
       </div>
     </footer>
-    <!-- </div> -->
-
-    <!-- <footer class="site-footer"> -->
-      <!-- <small>&copy The app formerly known as vegemite</small> -->
-      <!-- <%= image_tag('noun_288936_cc.png') %> -->
-    <!-- </footer> -->
-
-    <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
-
   </body>
 </html>

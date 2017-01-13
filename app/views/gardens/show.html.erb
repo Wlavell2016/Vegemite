@@ -2,9 +2,6 @@
 
 <div class="gardens-show">
 
-<<<<<<< HEAD
-    <%= image_tag @garden.garden_image.banner2.url   unless @garden.garden_image.banner2.url.blank?%>
-=======
   <%= image_tag @garden.garden_image.banner2.url unless @garden.garden_image.banner2.url.blank? %>
 
   <div class="garden-details">
@@ -16,7 +13,6 @@
         <%= @garden.user.lastname %>
       </div>
     </div>
->>>>>>> db73036850bee9c4543a264fe1f179ff8c1757e8
 
     <div class='garden-info'>
       <h4><%= @garden.title.upcase %></h4>
@@ -50,12 +46,8 @@
       </p>
     </div>
 
-<<<<<<< HEAD
-    <p id="reserve"><%= link_to "Reserve", new_garden_reservation_path(@garden)%></p>
-=======
   </div>
 
   <p id="reserve"><%= link_to "Reserve", new_garden_reservation_path(@garden)%></p>
->>>>>>> db73036850bee9c4543a264fe1f179ff8c1757e8
 
 </div>
