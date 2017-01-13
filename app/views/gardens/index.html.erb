@@ -12,7 +12,8 @@
             <div class="card blue-grey darken-1 garden_cards">
               <div class="card-content white-text">
                    <span class="card-title">Card Title</span>
-                   <img src="<%= garden.image %>">
+                   <!-- <img src="<%= garden.image %>"> -->
+                   <%= image_tag("garden.image") %>
                    <h3 class="garden-name"><%= garden.title %></h3>
                    <p class="garden-info">
                      Address: <%= garden.address %><br/>
