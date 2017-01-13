@@ -17,74 +17,124 @@
     <%#= end %>
 
   <div class="parallax-container">
-    <div class="parallax"><%= image_tag("city2.jpg") %></div>
+    <div class="parallax"><%= image_tag("moonphase2.jpg") %></div>
   </div>
-  <div class="section white">
+
+  <!-- <div class="section white">
   <div class="row container">
     <h2 class="header">Parallax</h2>
     <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
   </div>
+  </div> -->
+
+  <div class="section white">
+  <div class="row container">
+    <h2 class="header">Hippies sharing land and growing stuff</h2>
+  </div>
   </div>
 
-  <!-- <%= image_tag('city2.jpg') %> -->
-  <!-- <%= image_tag('city2.jpg') %> -->
   <%= image_tag('vegillustration1.jpg') %>
   <%= image_tag('vegillustration2.jpg') %>
   <%= image_tag('vegillustration3.jpg') %>
   <%= image_tag('vegillustration4.jpg') %>
 
-  <div class="row">
+  <li class="divider"></li>
+  <div class="section white">
+  <div class="row container">
+    <h2 class="header">Share land</h2>
+    <p class="grey-text text-darken-3 lighten-3">
+      Greenthumbs connects people with land to share with people with veg to grow - <br/>
+      Creating a community for sustainable urban living.
+    </p>
+  </div>
+  </div>
+
+  <li class="divider"></li>
+  <div class="section white">
+  <div class="row container">
+    <h2 class="header">Grow local</h2>
+    <p class="grey-text text-darken-3 lighten-3">
+      The roots of all goodness lie in the soil of appreciation.
+    </p>
+  </div>
+  </div>
+
+  <li class="divider"></li>
+  <div class="section white">
+  <div class="row container">
+    <h2 class="header">Veg out</h2>
+    <p class="grey-text text-darken-3 lighten-3">
+      Discover available greenspace and gardeners and start growing some veg together!
+    </p>
+  </div>
+  </div>
+
+  <!-- <div class="row">
     <div class="col s12">
-    <!-- <div class="info-hippies">
-    <div class="box"> -->
-      <h1>Hippies sharing land and growing stuff</h1>
-    <!-- </div>
+      <div class="info-hippies">
+        <div class="box">
+          <h1>Hippies sharing land and growing stuff</h1>
+        </div>
+      </div>
     </div> -->
-    </div>
 
-    <div class="col s12">
-    <!-- <div class="info-share"> -->
-      <h1>Share land</h1>
-      <p>
-        Greenthumbs connects people with land to share with people with veg to grow - <br/>
-        Creating a community for sustainable urban living.
-      </p>
-    <!-- </div> -->
-    </div>
+    <!-- <div class="col s12">
+      <div class="info-share">
+        <h1>Share land</h1>
+        <p>
+          Greenthumbs connects people with land to share with people with veg to grow - <br/>
+          Creating a community for sustainable urban living.
+        </p>
+      </div>
+    </div> -->
 
-    <div class="col s12">
+    <!-- <div class="col s12"> -->
     <!-- <div class="info-grow">
       <div class="box-grow"> -->
-        <h1>Grow local</h1>
+        <!-- <h1>Grow local</h1>
         <p>
           The roots of all goodness lie in the soil of appreciation.
-        </p>
+        </p> -->
       <!-- </div>
     </div> -->
-    </div>
+    <!-- </div> -->
 
-    <div class="col s12">
+    <!-- <div class="col s12"> -->
     <!-- <div class="info-veg"> -->
-      <h1>Veg out</h1>
+      <!-- <h1>Veg out</h1>
       <p>
         Discover available greenspace and gardeners and start growing some veg together!
-      </p>
+      </p> -->
     <!-- </div> -->
-    </div>
+    <!-- </div> -->
 
     <% if current_user %>
     <% else %>
-    <div class="col s12">
-    <!-- <div class="info-sign"> -->
-      <h1>Join the Greenthumbs Community</h1>
+    <li class="divider"></li>
+    <div class="section white">
+    <div class="row container">
+      <h2 class="header">Join the Greenthumbs Community</h2>
       <div class="buttons">
         <button type="button"><%= link_to "Sign up", new_user_path %></button>
         <button type="button"><%= link_to "Log in", new_session_path %></button>
       </div>
-    <!-- </div> -->
+    </div>
     </div>
     <% end %>
 
-  </div>
+    <!-- <% if current_user %>
+    <% else %>
+    <div class="col s12"> -->
+    <!-- <div class="info-sign"> -->
+      <!-- <h1>Join the Greenthumbs Community</h1>
+      <div class="buttons">
+        <button type="button"><%= link_to "Sign up", new_user_path %></button>
+        <button type="button"><%= link_to "Log in", new_session_path %></button>
+      </div> -->
+    <!-- </div> -->
+    <!-- </div>
+    <% end %> -->
+
+  <!-- </div> -->
 
 </div>
