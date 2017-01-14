@@ -1,197 +1,96 @@
+<script src="assets/parallax.js"></script>
 <div class="main">
-  <!-- <nav> -->
-    <!-- <div class="nav-wrapper"> -->
+
+  <!-- <nav>
+  <div class="nav-wrapper">
+    <form>
       <div class="input-field">
-        <!-- <input id="search" type="search" required> -->
-        <%= form_tag(gardens_path, :method => "get", class: "search-form") do %>
-          <span class="blue-text text-darken-2"><i class="material-icons">search<%= text_field_tag( :search, params[:search]) %></i></span>
-          <!-- <i class="material-icons">search<%= text_field_tag( :search, params[:search], placeholder: "Search away") %></i> -->
-          <% submit_tag "Search" %>
-        <% end %>
+        <input id="search" type="search" required>
+        <label for="search"><i class="material-icons">search</i></label>
+        <i class="material-icons">close</i>
       </div>
-    <!-- </div>
-  </nav> -->
+    </form>
+  </div>
+</nav> -->
+
+  <%= form_tag(gardens_path, :method => "get", class: "search-form") do %>
+    <%= text_field_tag( :search, params[:search], :placeholder => "Explore") %>
+    <% submit_tag "Search" %>
+  <% end %>
 
     <%#= if @gardens.present? %>
     <%#= render :gardens %>
     <%#= end %>
 
-  <div class="parallax-container">
-    <div class="parallax"><%= image_tag("moonphase2.jpg") %></div>
-  </div>
+    <div id="content">
+            <article id="hippies-share">
+                <header>
+                    <h1>Hippies sharing land and growing stuff</h1>
+                </header>
+                <h5 class="grey-text text-darken-3 lighten-3">Creating a community for sustainable urban living</h5>
+            </article>
 
-  <!-- <div class="section white">
-  <div class="row container">
-    <h2 class="header">Parallax</h2>
-    <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
-  </div>
-  </div> -->
+            <article id="share-land">
+                <header>
+                    <h1>Share Land</h1>
+                </header>
+                <h5 class="grey-text text-darken-3 lighten-3">Greenthumbs connect people with land to share with people with veg to grow</h5>
+            </article>
 
-  <div class="section white">
-  <div class="row container">
-    <h2 class="header">Hippies sharing land and growing stuff</h2>
-  </div>
-  </div>
+            <article id="grow-local">
+                <header>
+                    <h1>Grow Local</h1>
+                </header>
+                <h5 class="grey-text text-darken-3 lighten-3">The roots of all goodness lie in the soil of appreciation</h5>
+            </article>
 
-  <%= image_tag('vegillustration1.jpg') %>
-  <%= image_tag('vegillustration2.jpg') %>
-  <%= image_tag('vegillustration3.jpg') %>
-  <%= image_tag('vegillustration4.jpg') %>
-
-  <li class="divider"></li>
-  <div class="section white">
-  <div class="row container">
-    <h2 class="header">Share land</h2>
-    <p class="grey-text text-darken-3 lighten-3">
-      Greenthumbs connects people with land to share with people with veg to grow - <br/>
-      Creating a community for sustainable urban living.
-    </p>
-  </div>
-  </div>
-
-  <li class="divider"></li>
-  <div class="section white">
-  <div class="row container">
-    <h2 class="header">Grow local</h2>
-    <p class="grey-text text-darken-3 lighten-3">
-      The roots of all goodness lie in the soil of appreciation.
-    </p>
-  </div>
-  </div>
-
-  <li class="divider"></li>
-  <div class="section white">
-  <div class="row container">
-    <h2 class="header">Veg out</h2>
-    <p class="grey-text text-darken-3 lighten-3">
-      Discover available greenspace and gardeners and start growing some veg together!
-    </p>
-  </div>
-  </div>
-
-  <!-- <div class="row">
-    <div class="col s12">
-      <div class="info-hippies">
-        <div class="box">
-          <h1>Hippies sharing land and growing stuff</h1>
+            <article id="veg-out">
+                <header>
+                    <h1>Veg Out</h1>
+                </header>
+                <h5 class="grey-text text-darken-3 lighten-3">Discover available greenspace and gardeners and start growing some veg together!</h5>
+            </article>
         </div>
-      </div>
-    </div> -->
 
-    <!-- <div class="col s12">
-      <div class="info-share">
-        <h1>Share land</h1>
-        <p>
-          Greenthumbs connects people with land to share with people with veg to grow - <br/>
-          Creating a community for sustainable urban living.
-        </p>
-      </div>
-    </div> -->
-
-    <!-- <div class="col s12"> -->
-    <!-- <div class="info-grow">
-      <div class="box-grow"> -->
-        <!-- <h1>Grow local</h1>
-        <p>
-          The roots of all goodness lie in the soil of appreciation.
-        </p> -->
-      <!-- </div>
-    </div> -->
-    <!-- </div> -->
-
-    <!-- <div class="col s12"> -->
-    <!-- <div class="info-veg"> -->
-      <!-- <h1>Veg out</h1>
-      <p>
-        Discover available greenspace and gardeners and start growing some veg together!
-      </p> -->
-    <!-- </div> -->
-    <!-- </div> -->
-
-    <% if current_user %>
-    <% else %>
-    <li class="divider"></li>
-    <div class="section white">
-    <div class="row container">
-      <h2 class="header">Join the Greenthumbs Community</h2>
-
-      <!-- Modal Trigger -->
-      <button class="waves-effect waves-light btn modal-trigger" data-target="modal1">Log in</button>
-
-      <!-- Modal Structure -->
-      <div id="modal1" class="modal">
-        <div class="modal-content">
-          <h4>Log in</h4>
-
-          <div class="row">
-            <form class="col s12">
-              <div class="form">
-
-                <%= form_tag sessions_path do %>
-
-                  <div class="row modal-form-row">
-                    <div class="input-field col s12">
-                      <div class="field">
-                        <%= label_tag :email %><br/>
-                        <%= text_field_tag :email, params[:email] %>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="input-field col s12">
-                      <div class="field">
-                        <%= label_tag :password %><br/>
-                        <%= password_field_tag :password %>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="modal-footer">
-                    <div class="actions"><a class=" modal-action modal-close waves-effect waves-green btn-flat"><%= submit_tag "Log in" %></a></div>
-                  </div>
-
-                <% end %>
-
-                <p class="log-sign">Don't have an account? <%= link_to "Sign up", new_user_path %></p>
-
-              </div>
-            </form>
-          </div>
-
+        <!-- Parallax foreground -->
+        <div id="parallax-bg3">
+            <img id="bg3-1" src="assets/vegillustration1.jpg"/>
+            <img id="bg3-2" src="assets/vegillustration2.jpg"/>
+            <img id="bg3-3" src="assets/vegillustration3.jpg"/>
+            <img id="bg3-4" src="assets/city2.jpg"/>
         </div>
-      </div>
 
-       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+        <!-- Parallax midground c-->
+        <div id="parallax-bg2">
+            <img id="bg2-1" src="assets/cloud-lg1.png" alt="cloud"/>
+            <img id="bg2-2" src="assets/cloud-lg1.png" alt="cloud"/>
+            <img id="bg2-3" src="assets/cloud-lg1.png" alt="cloud"/>
+            <img id="bg2-4" src="assets/cloud-lg1.png" alt="cloud"/>
+            <img id="bg2-5" src="assets/cloud-lg1.png" alt="cloud"/>
+        </div>
 
+        <!-- Parallax background c-->
+        <div id="parallax-bg1">
+            <img id="bg1-1" src="assets/cloud-lg2.png" alt="cloud"/>
+            <img id="bg1-2" src="assets/cloud-lg2.png" alt="cloud"/>
+            <img id="bg1-3" src="assets/cloud-lg2.png" alt="cloud"/>
+            <img id="bg1-4" src="assets/cloud-lg2.png" alt="cloud"/>
+        </div>
 
-
-      <div class="buttons">
-        <button type="button"><%= link_to "Sign up", new_user_path %></button>
-        <button type="button"><%= link_to "Log in", new_session_path %></button>
-      </div>
-    </div>
-    </div>
-    <% end %>
-
-    <!-- <% if current_user %>
+        <% if current_user %>
     <% else %>
-    <div class="col s12"> -->
-    <!-- <div class="info-sign"> -->
-      <!-- <h1>Join the Greenthumbs Community</h1>
-      <div class="buttons">
-        <button type="button"><%= link_to "Sign up", new_user_path %></button>
-        <button type="button"><%= link_to "Log in", new_session_path %></button>
-      </div> -->
-    <!-- </div> -->
-    <!-- </div>
-    <% end %> -->
-
-  <!-- </div> -->
+        <div class="bottom-foot">
+            <h1>Join the Greenthumbs Community</h1>
+            <div class="buttons">
+                <button type="button"><%= link_to "Sign up", new_user_path %></button>
+                <button type="button"><%= link_to "Log in", new_session_path %></button>
+            </div>
+        </div>
+        <% end %>
+      </div>
 
   <!-- <div class="footer-fixed"> -->
-  <footer class="page-footer brown lighten-2">
+  <footer class="page-footer grey">
 
     <div class="row">
       <div class="col s12 m4 l6">
@@ -226,4 +125,5 @@
 
   </footer>
 
+</div>
 </div>
