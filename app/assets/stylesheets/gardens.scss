@@ -17,6 +17,16 @@ html, body {
     padding: 0;
 }
 
+.div.row_cards_row{
+ height: 20px;
+
+}
+
+div.card.blue-grey.darken-1.garden_cards{
+ height: 250px;
+ padding-bottom: 0px;
+}
+
 .row {
   position: relative;
 }
@@ -32,5 +42,9 @@ margin-bottom: 0;
 
 .test1{
   position: relative;
-  top: 10px;
+  top: 4px;
+}
+
+.container-garden-form{
+ margin-bottom: 100px; 
 }

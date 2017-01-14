@@ -1,7 +1,6 @@
-<div class="container">
+<div class="container container-reservation-form">
   <div class="row">
     <div class="form">
-
       <%= form_for ([@garden, @reservation]) do |f| %>
 
         <% if @reservation.errors.any? %>
@@ -37,16 +36,25 @@
 
       <div class="field">
         <p>Note: <%= f.text_field :note %></p>
-        <p>Reap and Sow: <br/><%= f.date_select :startdate %></p>
+        <p>Reap and Sow:</p>
+         <h7>Choose Your Date</h7>
+         <input type="text" class="datepicker">
+         <h7>Choose Your Date</h7>
+        <br/> <%= f.date_select :startdate %>
+      </div>
+         <input type="text" class="datepicker">
         <p>Harvest: <%= f.date_select :enddate %></p>
       </div>
-
-      <div class="actions">
-        <%= f.submit "Grow" %>
+          <div class="actions">
+            <%= f.submit "Grow" %>
+          </div>
       </div>
-
       <% end %>
-
     </div>
-  </div>
-</div>
+
+    <script>
+  $('.datepicker').pickadate({
+    selectMonths: true, // Creates a dropdown to control month
+    selectYears: 15 // Creates a dropdown of 15 years to control year
+  });
+    </script>
