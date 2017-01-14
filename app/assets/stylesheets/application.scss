@@ -96,19 +96,19 @@ body {
   height: 500px;
 }
 
-.img {
-  height: 200px;
-  width: 200px;
-}
-
-// img.responsive-img {
-//     max-width: 20%;
-//     height: auto;
+// .img {
+//   height: 200px;
+//   width: 200px;
 // }
 
 img.responsive-img {
     max-width: 70%;
     height: auto;
+}
+
+.show-image img {
+  height: 400px;
+  width: 100%;
 }
 
 .container.cards{
@@ -149,8 +149,8 @@ img.responsive-img {
 #map {
   position: fixed !important;
   top: 80px;
-  left: 10px;
-  height: 560px;
+  left: 5px;
+  height: 580px;
   width: 42%;
   padding-right: 100px !important;
   padding-left: 20px!important;
