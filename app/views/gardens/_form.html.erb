@@ -52,10 +52,10 @@
 
         <form action="#">
           <div class="file-field input-field">
-            <div class="btn">
+            <!-- <div class="btn">
               <span>File</span>
               <input type="file">
-            </div>
+            </div> -->
             <div class="file-path-wrapper">
               <div class="field">
                 <%= f.label :garden_image %><br>
@@ -66,9 +66,13 @@
           </div>
         </form>
 
-        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+        <!-- <button class="btn waves-effect waves-light" type="submit" name="action">Submit
           <i class="material-icons right">send</i>
-        </button>
+        </button> -->
+
+        <div class="actions">
+            <%= f.submit "Add" %>
+        </div>
 
       <% end %>
 

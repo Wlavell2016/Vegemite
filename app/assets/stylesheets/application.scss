@@ -36,19 +36,52 @@
   padding: 14px 16px;
 }
 
+.blue-text.text-darken-2 {
+    color: #d2be19 !important;
+}
+
+.blue
 a {
     color: #d0ba8f;
     text-decoration: none;
     -webkit-tap-highlight-color: transparent;
 }
 
+a {
+    color: #d2be19;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+// user card
+.brown.lighten-3 {
+    background-color: #bcaaa4 !important;
+    height: 30rem;
+}
+
+// user card links
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+    margin-right: 20px;
+    transition: color .3s ease;
+    text-transform: uppercase;
+    color: #d2be19;
+}
+
+// font-family: 'Cormorant Garamond', serif;
+// font-family: 'Playfair Display SC', serif;
+// font-family: 'Cinzel Decorative', cursive;
+// font-family: 'IM Fell Double Pica', serif;
+// font-family: 'IM Fell English', serif;
+// font-family: 'Cormorant SC', serif;
+// font-family: 'Mate SC', serif;
+
 body {
   // background-image: url('moonphase3.jpg');
   /*background-color: ;*/
-  /*font-family: 'Sniglet', cursive;*/
+  // font-family: 'Sniglet', cursive;
+  // font-family: 'Poiret One', cursive;
   font-family: 'Baloo Tamma', cursive;
-  /*font-family: 'Poiret One', cursive;*/
-  font-size: 12px;
+  // font-size: 12px;
   /*background-color: #E0E8D9 ;*/
   /*background-color: #E0E8D9;*/
   /*margin: 5px;*/
@@ -56,6 +89,7 @@ body {
 
 .page-title {
   text-align: center;
+  font-size: 3rem;
 }
 
 .parallax-container {
@@ -65,6 +99,16 @@ body {
 .img {
   height: 200px;
   width: 200px;
+}
+
+// img.responsive-img {
+//     max-width: 20%;
+//     height: auto;
+// }
+
+img.responsive-img {
+    max-width: 70%;
+    height: auto;
 }
 
 .container.cards{
@@ -110,4 +154,13 @@ body {
   width: 42%;
   padding-right: 100px !important;
   padding-left: 20px!important;
+}
+
+a.modal-action {
+  margin: auto !important;
+  bottom: 40% !important;
+  margin-left: 30% !important;
+  width: 120px;
+  align-items: flex-start;
+  text-align: center;
 }
