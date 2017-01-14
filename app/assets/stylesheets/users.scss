@@ -18,7 +18,8 @@
 #grow-local,
 #hippies-share,
 #share-land,
-#veg-out {
+#veg-out,
+#about {
     padding-top: 105px;
 }
 
@@ -35,6 +36,13 @@
 #grow-local {
     position: absolute;
     top: 1100px;
+}
+
+#about {
+    z-index: 5;
+    position: absolute;
+    top: 2950px;
+    width: 100%;
 }
 
 #content h1 {
@@ -152,4 +160,30 @@
     position: absolute;
     top: 1020px;
     left: 450px;
+}
+/* about us section */
+#about-us {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+/* about us header */
+#about h1 {
+  font-size: 4.2rem;
+  line-height: 110%;
+  margin: 2.1rem 0 1.68rem;
+  text-align: center;
+}
+/* width of each about us column*/
+.row .col.s4 {
+  width: 33.333%;
+  margin-left: auto;
+  left: auto;
+  right: auto;
+}
+/* width of entire about us row*/
+.container .row {
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+  width: 100%;
 }

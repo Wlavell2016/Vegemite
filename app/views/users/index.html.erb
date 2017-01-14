@@ -13,51 +13,52 @@
   </div>
 </nav> -->
 
-  <%= form_tag(gardens_path, :method => "get", class: "search-form") do %>
-    <%= text_field_tag( :search, params[:search], :placeholder => "Explore") %>
-    <% submit_tag "Search" %>
-  <% end %>
-
     <%#= if @gardens.present? %>
     <%#= render :gardens %>
     <%#= end %>
 
-    <div id="content">
-            <article id="hippies-share">
-                <header>
-                    <h1>Hippies sharing land and growing stuff</h1>
-                </header>
-                <h5 class="grey-text text-darken-3 lighten-3">Creating a community for sustainable urban living</h5>
-            </article>
+  <div id="content">
 
-            <article id="share-land">
-                <header>
-                    <h1>Share Land</h1>
-                </header>
-                <h5 class="grey-text text-darken-3 lighten-3">Greenthumbs connect people with land to share with people with veg to grow</h5>
-            </article>
+    <article id="hippies-share">
+      <header>
+        <h1>Hippies sharing land and growing stuff</h1>
+      </header>
+        <h5 class="grey-text text-darken-3 lighten-3">Creating a community for sustainable urban living</h5>
+    </article>
 
-            <article id="grow-local">
-                <header>
-                    <h1>Grow Local</h1>
-                </header>
-                <h5 class="grey-text text-darken-3 lighten-3">The roots of all goodness lie in the soil of appreciation</h5>
-            </article>
+    <article id="share-land">
+      <header>
+        <h1>Share Land</h1>
+      </header>
+        <h5 class="grey-text text-darken-3 lighten-3">Greenthumbs connect people with land to share with people with veg to grow</h5>
+    </article>
 
-            <article id="veg-out">
-                <header>
-                    <h1>Veg Out</h1>
-                </header>
-                <h5 class="grey-text text-darken-3 lighten-3">Discover available greenspace and gardeners and start growing some veg together!</h5>
-            </article>
-        </div>
+    <article id="grow-local">
+      <header>
+        <h1>Grow Local</h1>
+      </header>
+        <h5 class="grey-text text-darken-3 lighten-3">The roots of all goodness lie in the soil of appreciation</h5>
+    </article>
+
+    <article id="veg-out">
+      <header>
+        <h1>Veg Out</h1>
+      </header>
+        <h5 class="grey-text text-darken-3 lighten-3">Discover available greenspace and gardeners and start growing some veg together!</h5>
+        <%= form_tag(gardens_path, :method => "get", class: "search-form") do %>
+          <%= text_field_tag( :search, params[:search], :placeholder => "Explore Our Gardens") %>
+          <% submit_tag "Search" %>
+        <% end %>
+    </article>
+
+  </div>
 
         <!-- Parallax foreground -->
         <div id="parallax-bg3">
-            <img id="bg3-1" src="assets/vegillustration1.jpg"/>
-            <img id="bg3-2" src="assets/vegillustration2.jpg"/>
-            <img id="bg3-3" src="assets/vegillustration3.jpg"/>
-            <img id="bg3-4" src="assets/city2.jpg"/>
+            <img id="bg3-1" src="assets/vegillustration1.png"/>
+            <img id="bg3-2" src="assets/vegillustration2.png"/>
+            <img id="bg3-3" src="assets/vegillustration3.png"/>
+            <img id="bg3-4" src="assets/landscape.jpg"/>
         </div>
 
         <!-- Parallax midground c-->
@@ -78,16 +79,45 @@
         </div>
 
         <% if current_user %>
-    <% else %>
+        <% else %>
         <div class="bottom-foot">
             <h1>Join the Greenthumbs Community</h1>
             <div class="buttons">
                 <button type="button"><%= link_to "Sign up", new_user_path %></button>
-                <button type="button"><%= link_to "Log in", new_session_path %></button>
+                <!-- <button type="button"><%= link_to "Log in", new_session_path %></button> -->
             </div>
         </div>
         <% end %>
-      </div>
+
+        <article id="about" class="scrollspy">
+          <header>
+            <h1>About Us</h1>
+          </header>
+            <div class="container">
+              <div class="row">
+                  <div class="col s4">
+                    <h5 class="grey-text text-darken-3 lighten-3">Nicky Shieh</h5>
+                    <img id="about-us" src="assets/hippy1.jpg"/><br/>
+                    <a href="https://github.com/PlainofthePo">GitHub</a> |
+                    <a href="#">Linkedin</a>
+                  </div>
+                  <div class="col s4">
+                    <h5 class="grey-text text-darken-3 lighten-3">Prisara Morales</h5>
+                    <img id="about-us" src="assets/hippy2.jpg"/><br/>
+                    <a href="https://github.com/prisara">GitHub</a> |
+                    <a href="https://ph.linkedin.com/in/prisara-morales">Linkedin</a>
+                  </div>
+                  <div class="col s4">
+                    <h5 class="grey-text text-darken-3 lighten-3">William Lavell</h5>
+                    <img id="about-us" src="assets/hippy4.jpg"/><br/>
+                    <a href="https://github.com/Wlavell2016">GitHub</a> |
+                    <a href="#">Linkedin</a>
+                  </div>
+                </div>
+              </div>
+        </article>
+
+</div>
 
   <!-- <div class="footer-fixed"> -->
   <footer class="page-footer grey">
