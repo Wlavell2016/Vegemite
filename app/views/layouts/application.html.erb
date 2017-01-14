@@ -10,6 +10,7 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Baloo+Tamma|Baumans|Lily+Script+One|Poiret+One|Righteous|Sniglet" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative|Cormorant+Garamond|Cormorant+SC|IM+Fell+Double+Pica|IM+Fell+English|Mate+SC|Playfair+Display|Playfair+Display+SC" rel="stylesheet">
     <%= csrf_meta_tags %>
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -22,11 +23,12 @@
     <header class="site-header">
       <!-- <h1 class="logo"><a href="/">greenthumbs<%= image_tag('logo.png') %></a></h1> -->
       <!-- <nav class="site-nav"> -->
-      <nav class="brown lighten-2">
+      <div class="navbar-fixed">
+      <nav class="grey">
         <ul>
           <!-- Dropdown Structure -->
           <% if current_user %>
-            <li>Hello, <%= current_user.username %>!</li>
+            <li>Right on, <%= current_user.username %></li>
               <ul id="dropdown1" class="dropdown-content">
                 <li class="nav"><%= link_to "Home", root_path %></li>
                 <li class="nav"><%= link_to "Gardens", "/gardens" %></a></li>
@@ -51,6 +53,7 @@
           </div>
         </ul>
       </nav>
+    </div>
     </header>
   </div>
 
@@ -67,19 +70,11 @@
       <%= yield %>
     </main>
 
-    <!-- </div> -->
-
-    <!-- <div class="footer-fixed"> -->
     <footer class="page-footer brown lighten-2">
       <div class="row">
         <div class="col s12 m4 l4 offset-l5">
                     © 2016 Copyright Information
           <h7 id="about" class="white-text scrollspy">About Us</h7>
-        </div>
-
-      </div>
-
-    </footer>
 
 
   </body>

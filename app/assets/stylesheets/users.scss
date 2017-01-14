@@ -1,3 +1,189 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#content {
+    z-index: 4;
+    position: relative;
+    max-width: 940px;
+    padding: 0 10px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+#content article {
+    width: 300px;
+}
+
+#grow-local,
+#hippies-share,
+#share-land,
+#veg-out,
+#about {
+    padding-top: 105px;
+}
+
+#hippies-share {
+    position: absolute;
+    top: -10px;
+}
+
+#share-land {
+    position: absolute;
+    top: 600px;
+}
+
+#grow-local {
+    position: absolute;
+    top: 1100px;
+}
+
+#about {
+    z-index: 5;
+    position: absolute;
+    top: 2950px;
+    width: 100%;
+}
+
+#content h1 {
+    margin: 0 0 25px;
+    font-size: 60px;
+    font-family: Georgia, serif;
+    font-weight: normal;
+    line-height: 65px;
+}
+
+#veg-out {
+    position: absolute;
+    top: 1600px;
+}
+/* foreground (vegetables) */
+#parallax-bg3 {
+    z-index: 3;
+    position: absolute;
+    left: 50%;
+    width: 940px;
+    margin-left: -470px;
+}
+/* vegetables */
+#bg3-1 {
+    position: relative;
+    top: 150px;
+    left: 800px;
+}
+
+#bg3-2 {
+    position: relative;
+    top: 600px;
+    left: 600px;
+}
+
+#bg3-3 {
+    position: absolute;
+    top: 1050px;
+    left: 700px;
+}
+
+#bg3-4 {
+    position: relative;
+    top: 4300px;
+    left: -50px;
+}
+/* midground (clouds) */
+#parallax-bg2 {
+    z-index: 2;
+    position: fixed;
+    left: 50%;
+    top: 0;
+    width: 1200px;
+    margin-left: -600px;
+}
+
+#bg2-1 {
+    position: absolute;
+    top: 162px;
+    left: 200px;
+}
+
+#bg2-2 {
+    position: absolute;
+    top: 300px;
+    left: 1150px;
+}
+
+#bg2-3 {
+    position: absolute;
+    top: 543px;
+    left: -35px;
+}
+
+#bg2-4 {
+    position: absolute;
+    top: 1180px;
+    left: 250px;
+}
+
+#bg2-5 {
+    position: absolute;
+    top: 900px;
+    left: 890px;
+}
+/* background (clouds) */
+#parallax-bg1 {
+    z-index: 1;
+    position: fixed;
+    left: 50%;
+    top: 0;
+    width: 1200px;
+    margin-left: -600px;
+}
+
+#bg1-1 {
+    position: absolute;
+    top: 85px;
+    left: -270px;
+}
+
+#bg1-2 {
+    position: absolute;
+    top: 440px;
+    left: 795px;
+}
+
+#bg1-3 {
+    position: absolute;
+    top: 900px;
+    left: -220px;
+}
+
+#bg1-4 {
+    position: absolute;
+    top: 1020px;
+    left: 450px;
+}
+/* about us section */
+#about-us {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+/* about us header */
+#about h1 {
+  font-size: 4.2rem;
+  line-height: 110%;
+  margin: 2.1rem 0 1.68rem;
+  text-align: center;
+}
+/* width of each about us column*/
+.row .col.s4 {
+  width: 33.333%;
+  margin-left: auto;
+  left: auto;
+  right: auto;
+}
+/* width of entire about us row*/
+.container .row {
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+  width: 100%;
+}

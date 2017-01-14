@@ -39,8 +39,9 @@
     <div class="owner">
       <div class="userInfo">
         <div>
-           <h4 class="center-align">Greenthumbs owner</h4>
-      </div>
+          <i class="material-icons">message</i><p>Message host</p>
+          <h4 class="center-align"><%= @garden.user.username %>'s Garden</h4>
+        </div>
         <%= @garden.user.firstname %>
         <%= @garden.user.lastname %>
       </div>
@@ -55,8 +56,7 @@
             <div class="card-content white-text">
     <div class='garden-info'>
        <div>
-          <h4 class="center-align">
-            Address
+          <!-- <h4 class="center-align">About</h4> -->
       </div>
       <p><b>ADDRESS:</b>
           <%= @garden.address %><br/>
