@@ -41,7 +41,7 @@
 #about {
     z-index: 5;
     position: absolute;
-    top: 2950px;
+    top: 2700px;
     width: 100%;
 }
 
@@ -171,7 +171,7 @@
 #about h1 {
   font-size: 4.2rem;
   line-height: 110%;
-  margin: 2.1rem 0 1.68rem;
+  // margin: 2.1rem 0 1.68rem;
   text-align: center;
 }
 /* width of each about us column*/
@@ -180,10 +180,15 @@
   margin-left: auto;
   left: auto;
   right: auto;
+  text-align: center;
 }
 /* width of entire about us row*/
 .container .row {
   margin-left: -0.75rem;
   margin-right: -0.75rem;
   width: 100%;
+  padding-bottom: 20%;
+}
+/* join greenthumbs section */
+.join-greenthumbs {
 }

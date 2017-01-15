@@ -5,6 +5,52 @@
 @import "users";
 @import "vegetables";
 
+// user greeting
+ul:not(.browser-default) li {
+    list-style-type: none;
+    color: black;
+}
+
+// logo and hamburger
+nav ul a {
+    transition: background-color .3s;
+    font-size: 1rem;
+    color: #819c76;
+    display: block;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+// dropdown
+.dropdown-content {
+  opacity: 0.1%;
+  background-color: #e0e0e0;
+}
+
+// dropdown links
+.dropdown-content li > a, .dropdown-content li > span {
+    font-size: 16px;
+    color: #819c76;
+    display: block;
+    line-height: 22px;
+    padding: 14px 16px;
+}
+
+// links
+a {
+    color: #819c76;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+// link on user show update button
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-large):not(.btn-floating) {
+    margin-right: 20px;
+    transition: color .3s ease;
+    text-transform: uppercase;
+    color: #819c76;
+}
+
 .background {
   background: image-url('trust.jpg');
 }
@@ -28,14 +74,6 @@
   width: 50px;
 }
 
-.dropdown-content li > a, .dropdown-content li > span {
-  font-size: 16px;
-  color: #968468;
-  display: block;
-  line-height: 22px;
-  padding: 14px 16px;
-}
-
 .blue-text.text-darken-2 {
     color: #d2be19 !important;
 }
@@ -43,12 +81,6 @@
 .blue
 a {
     color: #d0ba8f;
-    text-decoration: none;
-    -webkit-tap-highlight-color: transparent;
-}
-
-a {
-    color: #d2be19;
     text-decoration: none;
     -webkit-tap-highlight-color: transparent;
 }
@@ -163,6 +195,12 @@ footer.page-footer.brown.lighten-2 {
 
 .grey {
 height: 80px;
+
+.join-greenthumbs {
+  position: absolute;
+  top: 2300px;
+  left: 150px;
+  text-align: center;
 }
 
 .page-footer{
@@ -171,6 +209,8 @@ height: 80px;
   bottom: 0px;
   width: 100%;
   height: 38px;
+  z-index: 6;
+  opacity: 0.5;
 }
 
 #map {
