@@ -33,8 +33,7 @@
                 <li class="nav"><%= link_to "Gardens", "/gardens" %></a></li>
                 <li class="nav"><%= link_to "Profile", "/users/#{session[:user_id]}" %></a></li>
                 <li class="nav"><%= link_to "Add a Garden", "/gardens/new" %></a></li>
-                <li class="divider"></li>
-                <li class="nav"><a href="#about">About Us</a></li>
+                <li class="divider"></li> 
                 <li class="nav"><%= link_to "Log out", session_path("current"), :method => :delete %></li>
               </ul>
               <ul class="right hide-on-med-and-down">
