@@ -61,6 +61,7 @@ user = User.create!([
                           user_id: user_id)
                           # image: image)
 
+
 end
 
 vegetable = Vegetable.create!([
