@@ -19,12 +19,11 @@
   </head>
 
   <body class="<%= controller.controller_name %> <%= controller.action_name %>">
- <div class="navbar-fixed">
-    <header class="site-header">
+      <header class="site-header">
       <!-- <h1 class="logo"><a href="/">greenthumbs<%= image_tag('logo.png') %></a></h1> -->
       <!-- <nav class="site-nav"> -->
       <div class="navbar-fixed">
-      <nav class="grey">
+      <nav class="grey lighten-2">
         <ul>
           <!-- Dropdown Structure -->
           <% if current_user %>
@@ -55,7 +54,6 @@
       </nav>
     </div>
     </header>
-  </div>
 
     <!-- <div class="container"> -->
 
@@ -70,10 +68,10 @@
       <%= yield %>
     </main>
 
-    <footer class="page-footer brown lighten-2">
+    <footer class="page-footer grey lighten-3">
       <div class="row">
         <div class="col s12 m4 l4 offset-l5">
-                    © 2016 Copyright Information
+                    © 2017 The app formerly known as vegemite
           <h7 id="about" class="white-text scrollspy">About Us</h7>
 
 
