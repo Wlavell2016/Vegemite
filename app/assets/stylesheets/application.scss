@@ -5,6 +5,12 @@
 @import "users";
 @import "vegetables";
 
+// "back to" links
+.back {
+  padding-top: 30px;
+  padding-left: 10px;
+}
+
 // user greeting
 ul:not(.browser-default) li {
     list-style-type: none;
@@ -62,6 +68,7 @@ h1, h2, h3, h4, h5, h6 {
 .brown.lighten-3 {
     background-color: #f5f5f5 !important;
     overflow: auto;
+    padding-bottom: 5%;
 }
 
 // elements in each column on user show card
@@ -171,6 +178,17 @@ img.responsive-img {
     padding-right: 5%;
 }
 
+// cards (garden index, show)
+.blue-grey.darken-1 {
+    background-color: rgba(62, 65, 66, 0.05) !important;
+}
+
+// garden index title
+.card .card-content .card-title {
+    line-height: 48px;
+    color: black;
+}
+
 .site-nav {
   position: fixed;
   z-index: 1;
@@ -180,8 +198,17 @@ img.responsive-img {
   height: 300px;
 }
 
-footer.page-footer.brown.lighten-2 {
-  padding-top: 10px;
+// footer.page-footer.brown.lighten-2 {
+//   padding-top: 10px;
+// }
+
+// .grey {
+// height: 80px;
+// }
+
+.grey.lighten-2 {
+    background-color: #e0e0e0 !important;
+    height: 80px;
 }
 
 .join-greenthumbs {
@@ -203,9 +230,9 @@ footer.page-footer.brown.lighten-2 {
 
 #map {
   position: fixed !important;
-  top: 76px;
+  top: 140px;
   left: 5px;
-  height: 522px;
+  height: 590px;
   width: 42%;
   padding-right: 100px !important;
   padding-left: 20px!important;

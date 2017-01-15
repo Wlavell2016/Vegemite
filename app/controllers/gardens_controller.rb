@@ -10,7 +10,14 @@ class GardensController < ApplicationController
     else
       @gardens = Garden.all
     end
-  end
+
+    @gardens_search = Garden.all
+      if params[:search]
+        @gardens_search = Garden.search(params[:search]).order("created_at DESC")
+        else
+          @gardens_search = Garden.all.order('created_at DESC')
+      end
+end
 
   def show
     @garden = Garden.find(params[:id])
@@ -56,5 +63,5 @@ class GardensController < ApplicationController
   def garden_params
     params.require(:garden).permit(:title, :description, :address, :size, :garden_image, vegetable_ids: [])
   end
-  
+
 end

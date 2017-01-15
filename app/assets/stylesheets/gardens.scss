@@ -2,14 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#map {
-    height: 100%;
-    width: 800px;
-    position: absolute;
-    right: 5px;
-    top: 5%;
-    z-index: 1000;
-}
+
 
 html, body {
     height: 100%;
@@ -23,14 +16,42 @@ html, body {
 }
 
 div.card.blue-grey.darken-1.garden_cards{
- height: 250px;
+ height: 310px;
  padding-bottom: 0px;
+-webkit-filter: sepia(65%);
+-moz-filter: sepia(65%);
+-o-filter: sepia(65%);
+-ms-filter: sepia(65%);
+filter: sepia(65%);
 }
 
+
+div.card.blue-grey.darken-1.garden_cards:hover{
+ padding-bottom: 0px;
+
+}
 .row {
   position: relative;
 }
 
+
+.vintage {
+  // background: url(https://source.unsplash.com/lZlfHGqx44Q/1600x900) center center #292929;
+  // background-size: cover;
+  -webkit-background-size: cover;
+  background-blend-mode: lighten;
+}
+
+.vintage:hover {
+ // background: url(https://source.unsplash.com/lZlfHGqx44Q/1600x900) center center #000;
+ //  background-size: cover;
+  -webkit-background-size: cover;
+  background-blend-mode: lighten;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+// ////////////////////////////////////////////////////////////////////////////
 .garden_cards{
   padding-top: 0%;
   height: 270px;
@@ -40,11 +61,20 @@ div.card.blue-grey.darken-1.garden_cards{
 margin-bottom: 0;
 }
 
+.cards_row{
+margin-top: 20px;
+
+}
+.search-form {
+
+}
+
 .test1{
   position: relative;
-  top: 4px;
+  top: 0px;
+  padding-top: 0px;
 }
 
 .container-garden-form{
- margin-bottom: 100px; 
+ margin-bottom: 100px;
 }
