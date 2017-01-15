@@ -139,14 +139,12 @@ img.responsive-img {
   height: 300px;
 }
 
-<<<<<<< HEAD
 // .body.gardens.index footer.page-footer.brown.lighten-2 {
 // position: fixed !important;
 // left: 400px;
 // margin-top: 0px;
 // height: 20px;
 // }
-// =======
 // .page-footer{
 //   position: absolute;
 //   bottom: 3720px;
@@ -158,12 +156,14 @@ img.responsive-img {
 //    position: absolute;
 //    top: 2300px;
 // }
-// >>>>>>> b9a584fcb6d9f032644e64fd1b2e0e5feb54caea
 
 footer.page-footer.brown.lighten-2 {
   padding-top: 10px;
 }
 
+.grey {
+height: 80px;
+}
 
 .page-footer{
   padding-top: 0px;
@@ -175,9 +175,9 @@ footer.page-footer.brown.lighten-2 {
 
 #map {
   position: fixed !important;
-  top: 76px;
+  top: 140px;
   left: 5px;
-  height: 522px;
+  height: 590px;
   width: 42%;
   padding-right: 100px !important;
   padding-left: 20px!important;

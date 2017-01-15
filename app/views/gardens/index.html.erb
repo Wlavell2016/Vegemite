@@ -1,32 +1,28 @@
 <div class="gardens-index">
 
-<!-- search bar -->
-  <!-- <%= form_tag(gardens_path, :method => "get", class: "search-form") do %>
-    <%= text_field_tag( :search, params[:search], :placeholder => "Explore Our Gardens") %>
-    <% submit_tag "Search" %>
-  <% end %> -->
-
 <div class="container-cards">
   <div class="row cards_row">
-    <div class="col s12 m4 l7 offset-l5 test1">
+    <div class="col s12 m4 l4  search-form">
+<%= form_tag(gardens_path, :method => "get", id: "search-form") do %>
+<%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
+<%= submit_tag "Search" %>
+<% end %>
+</div>
+
+
+    <div class="col s12 m4 l7 push-l1 test1">
       <div class="gardens">
-<!--Here i loop through our data and serve it to the web wiht a slice-->
   <% @gardens.each_slice(2) do |slice| %>
     <div class="row garden_row">
       <% slice.each do |garden| %>
           <div class="col s12 m6  cards-test1">
             <div class="card blue-grey darken-1 garden_cards" style="background-image: url(<%= garden.garden_image.banner2.url %>); background-repeat: no-repeat; background-position: center; background-size: cover;">
               <div class="card-content white-text">
-
                    <span class="card-title"><%= garden.title %></span>
-                   <!-- <img src="<%= garden.image %>"> -->
-
-                   <!-- <h3 class="garden-name"><%= garden.title %></h3> -->
-
+                   <h3 class="garden-name"><%= garden.title %></h3>
                    <p class="garden-info">
-                     Address: <%= garden.address %><br/>
-                     Size: <%= garden.size %><br/>
-                     <%= link_to 'More details', garden_path(garden) %>
+                     "Address:<br />
+                   <%= link_to garden.address,  garden_path(garden) %>
                    </p>
               </div>
             </div>
@@ -37,44 +33,17 @@
       <% end %>
    </div>
  </div>
-
-
-	<h2>Layla</h2>
-  <div class="grid">
-    <figure class="effect-layla">
-      <img src="img/6.jpg" alt="img06"/>
-      <figcaption>
-        <h2>Crazy <span>Layla</span></h2>
-        <p>When Layla appears, she brings an eternal summer along.</p>
-        <a href="#">View more</a>
-      </figcaption>
-    </figure>
-    <figure class="effect-layla">
-      <img src="img/3.jpg" alt="img03"/>
-      <figcaption>
-        <h2>Crazy <span>Layla</span></h2>
-        <p>When Layla appears, she brings an eternal summer along.</p>
-        <a href="#">View more</a>
-      </figcaption>
-    </figure>
-  </div>
-
-    <div id="map" class="fixed">test blah blah
+</div>
+<div id="map" class="fixed">test blah blah
         </div>
-    </div>
-
-
 </div>
-</div>
-
-
-
     <script>
        function initMap() {
          var toronto = {lat: 43.669297, lng: -79.415811};
          var map = new google.maps.Map(document.getElementById('map'), {
              zoom: 12,
-             center: toronto
+             center: toronto,
+             styles: [{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"visibility":"on"}]},{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#495421"}]},{"featureType":"administrative","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"weight":4.1}]},{"featureType":"landscape","elementType":"geometry.fill","stylers":[{"color":"#daebc6"},{"visibility":"on"}]},{"featureType":"landscape.natural.terrain","elementType":"geometry.fill","stylers":[{"color":"#cae9c2"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"color":"#769E72"}]},{"featureType":"poi","elementType":"labels.text.fill","stylers":[{"color":"#7B8758"}]},{"featureType":"poi","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"visibility":"simplified"},{"color":"#89d88f"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"color":"#ff0000"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#459945"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"color":"#ffffff"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#eeeeee"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#d8d8d8"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"geometry","stylers":[{"visibility":"on"},{"color":"#d2f0ef"}]}]
            });
       <%  @gardens.each do |g|  %>
       var marker = new google.maps.Marker({
@@ -88,38 +57,13 @@
      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfGdWTZAmF0HDpWOnGsfVpIwLcb94EO-0&callback=initMap">
      </script>
 
-     <!-- <div class="footer-fixed"> -->
      <footer class="page-footer brown lighten-2">
 
-       <!-- <div class="row">
-         <div class="col s12 m4 l6">
-           <h5 id="about" class="white-text scrollspy">About Us</h5>
-         </div> -->
 
-         <!-- <div class="col s12 m4 l4">
-           <div class="center-align">
-           </div>
-         </div>
-         </div> -->
-
-       <!-- <div class="col s12 m4 l6">
-         <div class="right-align">
-           <ul>
-             <li><a href="#" class="grey-text text-lighten-4 ">Help</a></li>
-             <li><a href="#" class="grey-text text-lighten-4 ">Privacy and Terms</a></li>
-             <li><a href="#" class="grey-text text-lighten-4 ">User Agreement</a></li>
-           </ul>
-         </div>
-         </div> -->
-
-       <!-- <div class="footer-copyright"> -->
-         <!-- <div class="container"> -->
            <div class="col s12 m4 l4">
              <div class="center-align">
                © 2017 The app formerly known as vegemite
              </div>
-           <!-- </div> -->
-         <!-- </div> -->
        </div>
 
      </footer>
