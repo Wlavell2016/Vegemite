@@ -29,7 +29,7 @@ user = User.create!([
 
 15.times do
     title = Faker::Pokemon.location
-    description = Faker::Hipster.paragraph(20)
+    description = Faker::Hipster.paragraph(4)
     size = Faker::Number.number(3)
     # image = Faker::Placeholdit.image
     user_id = Faker::Number.between(1, 16)
