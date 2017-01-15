@@ -189,12 +189,11 @@ img.responsive-img {
 //    top: 2300px;
 // }
 
-footer.page-footer.brown.lighten-2 {
-  padding-top: 10px;
-}
+
 
 .grey {
 height: 80px;
+}
 
 .join-greenthumbs {
   position: absolute;
@@ -232,7 +231,7 @@ a.modal-action {
   text-align: center;
 }
 
-// search bar
+search bar
 input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
     background-color: transparent;
     border: none;
@@ -240,7 +239,7 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
     border-radius: 0;
     outline: none;
     height: 3rem;
-    width: 55%;
+    width: 80%;
     font-size: 1rem;
     margin: 0 0 20px 0;
     padding: 0;
