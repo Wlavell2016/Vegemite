@@ -88,7 +88,7 @@ vegetable = Vegetable.create!([
                                   { name: 'Tomato', sow_period: 'Nov - Mar', plant_out_period: 'Feb - May', harvest: 'Aug - Oct' }
                               ])
 
-set = (1..21).to_a.sample 6
+set = (1..21).to_a.sample 12
 
 g1 = Garden.find(1)
 g1.vegetables << Vegetable.find(set)
