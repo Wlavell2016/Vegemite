@@ -1,5 +1,5 @@
-<!-- <div class="container container-reservation-form">
-  <div class="row"> -->
+<div class="container container-reservation-form">
+  <div class="row">
     <div class="form">
       <%= form_for ([@garden, @reservation]) do |f| %>
 
@@ -37,14 +37,14 @@
       <div class="field">
         <p>Note: <%= f.text_field :note %></p>
         <p>Reap and Sow:</p>
-         <h7>Choose Your Date</h7>
-         <input type="text" class="datepicker">
-         <h7>Choose Your Date</h7>
-        <br/> <%= f.date_select :startdate %>
-      </div>
-         <input type="text" class="datepicker">
-        <p>Harvest: <%= f.date_select :enddate %></p>
-      </div>
+         <h7>Choose Your Date test1</h7>
+         <!-- <input type="date" class="datepicker"> -->
+        <br/> start of date checker<%= f.date_select :startdate, class: "datepicker", type: "date" %>
+      <!-- </div> -->
+         <!-- <input type="date" class="datepicker"> -->
+         <h7>Choose Your Date test2</h7>
+        <p>Harvest:end of data checker <%= f.date_select :enddate, class: "datepicker", type: "date" %></p>
+      <!-- </div> -->
           <div class="actions">
             <%= f.submit "Grow" %>
           </div>

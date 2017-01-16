@@ -10,7 +10,7 @@
     <p class="reservation-details">
       <%= @garden.title.upcase %></br>
       Date:
-      <%= @reservation.startdate%><br/>
+      <%= @reservation.startdate.strftime("%b %d %Y")%><br/>
       Note:
       <%= @reservation.note %>
     </p>
