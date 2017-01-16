@@ -71,7 +71,7 @@ div.card.blue-grey.darken-1.garden_cards:hover{
   padding-top: 0px;
 }
 
-.container-garden-form{
+.container-garden-form {
   margin-bottom: 100px;
 }
 
@@ -85,15 +85,20 @@ div.card.blue-grey.darken-1.garden_cards:hover{
   line-height: 48px;
   color: black;
 }
+<<<<<<< HEAD
  #garden_vegetable_ids_{
+=======
+
+input #garden_vegetable_ids_{
+>>>>>>> eb3aa085164fa497dc6bce09c687d554204c7ca7
   display: inline-block !important;
   position: relative;
   left: 0;
   opacity: 100;
 }
 
+// garden links
 .garden-info a {
-    // color: #ffffff;
     color: #c7c8bb;
     text-decoration: none;
     -webkit-tap-highlight-color: transparent;
@@ -115,8 +120,8 @@ h4 {
   text-align: center;
 }
 // reserve button
-.waves-effect {
-  left: 300px;
+.reserve {
+  left: 475px;
   margin-bottom: 30px;
 }
 // image
@@ -124,30 +129,38 @@ h4 {
   padding-top: 2%;
 }
 // main card
-.container {
+.garden_container {
   margin-bottom: 100px;
+  // margin-top: 20px;
+  // margin-left: 100px;
+  // margin-right: 100px;
 }
 // main row of cards
-.container .row {
+.garden_container .row {
     margin-left: -0.75rem;
     margin-right: -0.75rem;
     width: 100%;
     padding-bottom: 0 !important;
 }
-
+//
 .message {
   float: right;
   font-size: 10px;
 }
-
+//
 .username {
   padding-top: 10px;
 }
-
+//
 p {
   color: black !important;
 }
-
+//
 i {
   color: black !important;
+}
+
+// GARDENS FORM
+.delete_garden {
+  margin-left: 960px;
 }

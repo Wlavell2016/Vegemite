@@ -1,9 +1,9 @@
 <!-- <%= link_to "Back to Gardens", gardens_path %> -->
 <div class="back"><%= link_to "Back", "/users/#{session[:user_id]}" %></div>
 
-<h1 class="page-title">Edit Garden</h1>
+<div class="delete_garden"><%= link_to "Delete Garden", garden_path(@garden), method: :delete, data: {confirm: "Are you sure you want to delete this garden?"}  %></div>
 
-<%= link_to "Delete", garden_path(@garden), method: :delete, data: {confirm: "Are you sure you want to delete this garden?"}  %>
+<h1 class="page-title">Edit Garden</h1>
 
 <%= render 'form' %>
 
