@@ -61,6 +61,7 @@ user = User.create!([
                           user_id: user_id)
                           # image: image)
 
+
 end
 
 vegetable = Vegetable.create!([
@@ -86,3 +87,50 @@ vegetable = Vegetable.create!([
                                   { name: 'Squash', sow_period: 'Mar - Apr', plant_out_period: 'n/a', harvest: 'Jun - Sep' },
                                   { name: 'Tomato', sow_period: 'Nov - Mar', plant_out_period: 'Feb - May', harvest: 'Aug - Oct' }
                               ])
+
+set = (1..21).to_a.sample 12
+
+g1 = Garden.find(1)
+g1.vegetables << Vegetable.find(set)
+
+g2 = Garden.find(2)
+g2.vegetables << Vegetable.find(set)
+
+g3 = Garden.find(3)
+g3.vegetables << Vegetable.find(set)
+
+g4 = Garden.find(4)
+g4.vegetables << Vegetable.find(set)
+
+g5 = Garden.find(5)
+g5.vegetables << Vegetable.find(set)
+
+g6 = Garden.find(6)
+g6.vegetables << Vegetable.find(set)
+
+g7 = Garden.find(7)
+g7.vegetables << Vegetable.find(set)
+
+g8 = Garden.find(8)
+g8.vegetables << Vegetable.find(set)
+
+g9 = Garden.find(9)
+g9.vegetables << Vegetable.find(set)
+
+g10 = Garden.find(10)
+g10.vegetables << Vegetable.find(set)
+
+g11 = Garden.find(11)
+g11.vegetables << Vegetable.find(set)
+
+g12 = Garden.find(12)
+g12.vegetables << Vegetable.find(set)
+
+g13 = Garden.find(13)
+g13.vegetables << Vegetable.find(set)
+
+g14 = Garden.find(14)
+g14.vegetables << Vegetable.find(set)
+
+g15 = Garden.find(15)
+g15.vegetables << Vegetable.find(set)
