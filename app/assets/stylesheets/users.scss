@@ -2,17 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// USERS INDEX
 #content {
-    z-index: 4;
-    position: relative;
-    max-width: 940px;
-    padding: 0 10px;
-    margin: 0 auto;
-    line-height: 1.7;
+  z-index: 4;
+  position: relative;
+  max-width: 940px;
+  padding: 0 10px;
+  margin: 0 auto;
+  line-height: 1.7;
 }
 
 #content article {
-    width: 300px;
+  width: 300px;
 }
 
 #grow-local,
@@ -20,146 +21,232 @@
 #share-land,
 #veg-out,
 #about {
-    padding-top: 105px;
+  padding-top: 105px;
 }
 
 #hippies-share {
-    position: absolute;
-    top: -10px;
+  position: absolute;
+  top: -10px;
 }
 
 #share-land {
-    position: absolute;
-    top: 600px;
+  position: absolute;
+  top: 600px;
 }
 
 #grow-local {
-    position: absolute;
-    top: 1100px;
+  position: absolute;
+  top: 1100px;
 }
 
 #about {
-    z-index: 5;
-    position: absolute;
-    top: 2700px;
-    width: 100%;
+  z-index: 5;
+  position: absolute;
+  top: 2700px;
+  width: 100%;
 }
 
 #content h1 {
-    margin: 0 0 25px;
-    font-size: 60px;
-    font-family: Georgia, serif;
-    font-weight: normal;
-    line-height: 65px;
+  margin: 0 0 25px;
+  font-size: 60px;
+  font-family: Georgia, serif;
+  font-weight: normal;
+  line-height: 65px;
 }
 
 #veg-out {
-    position: absolute;
-    top: 1600px;
+  position: absolute;
+  top: 1600px;
 }
 /* foreground (vegetables) */
 #parallax-bg3 {
-    z-index: 3;
-    position: absolute;
-    left: 50%;
-    width: 940px;
-    margin-left: -470px;
+  z-index: 3;
+  position: absolute;
+  left: 50%;
+  width: 940px;
+  margin-left: -470px;
 }
-/* vegetables */
-#bg3-1 {
-    position: relative;
-    top: 150px;
-    left: 800px;
-}
-
+// wheat
+// #bg3-1 {
+//   position: relative;
+//   top: 100px;
+//   left: 700px;
+// }
+// turnips
 #bg3-2 {
-    position: relative;
-    top: 600px;
-    left: 600px;
+  position: absolute;
+  top: 3150px;
+  left: 280px;
 }
-
+// landscape
 #bg3-3 {
-    position: absolute;
-    top: 1050px;
-    left: 700px;
+  position: relative;
+  top: 4850px;
+  // top: 4300px;
+  // left: -50px;
 }
-
+// bees
 #bg3-4 {
-    position: relative;
-    top: 4300px;
-    left: -50px;
+  position: absolute;
+  top: 1050px;
+  // left: 700px;
+  left: 80px;
+}
+// strawberries
+#bg3-5 {
+  position: absolute;
+  top: 2400px;
+  left: 100px;
+}
+// berries
+#bg3-6 {
+  position: absolute;
+  top: 2000px;
+  // left: 5px;
+}
+// banner
+#bg3-7 {
+  position: absolute;
+  top: 4450px;
+  left: 80px;
+}
+// cannabis
+#bg3-8 {
+  position: absolute;
+  // top: 200px;
+  // left: 750px;
+  top: 120px;
+  left: 700px;
+}
+// raspberries
+#bg3-9 {
+  position: absolute;
+  top: 2200px;
+  left: 200px;
+}
+// onions
+#bg3-10 {
+  position: absolute;
+  top: 3250px;
+  left: 140px;
+}
+// flowers
+#bg3-11 {
+  position: absolute;
+  top: 600px;
+  // left: 10px;
+}
+// lettuce
+#bg3-12 {
+  position: absolute;
+  top: 2900px;
+  left: 300px;
+}
+// tomato
+#bg3-13 {
+  position: absolute;
+  top: 3270px;
+  // left: 10px;
 }
 /* midground (clouds) */
 #parallax-bg2 {
-    z-index: 2;
-    position: fixed;
-    left: 50%;
-    top: 0;
-    width: 1200px;
-    margin-left: -600px;
+  z-index: 2;
+  position: fixed;
+  left: 50%;
+  top: 0;
+  width: 1200px;
+  margin-left: -600px;
 }
 
 #bg2-1 {
-    position: absolute;
-    top: 162px;
-    left: 200px;
+  position: absolute;
+  top: 162px;
+  left: 200px;
 }
 
 #bg2-2 {
-    position: absolute;
-    top: 300px;
-    left: 1150px;
+  position: absolute;
+  top: 300px;
+  left: 1150px;
 }
 
 #bg2-3 {
-    position: absolute;
-    top: 543px;
-    left: -35px;
+  position: absolute;
+  top: 543px;
+  left: -35px;
 }
 
 #bg2-4 {
-    position: absolute;
-    top: 1180px;
-    left: 250px;
+  position: absolute;
+  top: 1180px;
+  left: 250px;
 }
 
 #bg2-5 {
-    position: absolute;
-    top: 900px;
-    left: 890px;
+  position: absolute;
+  top: 900px;
+  left: 890px;
 }
+
+#bg2-6 {
+  position: absolute;
+  top: 1360px;
+  left: 95px;
+}
+
 /* background (clouds) */
 #parallax-bg1 {
-    z-index: 1;
-    position: fixed;
-    left: 50%;
-    top: 0;
-    width: 1200px;
-    margin-left: -600px;
+  z-index: 1;
+  position: fixed;
+  left: 50%;
+  top: 0;
+  width: 1200px;
+  margin-left: -600px;
 }
 
 #bg1-1 {
-    position: absolute;
-    top: 85px;
-    left: -270px;
+  position: absolute;
+  top: 85px;
+  left: -270px;
 }
 
 #bg1-2 {
-    position: absolute;
-    top: 440px;
-    left: 795px;
+  position: absolute;
+  top: 440px;
+  left: 795px;
 }
 
 #bg1-3 {
-    position: absolute;
-    top: 900px;
-    left: -220px;
+  position: absolute;
+  top: 900px;
+  left: -220px;
 }
 
 #bg1-4 {
-    position: absolute;
-    top: 1020px;
-    left: 450px;
+  position: absolute;
+  top: 1020px;
+  left: 450px;
+}
+
+
+#bg1-5 {
+  position: absolute;
+  top: 700px;
+  left: 900px;
+}
+
+#bg1-6 {
+  position: absolute;
+  top: 80px;
+  left: 200px;
+  // left: 120px;
+}
+/* join greenthumbs section */
+.join-greenthumbs {
+  position: absolute;
+  top: 2300px;
+  left: 150px;
+  text-align: center;
 }
 /* about us section */
 #about-us {
@@ -189,6 +276,29 @@
   width: 100%;
   padding-bottom: 20%;
 }
-/* join greenthumbs section */
-.join-greenthumbs {
+
+// USERS SHOW
+
+// link on user show update button
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-large):not(.btn-floating) {
+  margin-right: 20px;
+  transition: color .3s ease;
+  text-transform: uppercase;
+  color: #819c76;
+}
+
+// user show card
+.brown.lighten-3 {
+  background-color: #f5f5f5 !important;
+  overflow: auto;
+  padding-bottom: 5%;
+}
+
+// elements in each column on user show card
+.row .col.s3 {
+  width: 25%;
+  margin-left: auto;
+  left: auto;
+  right: auto;
+  color: black;
 }

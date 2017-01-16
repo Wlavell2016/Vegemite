@@ -23,7 +23,7 @@
       <!-- <h1 class="logo"><a href="/">greenthumbs<%= image_tag('logo.png') %></a></h1> -->
       <!-- <nav class="site-nav"> -->
       <div class="navbar-fixed">
-      <nav class="grey lighten-2">
+      <nav class="grey lighten-3">
         <ul>
           <!-- Dropdown Structure -->
           <% if current_user %>
@@ -33,7 +33,7 @@
                 <li class="nav"><%= link_to "Gardens", "/gardens" %></a></li>
                 <li class="nav"><%= link_to "Profile", "/users/#{session[:user_id]}" %></a></li>
                 <li class="nav"><%= link_to "Add a Garden", "/gardens/new" %></a></li>
-                <li class="divider"></li> 
+                <li class="divider"></li>
                 <li class="nav"><%= link_to "Log out", session_path("current"), :method => :delete %></li>
               </ul>
               <ul class="right hide-on-med-and-down">
@@ -72,9 +72,10 @@
     <footer class="page-footer grey lighten-3">
       <div class="row">
         <div class="col s12 m4 l4 offset-l5">
-                    © 2017 The app formerly known as vegemite
-          <h7 id="about" class="white-text scrollspy">About Us</h7>
-
+          © 2017 The app formerly known as vegemite
+        </div>
+      </div>
+    </footer>
 
   </body>
 </html>
