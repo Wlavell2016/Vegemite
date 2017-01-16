@@ -66,29 +66,87 @@
   width: 940px;
   margin-left: -470px;
 }
-/* vegetables */
-#bg3-1 {
-  position: relative;
-  top: 150px;
-  left: 800px;
-}
-
+// wheat
+// #bg3-1 {
+//   position: relative;
+//   top: 100px;
+//   left: 700px;
+// }
+// turnips
 #bg3-2 {
-  position: relative;
-  top: 600px;
-  left: 600px;
+  position: absolute;
+  top: 3150px;
+  left: 280px;
 }
-
+// landscape
 #bg3-3 {
+  position: relative;
+  top: 4850px;
+  // top: 4300px;
+  // left: -50px;
+}
+// bees
+#bg3-4 {
   position: absolute;
   top: 1050px;
+  // left: 700px;
+  left: 80px;
+}
+// strawberries
+#bg3-5 {
+  position: absolute;
+  top: 2400px;
+  left: 100px;
+}
+// berries
+#bg3-6 {
+  position: absolute;
+  top: 2000px;
+  // left: 5px;
+}
+// banner
+#bg3-7 {
+  position: absolute;
+  top: 4450px;
+  left: 80px;
+}
+// cannabis
+#bg3-8 {
+  position: absolute;
+  // top: 200px;
+  // left: 750px;
+  top: 120px;
   left: 700px;
 }
-
-#bg3-4 {
-  position: relative;
-  top: 4300px;
-  left: -50px;
+// raspberries
+#bg3-9 {
+  position: absolute;
+  top: 2200px;
+  left: 200px;
+}
+// onions
+#bg3-10 {
+  position: absolute;
+  top: 3250px;
+  left: 140px;
+}
+// flowers
+#bg3-11 {
+  position: absolute;
+  top: 600px;
+  // left: 10px;
+}
+// lettuce
+#bg3-12 {
+  position: absolute;
+  top: 2900px;
+  left: 300px;
+}
+// tomato
+#bg3-13 {
+  position: absolute;
+  top: 3270px;
+  // left: 10px;
 }
 /* midground (clouds) */
 #parallax-bg2 {
@@ -129,6 +187,13 @@
   top: 900px;
   left: 890px;
 }
+
+#bg2-6 {
+  position: absolute;
+  top: 1360px;
+  left: 95px;
+}
+
 /* background (clouds) */
 #parallax-bg1 {
   z-index: 1;
@@ -161,6 +226,20 @@
   position: absolute;
   top: 1020px;
   left: 450px;
+}
+
+
+#bg1-5 {
+  position: absolute;
+  top: 700px;
+  left: 900px;
+}
+
+#bg1-6 {
+  position: absolute;
+  top: 80px;
+  left: 200px;
+  // left: 120px;
 }
 /* join greenthumbs section */
 .join-greenthumbs {
