@@ -17,6 +17,8 @@ class GardensController < ApplicationController
         else
           @gardens_search = Garden.all.order('created_at DESC')
       end
+
+      @vegetables = Vegetable.all
 end
 
   def show
