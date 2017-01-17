@@ -7,7 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 #   user = User.create!([{name: ''}, {name: ''}])
 
-require 'faker'
 
 
 # user = User.create!([
