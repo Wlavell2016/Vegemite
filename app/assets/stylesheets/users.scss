@@ -280,6 +280,7 @@ a img {
   width: 30px;
   height: 30px;
 }
+
 // USERS SHOW
 
 // link on user show update button
@@ -304,4 +305,21 @@ a img {
   left: auto;
   right: auto;
   color: black;
+}
+
+// USERS FORM
+.user_form {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.login_form {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.signin {
+  margin-top: 50px;
 }

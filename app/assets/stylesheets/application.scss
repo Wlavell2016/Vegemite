@@ -136,6 +136,10 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
   transition: all 0.3s;
 }
 
+.actions {
+  color: black;
+}
+
 .parallax-container {
   height: 500px;
 }

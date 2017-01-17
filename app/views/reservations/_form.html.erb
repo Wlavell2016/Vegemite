@@ -1,6 +1,7 @@
 <div class="container container-reservation-form">
   <div class="row">
     <div class="form">
+
       <%= form_for ([@garden, @reservation]) do |f| %>
 
         <% if @reservation.errors.any? %>
@@ -14,14 +15,13 @@
           </div>
         <% end %>
 
-        <div class="card blue-grey darken-1">
+        <div class="reservation_form card blue-grey darken-1">
 
-          <h1 class="page-title">Make a Reservation</h1>
           <h4 class="garden-name"><%= @garden.title.upcase %></h4>
 
           This garden is currently booked on the following dates:
           <% @garden.reservations.each do |f| %>
-          <p><%= f.startdate.strftime("%b %d %Y") %> - <%= f.enddate.strftime("%b %d %Y") %></p>
+            <p><%= f.startdate.strftime("%b %d %Y") %> - <%= f.enddate.strftime("%b %d %Y") %></p>
           <% end %>
 
           <div class="field">
@@ -30,7 +30,7 @@
 
           <div class="veg-info">
             Veggies:<br/><% @garden.vegetables.each do |vegetable| %>
-              <h4><div class="veg-name"><%= vegetable.name.capitalize %></div></h4>
+              <div class="veg_name"><%= vegetable.name.capitalize %></div>
                 Sow: <%= vegetable.sow_period %><br/>
                 Plant Out: <%= vegetable.plant_out_period %><br/>
                 Harvest: <%= vegetable.harvest %><br/>
@@ -54,10 +54,11 @@
           </div>
 
           <div>
-            <h5 class="center-align">
+            <div class="grow waves-effect waves-light btn grey lighten-3">
               <div class="actions">
                 <%= f.submit "Grow" %>
               </div>
+            </div>
           </div>
 
         </div>

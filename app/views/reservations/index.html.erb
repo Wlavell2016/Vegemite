@@ -2,18 +2,20 @@
 
 <div class="container">
   <div class="row">
-    <div class="reservations-index">
 
       <h1 class="page-title">Reservations</h1>
-
-      <% @reservations.each do |reservation| %>
-        <div class="reservation-info"><p>Grow!</p>
-          Confirmation Number: <%= reservation.id %> </br>
-          Date: <%= reservation.startdate.strftime("%b %d")%> -
-          <%= reservation.enddate.strftime("%b %d %Y")%></br>
-          Note: <%= reservation.note %>
+        <div class="reservation_index card blue-grey darken-1">
+          <h4 class="garden-name"><%= @garden.title.upcase %></h4>
+          <% @reservations.each do |reservation| %>
+            <div class="reservation-info">
+              <!-- <p>Grow!</p> -->
+              Confirmation Number: <%= reservation.id %> </br>
+              Date: <%= reservation.startdate.strftime("%b %d")%> -
+              <%= reservation.enddate.strftime("%b %d %Y")%></br>
+              Note: <%= reservation.note %>
+            </div>
+          <% end %>
         </div>
-      <% end %>
 
     </div>
   </div>

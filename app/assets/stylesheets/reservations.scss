@@ -2,6 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.container-reservation-form {
-  padding-bottom: 100px;
+// RESERVATION FORM
+.reservation_form {
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.veg_name {
+  color: green;
+}
+.grow {
+  margin-left: 325px;
+  margin-top: 30px;
+}
+
+// RESERVATION INDEX
+.reservation_index {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  text-align: center;
 }

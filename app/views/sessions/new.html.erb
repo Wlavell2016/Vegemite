@@ -3,33 +3,36 @@
 
     <h1 class="page-title">Log in</h1>
 
-    <div class="form">
+    <div class="login_form card blue-grey darken-1">
+      <div class="form">
 
-      <%= form_tag sessions_path do %>
+        <%= form_tag sessions_path do %>
 
-        <div class="field">
-          <%= label_tag :email %><br/>
-          <%= text_field_tag :email, params[:email] %>
-          <!-- why pass email params? -->
-        </div>
+          <div class="field">
+            <%= label_tag :email %><br/>
+            <%= text_field_tag :email, params[:email] %>
+            <!-- why pass email params? -->
+          </div>
 
-        <div class="field">
-          <%= label_tag :password %><br/>
-          <%= password_field_tag :password %>
-        </div>
+          <div class="field">
+            <%= label_tag :password %><br/>
+            <%= password_field_tag :password %>
+          </div>
 
-        <!-- <div class="field">
-          <%= check_box_tag :remember_me %><br />
-          <%= label_tag :remember_me %>
-        </div> -->
+          <!-- <div class="field">
+            <%= check_box_tag :remember_me %><br />
+            <%= label_tag :remember_me %>
+          </div> -->
 
-        <div class="actions"><%= submit_tag "Log in" %></div>
+          <div class="login waves-effect waves-light btn grey lighten-3">
+            <div class="actions"><%= submit_tag "Log in" %></div>
+          </div>
+          
+        <% end %>
 
-      <% end %>
+        <p class="log-sign">Don't have an account? <%= link_to "Sign up", new_user_path %></p>
 
-      <p class="log-sign">Don't have an account? <%= link_to "Sign up", new_user_path %></p>
-
-  </div>
-  
+      </div>
+    </div>
   </div>
 </div>
