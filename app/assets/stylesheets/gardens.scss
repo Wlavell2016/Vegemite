@@ -62,7 +62,9 @@ div.card.blue-grey.darken-1.garden_cards:hover{
 }
 
 .search-form {
-
+position: fixed;
+height: 3rem;
+width: 300px;
 }
 
 .test1{
@@ -85,12 +87,8 @@ div.card.blue-grey.darken-1.garden_cards:hover{
   line-height: 48px;
   color: black;
 }
-<<<<<<< HEAD
- #garden_vegetable_ids_{
-=======
 
 input #garden_vegetable_ids_{
->>>>>>> eb3aa085164fa497dc6bce09c687d554204c7ca7
   display: inline-block !important;
   position: relative;
   left: 0;
