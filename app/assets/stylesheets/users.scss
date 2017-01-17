@@ -81,7 +81,7 @@
 // landscape
 #bg3-3 {
   position: relative;
-  top: 4850px;
+  top: 5200px;
   // top: 4300px;
   // left: -50px;
   opacity: 0.8;
@@ -98,9 +98,9 @@
 #bg3-5 {
   position: absolute;
   top: 2400px;
-  left: 100px;
+  left: -300px;
   opacity: 0.7;
-  left: 800px;
+  // left: 500px;
 }
 // berries
 #bg3-6 {
@@ -132,13 +132,13 @@
   // top: 2200px;
   // left: 200px;
   opacity: 0.7;
-  top: 2380px;
+  top: 2180px;
   left: 300px;
 }
 // onions
 #bg3-10 {
   position: absolute;
-  top: 4300px;
+  top: 4200px;
   left: 250px;
 }
 // flowers
@@ -207,7 +207,8 @@
 /* bird */
 #bg2-6 {
   position: absolute;
-  top: 1340px;
+  // top: 1340px;
+  top: 1430px;
   left: 90px;
 }
 
@@ -244,19 +245,19 @@
   top: 1020px;
   left: 450px;
 }
-
-
+// sun
 #bg1-5 {
   position: absolute;
-  top: 700px;
-  left: 900px;
+  top: 740px;
+  left: 850px;
 }
-
+// moon
 #bg1-6 {
   position: absolute;
   top: 80px;
-  left: 200px;
-  // left: 120px;
+  // left: 200px;
+  // left: 490px;
+  left: 10px;
 }
 /* join greenthumbs section */
 .join-greenthumbs {
