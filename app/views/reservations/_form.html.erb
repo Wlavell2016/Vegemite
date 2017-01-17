@@ -8,53 +8,61 @@
             <h2><%= pluralize(@reservation.errors.count, "error") %>prohibited this reservation from being made:</h2>
             <ul>
                 <% @reservation.errors.full_messages.each do |msg| %>
-                <li><%= msg %></li>
+                  <li><%= msg %></li>
                 <% end %>
             </ul>
           </div>
         <% end %>
-<div class="card blue-grey darken-1">
-  <h1 class="page-title">Make a Reservation</h1>
 
-      <h4 class="garden-name"><%= @garden.title.upcase %></h4>
+        <div class="card blue-grey darken-1">
 
-      This garden is currently booked on the following dates:
-        <% @garden.reservations.each do |f| %>
+          <h1 class="page-title">Make a Reservation</h1>
+          <h4 class="garden-name"><%= @garden.title.upcase %></h4>
+
+          This garden is currently booked on the following dates:
+          <% @garden.reservations.each do |f| %>
           <p><%= f.startdate.strftime("%b %d %Y") %> - <%= f.enddate.strftime("%b %d %Y") %></p>
-        <% end %>
+          <% end %>
 
-      <div class="field">
-        <% f.hidden_field :garden_id, value: @garden.id %>
-      </div>
-
-      <div class="veg-info">
-        Veggies:<br/><% @garden.vegetables.each do |vegetable| %>
-        <h4><div class="veg-name"><%= vegetable.name.capitalize %></div></h4>
-        Sow: <%= vegetable.sow_period %><br/>
-        Plant Out: <%= vegetable.plant_out_period %><br/>
-        Harvest: <%= vegetable.harvest %><br/>
-        <% end %>
-      </div>
-
-      <div class="field">
-        <p>Note: <%= f.text_field :note %></p>
-        <p>Reap and Sow:</p>
-         <h7>Choose Your Date test1</h7>
-         <!-- <input type="date" class="datepicker"> -->
-        <br/> start of date checker<%= f.date_select :startdate, class: "datepicker", type: "date" %>
-      <!-- </div> -->
-         <!-- <input type="date" class="datepicker"> -->
-         <h7>Choose Your Date test2</h7>
-        <p>Harvest:end of data checker <%= f.date_select :enddate, class: "datepicker", type: "date" %></p>
-      <!-- </div> -->
-
-       <div>
-    <h5 class="center-align">
-          <div class="actions">
-            <%= f.submit "Grow" %>
+          <div class="field">
+            <% f.hidden_field :garden_id, value: @garden.id %>
           </div>
-            </div>
-      </div>
+
+          <div class="veg-info">
+            Veggies:<br/><% @garden.vegetables.each do |vegetable| %>
+              <h4><div class="veg-name"><%= vegetable.name.capitalize %></div></h4>
+                Sow: <%= vegetable.sow_period %><br/>
+                Plant Out: <%= vegetable.plant_out_period %><br/>
+                Harvest: <%= vegetable.harvest %><br/>
+            <% end %>
+          </div>
+
+          <div class="field">
+            <p>Note: <%= f.text_field :note %></p>
+
+            <p>Reap and Sow:</p>
+              <!-- <h7>Choose Your Date test1</h7> -->
+              <!-- <input type="date" class="datepicker"> -->
+              <!-- <br/> start of date checker -->
+              <%= f.date_select :startdate, class: "datepicker", type: "date" %>
+              <!-- </div> -->
+              <!-- <input type="date" class="datepicker"> -->
+              <!-- <h7>Choose Your Date test2</h7> -->
+            <p>Harvest:</p>
+              <!-- :end of data checker  -->
+              <%= f.date_select :enddate, class: "datepicker", type: "date" %></p>
+          </div>
+
+          <div>
+            <h5 class="center-align">
+              <div class="actions">
+                <%= f.submit "Grow" %>
+              </div>
+          </div>
+
+        </div>
+
       <% end %>
     </div>
+  </div>
 </div>
