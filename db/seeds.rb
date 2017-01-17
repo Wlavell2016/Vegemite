@@ -9,6 +9,7 @@
 
 require 'faker'
 
+
 # user = User.create!([
 #                         { username: 'slerner', firstname: 'Sean', lastname: 'Lerner', email: 'sean@bitmaker.co', password: 'passpass', image: 'imgres.jpg' },
 #                         { username: 'dmoniz', firstname: 'Daniel', lastname: 'Moniz', email: 'daniel@bitmaker.co', password: 'passpass', image: 'AAEAAQAAAAAAAAfkAAAAJGFhMmY4NTczLTUzYjYtNDI0My04MzA2LWJmNzA5ODBiZTRmOQ.jpg' },
@@ -59,10 +60,7 @@ require 'faker'
   #                         address: address.sample,
   #                         size: size,
   #                         user_id: user_id)
-  #                         # image: image)
 
-
-end
 
 vegetable = Vegetable.create!([
                                   { name: 'Asparagus', sow_period: 'Jan - Feb', plant_out_period: 'Apr - May', harvest: 'Apr - Jun' },
@@ -87,7 +85,7 @@ vegetable = Vegetable.create!([
                                   { name: 'Squash', sow_period: 'Mar - Apr', plant_out_period: 'n/a', harvest: 'Jun - Sep' },
                                   { name: 'Tomato', sow_period: 'Nov - Mar', plant_out_period: 'Feb - May', harvest: 'Aug - Oct' }
                               ])
-#
+
 # set = (1..21).to_a.sample 12
 #
 # g1 = Garden.find(1)
