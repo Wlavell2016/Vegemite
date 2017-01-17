@@ -18,14 +18,14 @@ body {
 }
 
 // nav bar
-.grey.lighten-2 {
+.grey.lighten-3 {
   background-color: #e0e0e0 !important;
-  height: 80px;
 }
 
 .site-nav {
   position: fixed;
   z-index: 1;
+  height: 80px;
 }
 
 .nav-wrapper {
@@ -135,9 +135,9 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
   box-sizing: content-box;
   transition: all 0.3s;
 }
-
+// buttons on forms
 .actions {
-  color: black;
+  color: #819c76;
 }
 
 .parallax-container {
