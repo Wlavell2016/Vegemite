@@ -14,7 +14,7 @@ html, body {
 }
 
 div.card.blue-grey.darken-1.garden_cards{
-  height: 370px;
+  height: 270px;
   padding-bottom: 0px;
   -webkit-filter: sepia(65%);
   -moz-filter: sepia(65%);
@@ -63,6 +63,7 @@ div.card.blue-grey.darken-1.garden_cards:hover{
 
 .search-form {
 position: fixed;
+// top:75px;
 height: 3rem;
 width: 300px;
 }
@@ -107,7 +108,7 @@ width: 300px;
   position: fixed !important;
   top: 140px;
   left: 5px;
-  height: 710px;
+  height: 480px;
   width: 42%;
   padding-right: 100px !important;
   padding-left: 20px!important;
