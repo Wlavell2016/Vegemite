@@ -6,7 +6,8 @@
 @import "vegetables";
 
 body {
-  background-image: url('clouds2.png');
+  background-image: url('clouds.png');
+    // background-image:  contrast(800%);
   // background-color: ;
   // font-family: 'Sniglet', cursive;
   // font-family: 'Poiret One', cursive;
@@ -17,16 +18,22 @@ body {
   // margin: 5px;
 }
 
+
+@media (min-width: 480px) and (max-width: 1199px)  {
+  body {
+  background-image: url('clouds3.png');
+}
+}
 // nav bar
 .grey.lighten-3 {
   background-color: #e0e0e0 !important;
 }
 
-.site-nav {
-  position: fixed;
-  z-index: 1;
-  height: 80px;
-}
+// .site-nav {
+//   position: fixed;
+//   z-index: 1;
+//   height: 80px;
+// }
 
 .nav-wrapper {
   height: 300px;
