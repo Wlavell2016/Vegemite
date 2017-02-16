@@ -45,11 +45,15 @@
                 <li><a class="dropdown-button" href="#!" data-activates="dropdown1"><i class="material-icons right">reorder</i></a></li>
               </ul>
           <% else %>
-            <ul class="right">
-              <li class="waves-effect waves-light"><a href="#veg-out">Explore</a></li>
+            <!-- <ul class="right"> -->
+            <ul id="dropdown1" class="dropdown-content">
+              <!-- <li class="waves-effect waves-light"><a href="#veg-out">Explore</a></li> -->
               <li class="waves-effect waves-light"><a href="#about">About Us</a></li>
               <li class="waves-effect waves-light"><%= link_to "Log in", new_session_path %></li>
               <li class="waves-effect waves-light"><%= link_to "Sign up", new_user_path %></li>
+            </ul>
+                <ul class="right">
+              <li><a class="dropdown-button" href="#!" data-activates="dropdown1"><i class="material-icons right">reorder</i></a></li>
             </ul>
           <% end %>
           <div class="nav-wrapper">
